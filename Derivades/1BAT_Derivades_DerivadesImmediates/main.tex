@@ -1,0 +1,214 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{multicol}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} % Si tens els logos, pots posar 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}} % I aquí 
+
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Fitxa: Derivades Immediates & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+
+\section*{Resum de Teoria: Regles de Derivació}
+Aquestes són les fórmules fonamentals que has de conèixer [cite: 2, 3]:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Funció} & \textbf{Derivada} \\ \hline
+Constant: $f(x) = c$ & $f'(x) = 0$ \\ \hline
+Identitat: $f(x) = x$ & $f'(x) = 1$ \\ \hline
+Potencial: $f(x) = x^n$ & $f'(x) = n \cdot x^{n-1}$ \\ \hline
+Exponencial: $f(x) = a^x$ & $f'(x) = a^x \cdot \ln(a)$ \\ \hline
+Logarítmica: $f(x) = \log_a x$ & $f'(x) = \frac{1}{x \cdot \ln(a)}$ \\ \hline
+Cosinus: $f(x) = \cos(x)$ & $f'(x) = -\sin(x)$ \\ \hline
+Sinus: $f(x) = \sin(x)$ & $f'(x) = \cos(x)$ \\ \hline
+\end{tabular}
+\end{center}
+
+\textbf{Operacions bàsiques:}
+\begin{itemize}
+    \item Multiplicació per constant: $[k \cdot f(x)]' = k \cdot f'(x)$
+    \item Suma/Resta: $[f(x) \pm g(x)]' = f'(x) \pm g'(x)$
+\end{itemize}
+
+\section*{Exercicis de Pràctica}
+
+\subsection*{1. Derivades de potències simples i constants}
+\textbf{Calcula la derivada de les següents funcions:} \\[0.2cm]
+\textit{Exemple:} \\ [0.2cm]
+Si $f(x) = x^3$, llavors $f'(x) = 3x^2$.\\[0.2cm]
+Si $f(x) = 5$, llavors $f'(x) = 0$.
+
+
+\begin{multicols}{3}
+\begin{enumerate}[label=\alph*)]
+    \item $f(x) = 8$
+    \item $f(x) = x$
+    \item $f(x) = x^4$
+    \item $f(x) = x^7$
+    \item $f(x) = -5$
+    \item $f(x) = x^{10}$
+    \item $f(x) = 3x$
+    \item $f(x) = 5x^2$
+    \item $f(x) = -2x^3$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{2. Sumes i polinomis}
+\textbf{Calcula la derivada d'aquestes combinacions:}\\[0.2cm]
+\textit{Exemple:}  \\[0.2cm]
+Si $f(x) = 2x^3 - 5x + 4$, llavors $f'(x) = 2(3x^2) - 5(1) + 0 = 6x^2 - 5$.
+
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*)]
+    \item $f(x) = 4x^3 - 8x^2 + 12x$
+    \item $f(x) = 2x^4 + x^3 - 5x + 1$
+    \item $f(x) = \frac{1}{2}x^2 + 4x - 7$
+    \item $f(x) = -x^5 + 3x^3 - 2$
+    \item $f(x) = 10x^6 - x^2 + x$
+    \item $f(x) = \frac{x^3}{3} - \frac{x^2}{2} + 5$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{3. Radicals i potències en el denominador}
+\textbf{Calcula la derivada d'aquestes funcions: } \\[0.2cm]
+\textit{Recorda: $\sqrt[n]{x^m} = x^{m/n}$ i $\frac{1}{x^n} = x^{-n}$. Transforma primer la funció.}\\[0.2cm]
+\textit{Exemple:} \\ [0.2cm]
+Si $f(x) = \sqrt{x} = x^{1/2}$, llavors $f'(x) = \frac{1}{2}x^{-1/2} = \frac{1}{2\sqrt{x}}$. \\[0.2cm]
+Si $f(x) = \frac{1}{x^2} = x^{-2}$, llavors $f'(x) = \frac{-2}{x^3}$.
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*)]
+    \item $f(x) = \sqrt{x}$
+    \item $f(x) = \sqrt[3]{x^2}$
+    \item $g(x) = \sqrt[4]{x^3} + \sqrt{x}$
+    \item $f(x) = \frac{1}{x^2}$
+    \item $i(x) = \frac{1}{\sqrt[4]{x^3}}$
+    \item $f(x) = \frac{1}{x^3}$
+    \item $f(x) = \sqrt[4]{x^3} - \frac{2}{x}$
+    \item $f(x) = 2\sqrt{x} + \frac{1}{x^2}$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{4. Simplificació prèvia}
+\textbf{Simplifica les expressions utilitzant les propietats de les potències abans de derivar} \\[0.2cm]
+\textit{Exemple:} \\[0.2cm]
+Si $f(x) = \frac{x^5}{x^2} = x^{5-2} = x^3$, llavors $f'(x) = 3x^2$. \\ [0.2cm]
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*)]
+    \item $j(x) = \frac{x^2}{\sqrt[3]{x}}$
+    \item $f(x) = \frac{x^2}{x^5}$
+    \item $f(x) = x \cdot \sqrt{x}$
+    \item $f(x) = \frac{\sqrt{x}}{x}$
+    \item $h(x) = (x+6)^2$
+    \item $f(x) = (x+2)^2 - 4x$
+\end{enumerate}
+\end{multicols}
+
+\newpage 
+
+\subsection*{5. Exponencials, logaritmes i trigonomètriques}
+\textbf{Calcula la derivada d'aquestes funcions: } \\[0.2cm]
+\textit{Exemple:} \\[0.2cm] 
+Si $f(x) = 5^x + \sin(x)$, llavors $f'(x) = 5^x \ln(5) + \cos(x)$.
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*)]
+    \item $f(x) = 3^x$
+    \item $f(x) = e^x$
+    \item $f(x) = \log_8 x$
+    \item $f(x) = \ln(x)$
+    \item $f(x) = \sin(x) + \cos(x)$
+    \item $f(x) = 5\sin(x) - e^x$
+    \item $f(x) = 2^x + \log_2 x$
+    \item $f(x) = 4\cos(x) + x^2$
+\end{enumerate}
+\end{multicols}
+
+\newpage
+\section*{Solucions}
+\begin{multicols}{2}
+\textbf{1.}
+\begin{itemize}[itemsep=0pt]
+    \item a) $0$, b) $1$, c) $4x^3$, d) $7x^6$, e) $0$, f) $10x^9$, g) $3$, h) $10x$, i) $-6x^2$
+\end{itemize}
+
+\textbf{2.}
+\begin{itemize}[itemsep=0pt]
+    \item a) $12x^2 - 16x + 12$
+    \item b) $8x^3 + 3x^2 - 5$
+    \item c) $x + 4$
+    \item d) $-5x^4 + 9x^2$
+    \item e) $60x^5 - 2x + 1$
+    \item f) $x^2 - x$
+\end{itemize}
+
+\textbf{3.}
+\begin{itemize}[itemsep=0pt]
+    \item a) $\frac{1}{2\sqrt{x}}$
+    \item b) $\frac{2}{3\sqrt[3]{x}}$
+    \item c) $\frac{3}{4\sqrt[4]{x}} + \frac{1}{2\sqrt{x}}$
+    \item d) $-\frac{2}{x^3}$
+    \item e) $-\frac{3}{4\sqrt[4]{x^7}}$
+    \item f) $-\frac{3}{x^4}$
+    \item g) $\frac{3}{4\sqrt[4]{x}} + \frac{2}{x^2}$
+    \item h) $\frac{1}{\sqrt{x}} - \frac{2}{x^3}$
+\end{itemize}
+
+\textbf{4.}
+\begin{itemize}[itemsep=0pt]
+    \item a) $\frac{5}{3}\sqrt[3]{x^2}$
+    \item b) $-\frac{3}{x^4}$
+    \item c) $\frac{3}{2}\sqrt{x}$
+    \item d) $-\frac{1}{2\sqrt{x^3}}$
+    \item e) $2x + 12$
+    \item f) $2x$
+\end{itemize}
+
+\textbf{5.}
+\begin{itemize}[itemsep=0pt]
+    \item a) $3^x \ln(3)$
+    \item b) $e^x$
+    \item c) $\frac{1}{x \ln(8)}$
+    \item d) $\frac{1}{x}$
+    \item e) $\cos(x) - \sin(x)$
+    \item f) $5\cos(x) - e^x$
+    \item g) $2^x \ln(2) + \frac{1}{x \ln(2)}$
+    \item h) $-4\sin(x) + 2x$
+\end{itemize}
+\end{multicols}
+
+\end{document}

@@ -1,0 +1,453 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+
+% ---- Colors ----
+\definecolor{taronja}{RGB}{220, 120, 30}
+\definecolor{blaufosc}{RGB}{30, 80, 160}
+\definecolor{verdfosc}{RGB}{40, 130, 60}
+\definecolor{grisnet}{RGB}{245, 245, 245}
+\definecolor{grisblavet}{RGB}{235, 240, 250}
+
+% ---- Marges ----
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+% ---- Capçalera ----
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ---- Entorns ----
+
+% Caixa de recordatori del mètode
+\newmdenv[
+  backgroundcolor=grisnet,
+  linecolor=taronja,
+  linewidth=1.5pt,
+  roundcorner=4pt,
+  innertopmargin=7pt, innerbottommargin=7pt,
+  innerleftmargin=10pt, innerrightmargin=10pt,
+]{metodebox}
+
+% Caixa d'exemple resolt
+\tcbset{
+  exemplebox/.style={
+    enhanced,
+    colback=grisblavet,
+    colframe=blaufosc,
+    fonttitle=\bfseries\small,
+    title={Exemple resolt},
+    arc=3pt,
+    boxrule=1.2pt,
+    left=8pt, right=8pt, top=6pt, bottom=6pt,
+    breakable
+  }
+}
+
+% ---- Comptador de tipus ----
+\newcounter{tipus}
+\setcounter{tipus}{0}
+\newcommand{\secciotipus}[1]{%
+  \stepcounter{tipus}
+  \vspace{0.5cm}
+  \noindent{\large\textbf{\color{taronja}Tipus \thetipus \quad #1}}
+  \vspace{0.15cm}
+  \hrule height 1pt
+  \vspace{0.3cm}
+}
+
+% ---- Estil de la llista d'exercicis ----
+\newlist{exercicis}{enumerate}{1}
+\setlist[exercicis]{label=\textbf{\alph*)}, leftmargin=1.5cm, itemsep=0.4cm}
+
+% ========================================================
+\begin{document}
+% ========================================================
+
+% --- Capçalera d'identificació ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Equacions exponencials & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.2cm}
+
+\begin{metodebox}
+\textbf{Idea clau:} Per resoldre una equació exponencial, l'objectiu és sempre arribar a una situació del tipus $a^{f(x)} = a^{g(x)}$, i aleshores concloure que $f(x) = g(x)$.
+Veurem \textbf{cinc tipus} d'equacions, cadascun amb el seu mètode propi.
+\end{metodebox}
+
+% ========================================================
+\secciotipus{Reconeixement directe de potències}
+% ========================================================
+
+\begin{metodebox}
+\textbf{Mètode:} El nombre de l'altre costat de la igualtat ja és (o és fàcilment expressable com) una potència de la base que tenim. Reescrivim-lo, igualem els exponents i resolem l'equació lineal resultant.
+\end{metodebox}
+
+\vspace{0.1cm}
+
+\begin{tcolorbox}[exemplebox]
+Resol $\;2^x = 32$
+\tcblower
+Observem que $32 = 2^5$, per tant:
+\[
+2^x = 2^5 \;\longrightarrow\; x = 5
+\]
+\end{tcolorbox}
+
+\vspace{0.1cm}
+\noindent\textbf{Practica:}
+
+\begin{exercicis}
+    \item $3^x = 81$
+    \item $7^x = 49$
+    \item $2^{x+1} = 16$
+    \item $5^{2x} = 125$
+    \item $10^{x-2} = 1\,000$
+    \item $10^{x+3} = 10000$
+    \item $7^{3x-2} = 49$
+    \item $2^{x/2} = 8$
+    \item $3^{x^2-1} = 27$
+\end{exercicis}
+\newpage
+% ========================================================
+\secciotipus{Reescriure ambdós costats amb la mateixa base}
+% ========================================================
+
+\begin{metodebox}
+\textbf{Mètode:} Les dues bases no coincideixen, però \textbf{totes dues es poden expressar com a potències d'una base comú} (ex.\ $4=2^2$, $8=2^3$, $9=3^2$, $27=3^3$\ldots). Reescrivim, apliquem $(a^m)^n = a^{mn}$ i igualem els exponents.
+\end{metodebox}
+
+\vspace{0.3cm}
+
+\begin{tcolorbox}[exemplebox]
+Resol $\;4^x = 8$
+\tcblower
+Expressem $4 = 2^2$ i $8 = 2^3$:
+\[
+(2^2)^x = 2^3 \;\longrightarrow\; 2^{2x} = 2^3 \;\longrightarrow\; 2x = 3 \;\longrightarrow\; x = \frac{3}{2}
+\]
+\end{tcolorbox}
+
+\vspace{0.4cm}
+\noindent\textbf{Practica:}
+
+\begin{exercicis}
+    \item $9^x = 27$
+    \item $4^{x+1} = 32$
+    \item $8^{x-1} = 16$
+    \item $25^x = 125$
+    \item $16^x = 8^{x+2}$
+    \item $16^x = 32$
+    \item $4^{x-1} = 2$
+    \item $9^{2x} = 243$
+    \item $125^x = 25$
+\end{exercicis}
+
+\newpage
+
+% ========================================================
+\secciotipus{Suma de potències de la mateixa base --- factor comú}
+% ========================================================
+
+\begin{metodebox}
+\textbf{Mètode:} Tenim una \textbf{suma de potències de la mateixa base} $a$. Escrivim totes les potències en funció de $a^x$ (recordant que $a^{x+k}=a^x \cdot a^k$ i $a^{x-k}=\frac{a^x}{a^k}$), traiem $a^x$ com a \textbf{factor comú}, simplifiquem el parèntesi i aïllem $a^x$ per igualar finalment els exponents.
+\end{metodebox}
+
+\vspace{0.3cm}
+
+\begin{tcolorbox}[exemplebox]
+Resol $\;2^{x-1} + 2^x + 2^{x+1} = 28$
+\tcblower
+Reescrivim cada terme en funció de $2^x$:
+\[
+\frac{2^x}{2} + 2^x + 2^x \cdot 2 = 28
+\]
+Treiem $2^x$ com a factor comú:
+\[
+2^x \!\left(\frac{1}{2} + 1 + 2\right) = 28 \;\longrightarrow\; 2^x \cdot \frac{7}{2} = 28 \;\longrightarrow\; 2^x = 8 = 2^3 \;\longrightarrow\; x = 3
+\]
+\end{tcolorbox}
+
+\vspace{0.4cm}
+\noindent\textbf{Practica:}
+
+\begin{exercicis}
+    \item $3^{x-1} + 3^x + 3^{x+1} = 13$
+    \item $5^x + 5^{x+1} = 30$
+    \item $2^x + 2^{x+1} + 2^{x+2} = 56$
+    \item $3^{x-1} + 3^x = 12$
+    \item $2^x + 2^{x+1} + 2^{x+2} + 2^{x+3} = 120$
+    \item $2^x + 2^{x+2} = 40$
+    \item $3^{x+1} - 3^{x-1} = 24$
+    \item $10^x + 10^{x+1} = 110$
+    \item $4^x - 5 \cdot 2^x + 4 = 0$
+    \item $9^x - 12 \cdot 3^x + 27 = 0$
+    \item $25^x - 30 \cdot 5^x + 125 = 0$
+\end{exercicis}
+
+\newpage
+% ========================================================
+\secciotipus{Canvi de variable --- equació de segon grau en $a^x$}
+% ========================================================
+
+\begin{metodebox}
+\textbf{Mètode:} L'equació conté $a^{2x}$ i $a^x$. Com que $a^{2x} = (a^x)^2$, fem el \textbf{canvi de variable} $t = a^x$ per obtenir una equació de segon grau en $t$. Resolem per $t$ i desfem el canvi ($a^x = t_i$, expressem $t_i$ com a potència de $a$ i igualem exponents). \textbf{Descartem} les solucions negatives o zero (ja que $a^x > 0$).
+\end{metodebox}
+
+\vspace{0.3cm}
+
+\begin{tcolorbox}[exemplebox]
+Resol $\;4^x - 5 \cdot 2^x + 4 = 0$
+\tcblower
+Com que $4^x = (2^2)^x = (2^x)^2$, fem el canvi $t = 2^x$ ($t > 0$):
+\[
+t^2 - 5t + 4 = 0 \;\longrightarrow\; (t-1)(t-4) = 0
+\]
+\[
+t_1 = 1 \;\Rightarrow\; 2^x = 1 = 2^0 \;\Rightarrow\; x_1 = 0
+\]
+\[
+t_2 = 4 \;\Rightarrow\; 2^x = 4 = 2^2 \;\Rightarrow\; x_2 = 2
+\]
+\end{tcolorbox}
+
+\vspace{0.4cm}
+\noindent\textbf{Practica:}
+
+\begin{exercicis}
+    \item $4^x - 3 \cdot 2^x - 4 = 0$
+    \item $9^x - 4 \cdot 3^x + 3 = 0$
+    \item $25^x - 6 \cdot 5^x + 5 = 0$
+    \item $4^x - 6 \cdot 2^x + 8 = 0$
+    \item $9^x - 10 \cdot 3^x + 9 = 0$
+    % Afegeix aquests apartats al bloc de Tipus 5
+    \item $4^x - 5 \cdot 2^x + 4 = 0$
+    \item $9^x - 12 \cdot 3^x + 27 = 0$
+    \item $25^x - 30 \cdot 5^x + 125 = 0$
+\end{exercicis}
+
+\newpage
+
+% ========================================================
+\secciotipus{Solució numèrica per aproximació}
+% ========================================================
+
+\begin{metodebox}
+\textbf{Mètode:} Quan no es pot trobar una solució exacta (el costat dret no és una potència exacta de la base), busquem la solució \textbf{per aproximació} amb la calculadora:
+\begin{enumerate}[noitemsep, label=\arabic*.]
+    \item Identifiquem entre quines dues potències consecutives es troba la solució.
+    \item Anem afınant el valor de l'exponent decimal fins al nombre de decimals demanat.
+    \item Donem la \textbf{solució per defecte} (truncament) i la \textbf{solució per excés}.
+\end{enumerate}
+\end{metodebox}
+
+\vspace{0.3cm}
+
+\begin{tcolorbox}[exemplebox]
+Resol $\;2^x = 10$ \quad (aproximació amb 2 decimals)
+\tcblower
+\textbf{Pas 1.} Localitzem la solució:
+\quad $2^3 = 8 < 10 < 16 = 2^4$, \quad per tant $3 < x < 4$.
+
+\vspace{0.3cm}
+\textbf{Pas 2.} Afinem provant valors intermedis:
+
+\medskip
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{ccc}
+$2^{3{,}2} \approx 9{,}19$ & $2^{3{,}3} \approx 9{,}85$ & $2^{3{,}4} \approx 10{,}56$ \\
+\multicolumn{3}{c}{$\Rightarrow$ la solució és entre $3{,}3$ i $3{,}4$} \\[4pt]
+$2^{3{,}32} \approx 9{,}98$ & $2^{3{,}33} \approx 10{,}04$ & \\
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{Pas 3.} Conclusions:
+\[
+\text{Solució per defecte (2 dec.):}\; x \approx 3{,}32 \qquad
+\text{Solució per excés (2 dec.):}\; x \approx 3{,}33
+\]
+\end{tcolorbox}
+
+\vspace{0.4cm}
+\noindent\textbf{Practica} (aproxima amb 2 decimals):
+
+\begin{exercicis}
+    \item $2^x = 7$
+    \item $3^x = 20$
+    \item $2^x = 50$
+    \item $5^x = 100$
+    \item $3^x = 50$
+    \item $5^x = 12$
+    \item $10^x = 50$
+\end{exercicis}
+
+\vspace{0.6cm}
+\noindent\textbf{Exercici 6 --- Miscel·lània (Combinats)} \\
+En aquest exercici els tipus estan barrejats. Identifica primer quina estratègia cal seguir en cada cas.
+
+\begin{multicols}{2}
+\begin{exercicis}
+    \item $3^{2x-1} = 243$
+    \item $4^{x+1} = 8^{x-1}$
+    \item $2^x + 2^{x-1} = 12$
+    \item $5^{2x} - 6 \cdot 5^x + 5 = 0$
+    \item $10^x = 250$ 
+    \item $7^{x^2-4} = 1$
+    \item $27^x = \frac{1}{9}$
+    \item $3^{x+1} + 3^{x+2} = 108$
+    \item $4^x - 10 \cdot 2^x + 16 = 0$
+    \item $2^x = 15$ 
+    \item $125^{x-1} = 25$
+    \item $2 \cdot 3^x + 3^{x-1} = 21$
+    \item $2^{x-3} = \frac{1}{4}$
+    \item $9^x - 10 \cdot 3^x + 9 = 0$
+    \item $6^x = 200$ (
+\end{exercicis}
+\end{multicols}
+% ========================================================
+\newpage
+\begin{center}
+    {\Large \textbf{SOLUCIONS}}
+\end{center}
+\begin{center}
+    \textit{(Pàgina per al professor / autocorrecció)}
+\end{center}
+\vspace{0.4cm}
+% ========================================================
+
+% ---- Tipus 1 ----
+\noindent\textbf{Tipus 1 --- Reconeixement directe}
+
+\begin{multicols}{2}
+\begin{exercicis}
+    \item $3^x = 3^4 \;\Rightarrow\; \boldsymbol{x=4}$
+    \item $7^x = 7^2 \;\Rightarrow\; \boldsymbol{x=2}$
+    \item $2^{x+1} = 2^4 \;\Rightarrow\; x+1=4 \;\Rightarrow\; \boldsymbol{x=3}$
+    \item $5^{2x} = 5^3 \;\Rightarrow\; 2x=3 \;\Rightarrow\; \boldsymbol{x=\tfrac{3}{2}}$
+    \item $10^{x-2} = 10^3 \;\Rightarrow\; x-2=3 \;\Rightarrow\; \boldsymbol{x=5}$
+    \item $x+3=4 \Rightarrow \boldsymbol{x=1}$
+    \item $3x-2=2 \Rightarrow 3x=4 \Rightarrow \boldsymbol{x=4/3}$
+    \item $x/2=3 \Rightarrow \boldsymbol{x=6}$
+    \item $x^2-1=3 \Rightarrow x^2=4 \Rightarrow \boldsymbol{x=\pm 2}$
+\end{exercicis}
+\end{multicols}
+
+\vspace{0.3cm}
+
+% ---- Tipus 2 ----
+\noindent\textbf{Tipus 2 --- Mateixa base}
+
+\begin{multicols}{2}
+\begin{exercicis}
+    \item $(3^2)^x = 3^3 \;\Rightarrow\; 2x=3 \;\Rightarrow\; \boldsymbol{x=\tfrac{3}{2}}$
+    \item $(2^2)^{x+1} = 2^5 \;\Rightarrow\; 2x+2=5 \;\Rightarrow\; \boldsymbol{x=\tfrac{3}{2}}$
+    \item $(2^3)^{x-1} = 2^4 \;\Rightarrow\; 3x-3=4 \;\Rightarrow\; \boldsymbol{x=\tfrac{7}{3}}$
+    \item $(5^2)^x = 5^3 \;\Rightarrow\; 2x=3 \;\Rightarrow\; \boldsymbol{x=\tfrac{3}{2}}$
+    \item $(2^4)^x = (2^3)^{x+2} \;\Rightarrow\; 4x=3x+6 \;\Rightarrow\; \boldsymbol{x=6}$
+    \item $2^{4x} = 2^5 \Rightarrow 4x=5 \Rightarrow \boldsymbol{x=5/4}$
+    \item $2^{2(x-1)} = 2^1 \Rightarrow 2x-2=1 \Rightarrow \boldsymbol{x=3/2}$
+    \item $3^{2(2x)} = 3^5 \Rightarrow 4x=5 \Rightarrow \boldsymbol{x=5/4}$
+    \item $5^{3x} = 5^2 \Rightarrow 3x=2 \Rightarrow \boldsymbol{x=2/3}$
+\end{exercicis}
+\end{multicols}
+
+\vspace{0.3cm}
+
+% ---- Tipus 3 ----
+\noindent\textbf{Tipus 3 --- Factor comú}
+
+\begin{exercicis}
+    \item $3^x\!\left(\tfrac{1}{3}+1+3\right)=13 \;\Rightarrow\; 3^x \cdot \tfrac{13}{3}=13 \;\Rightarrow\; 3^x=3 \;\Rightarrow\; \boldsymbol{x=1}$
+    \item $5^x(1+5)=30 \;\Rightarrow\; 5^x \cdot 6=30 \;\Rightarrow\; 5^x=5 \;\Rightarrow\; \boldsymbol{x=1}$
+    \item $2^x(1+2+4)=56 \;\Rightarrow\; 2^x \cdot 7=56 \;\Rightarrow\; 2^x=8=2^3 \;\Rightarrow\; \boldsymbol{x=3}$
+    \item $3^x\!\left(\tfrac{1}{3}+1\right)=12 \;\Rightarrow\; 3^x \cdot \tfrac{4}{3}=12 \;\Rightarrow\; 3^x=9=3^2 \;\Rightarrow\; \boldsymbol{x=2}$
+    \item $2^x(1+2+4+8)=120 \;\Rightarrow\; 2^x \cdot 15=120 \;\Rightarrow\; 2^x=8=2^3 \;\Rightarrow\; \boldsymbol{x=3}$
+    \item $2^x(1+4)=40 \Rightarrow 5 \cdot 2^x = 40 \Rightarrow 2^x = 8 \Rightarrow \boldsymbol{x=3}$
+    \item $3^{x-1}(3^2 - 1) = 24 \Rightarrow 3^{x-1} \cdot 8 = 24 \Rightarrow 3^{x-1} = 3 \Rightarrow \boldsymbol{x=2}$
+    \item $10^x(1+10)=110 \Rightarrow 11 \cdot 10^x = 110 \Rightarrow 10^x = 10 \Rightarrow \boldsymbol{x=1}$
+
+\end{exercicis}
+
+\vspace{0.3cm}
+
+% ---- Tipus 4 ----
+\noindent\textbf{Tipus 4 --- Canvi de variable}
+
+\begin{exercicis}
+    \item $t=2^x$: $t^2-3t-4=0 \;\Rightarrow\; (t-4)(t+1)=0$. \quad $t_1=4\;\Rightarrow\;2^x=2^2\;\Rightarrow\;\boldsymbol{x=2}$. \quad $t_2=-1$ (descartem, $2^x>0$).
+    \item $t=3^x$: $t^2-4t+3=0 \;\Rightarrow\; (t-1)(t-3)=0$. \quad $t_1=1\;\Rightarrow\;\boldsymbol{x_1=0}$; \quad $t_2=3\;\Rightarrow\;\boldsymbol{x_2=1}$.
+    \item $t=5^x$: $t^2-6t+5=0 \;\Rightarrow\; (t-1)(t-5)=0$. \quad $t_1=1\;\Rightarrow\;\boldsymbol{x_1=0}$; \quad $t_2=5\;\Rightarrow\;\boldsymbol{x_2=1}$.
+    \item $t=2^x$: $t^2-6t+8=0 \;\Rightarrow\; (t-2)(t-4)=0$. \quad $t_1=2\;\Rightarrow\;\boldsymbol{x_1=1}$; \quad $t_2=4\;\Rightarrow\;\boldsymbol{x_2=2}$.
+    \item $t=3^x$: $t^2-10t+9=0 \;\Rightarrow\; (t-1)(t-9)=0$. \quad $t_1=1\;\Rightarrow\;\boldsymbol{x_1=0}$; \quad $t_2=9=3^2\;\Rightarrow\;\boldsymbol{x_2=2}$.
+    \item $t=2^x \Rightarrow t^2-5t+4=0 \Rightarrow (t-1)(t-4)=0 \Rightarrow \boldsymbol{x_1=0, x_2=2}$
+    \item $t=3^x \Rightarrow t^2-12t+27=0 \Rightarrow (t-3)(t-9)=0 \Rightarrow \boldsymbol{x_1=1, x_2=2}$
+    \item $t=5^x \Rightarrow t^2-30t+125=0 \Rightarrow (t-5)(t-25)=0 \Rightarrow \boldsymbol{x_1=1, x_2=2}$
+\end{exercicis}
+
+\vspace{0.3cm}
+
+% ---- Tipus 5 ----
+\noindent\textbf{Tipus 5 --- Aproximació numèrica} (solucions per defecte i per excés amb 2 decimals)
+
+\begin{multicols}{2}
+\begin{exercicis}
+    \item $2^x=7$: $2^{2{,}80}\approx 6{,}96$, $2^{2{,}81}\approx 7{,}02$. \quad \textbf{Def.} $x\approx2{,}80$; \textbf{Exc.} $x\approx2{,}81$
+    \item $3^x=20$: $3^{2{,}72}\approx19{,}7$, $3^{2{,}73}\approx20{,}1$. \quad \textbf{Def.} $x\approx2{,}72$; \textbf{Exc.} $x\approx2{,}73$
+    \item $2^x=50$: $2^{5{,}64}\approx49{,}9$, $2^{5{,}65}\approx50{,}3$. \quad \textbf{Def.} $x\approx5{,}64$; \textbf{Exc.} $x\approx5{,}65$
+    \item $5^x=100$: $5^{2{,}86}\approx98{,}5$, $5^{2{,}87}\approx100{,}0$. \quad \textbf{Def.} $x\approx2{,}86$; \textbf{Exc.} $x\approx2{,}87$
+    \item $3^x=50$: $3^{3{,}56}\approx49{,}8$, $3^{3{,}57}\approx50{,}3$. \quad \textbf{Def.} $x\approx3{,}56$; \textbf{Exc.} $x\approx3{,}57$
+    \item $5^x=12$: $5^{1{,}54} \approx 11{,}94, 5^{1{,}55} \approx 12{,}10. \Rightarrow \boldsymbol{x \approx 1{,}54}$
+    \item $10^x=50$: $10^{1{,}69} \approx 48{,}97, 10^{1{,}70} \approx 50{,}11. \Rightarrow \boldsymbol{x \approx 1{,}70}$
+\end{exercicis}
+\end{multicols}
+
+\newpage
+
+\vspace{0.8cm}
+\noindent\textbf{Exercici 6}
+
+\begin{multicols}{2}
+\begin{itemize}[]
+    \item \textbf{a)} $3^{2x-1} = 3^5 \Rightarrow 2x-1=5 \Rightarrow \boldsymbol{x=3}$
+    \item \textbf{b)} $2^{2x+2} = 2^{3x-3} \Rightarrow 2x+2=3x-3 \Rightarrow \boldsymbol{x=5}$
+    \item \textbf{c)} $2^{x-1}(2+1)=12 \Rightarrow 3 \cdot 2^{x-1}=12 \Rightarrow \boldsymbol{x=3}$
+    \item \textbf{d)} $t^2-6t+5=0 \Rightarrow (t-1)(t-5)=0 \Rightarrow \boldsymbol{x_1=0, x_2=1}$
+    \item \textbf{e)} $10^{2,39} \approx 245, 10^{2,40} \approx 251 \Rightarrow \boldsymbol{x \approx 2,40}$
+    \item \textbf{f)} $x^2-4=0 \Rightarrow \boldsymbol{x = \pm 2}$
+    \item \textbf{g)} $3^{3x} = 3^{-2} \Rightarrow \boldsymbol{x = -2/3}$
+    \item \textbf{h)} $3^{x+1}(1+3)=108 \Rightarrow 3^{x+1}=27 \Rightarrow \boldsymbol{x=2}$
+    \item \textbf{i)} $t^2-10t+16=0 \Rightarrow (t-2)(t-8)=0 \Rightarrow \boldsymbol{x_1=1, x_2=3}$
+    \item \textbf{j)} $2^{3,90} \approx 14,9, 2^{3,91} \approx 15,0 \Rightarrow \boldsymbol{x \approx 3,91}$
+    \item \textbf{k)} $5^{3x-3} = 5^2 \Rightarrow 3x-3=2 \Rightarrow \boldsymbol{x=5/3}$
+    \item \textbf{l)} $3^{x-1}(2 \cdot 3 + 1) = 21 \Rightarrow 7 \cdot 3^{x-1}=21 \Rightarrow \boldsymbol{x=2}$
+    \item \textbf{m)} $x-3=-2 \Rightarrow \boldsymbol{x=1}$
+    \item \textbf{n)} $t^2-10t+9=0 \Rightarrow (t-1)(t-9)=0 \Rightarrow \boldsymbol{x_1=0, x_2=2}$
+    \item \textbf{o)} $6^{2,95} \approx 195, 6^{2,96} \approx 200,9 \Rightarrow \boldsymbol{x \approx 2,96}$
+\end{itemize}
+\end{multicols}
+
+\end{document}

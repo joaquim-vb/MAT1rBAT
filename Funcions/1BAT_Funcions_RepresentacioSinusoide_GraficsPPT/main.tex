@@ -1,0 +1,124 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{tikz}
+
+% Configuració neta
+\setbeamertemplate{navigation symbols}{} 
+\setbeamercolor{background canvas}{bg=white}
+
+\begin{document}
+
+% ---------------------------------------------------------
+% 1. TRASLLAT PI/6 (Amb tots els ticks i labels)
+% ---------------------------------------------------------
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[scale=0.48] % Escala ajustada per Beamer
+    % CIRCUMFERÈNCIA I EIXOS (Sempre iguals)
+    \draw[thick, blue] (5, 10.5) circle (4);
+    \draw[->, ultra thick] (1, 10.5) -- (28.5, 10.5) node[right] {Eix $x$};
+    \draw[thick, red, ->] (9.5, 6) -- (9.5, 15) node[above] {Eix $y$};
+    \fill[black] (9.5, 10.5) circle (2.5pt) node[below left, scale=1.1] {$0$};
+    
+    % Totes les marques a la circumferència
+    \foreach \a/\t in {30/\frac{\pi}{6}, 45/\frac{\pi}{4}, 60/\frac{\pi}{3}, 90/\frac{\pi}{2}, 120/\frac{2\pi}{3}, 135/\frac{3\pi}{4}, 150/\frac{5\pi}{6}, 180/\pi, 210/\frac{7\pi}{6}, 225/\frac{5\pi}{4}, 240/\frac{4\pi}{3}, 270/\frac{3\pi}{2}, 300/\frac{5\pi}{3}, 315/\frac{7\pi}{4}, 330/\frac{11\pi}{6}} {
+        \draw[thick, black] ({5+3.8*cos(\a)}, {10.5+3.8*sin(\a)}) -- ({5+4.2*cos(\a)}, {10.5+4.2*sin(\a)});
+        \node[scale=0.8, text=black] at ({5+5*cos(\a)}, {10.5+5*sin(\a)}) {$\t$};
+    }
+    
+    % Tots els ticks a l'eix X
+    \foreach \dist/\t in {1.5/\frac{\pi}{6}, 2.25/\frac{\pi}{4}, 3/\frac{\pi}{3}, 4.5/\frac{\pi}{2}, 6/\frac{2\pi}{3}, 6.75/\frac{3\pi}{4}, 7.5/\frac{5\pi}{6}, 9/\pi, 10.5/\frac{7\pi}{6}, 11.25/\frac{5\pi}{4}, 12/\frac{4\pi}{3}, 13.5/\frac{3\pi}{2}, 15/\frac{5\pi}{3}, 15.75/\frac{7\pi}{4}, 16.5/\frac{11\pi}{6}, 18/2\pi} {
+        \draw[thick, blue] ({9.5+\dist}, 10.7) -- ({9.5+\dist}, 10.3) node[below=10pt, text=black, scale=0.8] {$\t$};
+    }
+
+    % ELEMENTS DEL PAS: Línies pi/6
+    \draw[dashed, cyan, ultra thick] ({5+4*cos(30)}, {10.5+4*sin(30)}) -- (11, {10.5+4*sin(30)});
+    \draw[dashed, orange, ultra thick] (11, 10.5) -- (11, {10.5+4*sin(30)});
+    \fill[red] (11, {10.5+4*sin(30)}) circle (4pt);
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+% ---------------------------------------------------------
+% 2. TRASLLAT PI/4 (Mantenint pi/6 i afegint pi/4)
+% ---------------------------------------------------------
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[scale=0.48]
+    % REPETICIÓ DEL FONS FIX (Circumferència i eixos)
+    \draw[thick, blue] (5, 10.5) circle (4);
+    \draw[->, ultra thick] (1, 10.5) -- (28.5, 10.5) node[right] {Eix $x$};
+    \draw[thick, red, ->] (9.5, 6) -- (9.5, 15) node[above] {Eix $y$};
+    \fill[black] (9.5, 10.5) circle (2.5pt);
+    \foreach \a/\t in {30/\frac{\pi}{6}, 45/\frac{\pi}{4}, 60/\frac{\pi}{3}, 90/\frac{\pi}{2}, 120/\frac{2\pi}{3}, 135/\frac{3\pi}{4}, 150/\frac{5\pi}{6}, 180/\pi, 210/\frac{7\pi}{6}, 225/\frac{5\pi}{4}, 240/\frac{4\pi}{3}, 270/\frac{3\pi}{2}, 300/\frac{5\pi}{3}, 315/\frac{7\pi}{4}, 330/\frac{11\pi}{6}} {
+        \draw[thick, black] ({5+3.8*cos(\a)}, {10.5+3.8*sin(\a)}) -- ({5+4.2*cos(\a)}, {10.5+4.2*sin(\a)});
+        \node[scale=0.8] at ({5+5*cos(\a)}, {10.5+5*sin(\a)}) {$\t$};
+    }
+    \foreach \dist/\t in {1.5/\frac{\pi}{6}, 2.25/\frac{\pi}{4}, 3/\frac{\pi}{3}, 4.5/\frac{\pi}{2}, 6/\frac{2\pi}{3}, 6.75/\frac{3\pi}{4}, 7.5/\frac{5\pi}{6}, 9/\pi, 10.5/\frac{7\pi}{6}, 11.25/\frac{5\pi}{4}, 12/\frac{4\pi}{3}, 13.5/\frac{3\pi}{2}, 15/\frac{5\pi}{3}, 15.75/\frac{7\pi}{4}, 16.5/\frac{11\pi}{6}, 18/2\pi} {
+        \draw[thick, blue] ({9.5+\dist}, 10.7) -- ({9.5+\dist}, 10.3) node[below=10pt, scale=0.8] {$\t$};
+    }
+
+    % ELEMENTS DEL PAS
+    \fill[red!30] (11, {10.5+4*sin(30)}) circle (4pt); % Punt anterior
+    \draw[dashed, cyan, ultra thick] ({5+4*cos(45)}, {10.5+4*sin(45)}) -- (11.75, {10.5+4*sin(45)});
+    \draw[dashed, orange, ultra thick] (11.75, 10.5) -- (11.75, {10.5+4*sin(45)});
+    \fill[red] (11.75, {10.5+4*sin(45)}) circle (4pt);
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+% ---------------------------------------------------------
+% 3. TOTS ELS PUNTS (Sense línies, només esquelet)
+% ---------------------------------------------------------
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[scale=0.48]
+    % REPETICIÓ DEL FONS FIX (Circumferència i eixos)
+    \draw[thick, blue] (5, 10.5) circle (4);
+    \draw[->, ultra thick] (1, 10.5) -- (28.5, 10.5) node[right] {Eix $x$};
+    \draw[thick, red, ->] (9.5, 6) -- (9.5, 15) node[above] {Eix $y$};
+    \fill[black] (9.5, 10.5) circle (2.5pt);
+    \foreach \a/\t in {30/\frac{\pi}{6}, 45/\frac{\pi}{4}, 60/\frac{\pi}{3}, 90/\frac{\pi}{2}, 120/\frac{2\pi}{3}, 135/\frac{3\pi}{4}, 150/\frac{5\pi}{6}, 180/\pi, 210/\frac{7\pi}{6}, 225/\frac{5\pi}{4}, 240/\frac{4\pi}{3}, 270/\frac{3\pi}{2}, 300/\frac{5\pi}{3}, 315/\frac{7\pi}{4}, 330/\frac{11\pi}{6}} {
+        \draw[thick, black] ({5+3.8*cos(\a)}, {10.5+3.8*sin(\a)}) -- ({5+4.2*cos(\a)}, {10.5+4.2*sin(\a)});
+        \node[scale=0.8] at ({5+5*cos(\a)}, {10.5+5*sin(\a)}) {$\t$};
+    }
+    \foreach \dist/\t in {1.5/\frac{\pi}{6}, 2.25/\frac{\pi}{4}, 3/\frac{\pi}{3}, 4.5/\frac{\pi}{2}, 6/\frac{2\pi}{3}, 6.75/\frac{3\pi}{4}, 7.5/\frac{5\pi}{6}, 9/\pi, 10.5/\frac{7\pi}{6}, 11.25/\frac{5\pi}{4}, 12/\frac{4\pi}{3}, 13.5/\frac{3\pi}{2}, 15/\frac{5\pi}{3}, 15.75/\frac{7\pi}{4}, 16.5/\frac{11\pi}{6}, 18/2\pi} {
+        \draw[thick, blue] ({9.5+\dist}, 10.7) -- ({9.5+\dist}, 10.3) node[below=10pt, scale=0.8] {$\t$};
+    }
+
+    % TOTS ELS PUNTS
+    \foreach \a in {0, 30, 45, 60, 90, 120, 135, 150, 180, 210, 225, 240, 270, 300, 315, 330, 360} {
+        \fill[red] ({9.5 + (\a * 9 / 180)}, {10.5 + 4*sin(\a)}) circle (4pt);
+    }
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+% ---------------------------------------------------------
+% 4. CORBA FINAL (Unió dels punts)
+% ---------------------------------------------------------
+\begin{frame}
+\begin{center}
+\begin{tikzpicture}[scale=0.48]
+    % REPETICIÓ DEL FONS FIX (Circumferència i eixos)
+    \draw[thick, blue] (5, 10.5) circle (4);
+    \draw[->, ultra thick] (1, 10.5) -- (28.5, 10.5) node[right] {Eix $x$};
+    \draw[thick, red, ->] (9.5, 6) -- (9.5, 15) node[above] {Eix $y$};
+    \fill[black] (9.5, 10.5) circle (2.5pt);
+    \foreach \a/\t in {30/\frac{\pi}{6}, 45/\frac{\pi}{4}, 60/\frac{\pi}{3}, 90/\frac{\pi}{2}, 120/\frac{2\pi}{3}, 135/\frac{3\pi}{4}, 150/\frac{5\pi}{6}, 180/\pi, 210/\frac{7\pi}{6}, 225/\frac{5\pi}{4}, 240/\frac{4\pi}{3}, 270/\frac{3\pi}{2}, 300/\frac{5\pi}{3}, 315/\frac{7\pi}{4}, 330/\frac{11\pi}{6}} {
+        \draw[thick, black] ({5+3.8*cos(\a)}, {10.5+3.8*sin(\a)}) -- ({5+4.2*cos(\a)}, {10.5+4.2*sin(\a)});
+        \node[scale=0.8] at ({5+5*cos(\a)}, {10.5+5*sin(\a)}) {$\t$};
+    }
+    \foreach \dist/\t in {1.5/\frac{\pi}{6}, 2.25/\frac{\pi}{4}, 3/\frac{\pi}{3}, 4.5/\frac{\pi}{2}, 6/\frac{2\pi}{3}, 6.75/\frac{3\pi}{4}, 7.5/\frac{5\pi}{6}, 9/\pi, 10.5/\frac{7\pi}{6}, 11.25/\frac{5\pi}{4}, 12/\frac{4\pi}{3}, 13.5/\frac{3\pi}{2}, 15/\frac{5\pi}{3}, 15.75/\frac{7\pi}{4}, 16.5/\frac{11\pi}{6}, 18/2\pi} {
+        \draw[thick, blue] ({9.5+\dist}, 10.7) -- ({9.5+\dist}, 10.3) node[below=10pt, scale=0.8] {$\t$};
+    }
+
+    % Dibuix de la funció sinus
+    \draw[ultra thick, red, samples=100, domain=0:18] 
+        plot ({9.5 + \x}, {10.5 + 4*sin(\x * 180 / 9)});
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\end{document}

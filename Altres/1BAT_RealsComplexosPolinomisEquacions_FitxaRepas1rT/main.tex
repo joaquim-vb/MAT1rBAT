@@ -1,0 +1,121 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Assegura't que tens els fitxers d'imatge o comenta aquestes línies si no els tens
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} EXERCICIS (10\% de la nota) & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.8cm}
+
+\begin{center}
+    {\Large \textbf{MATEMÀTIQUES (1r BATXILLERAT)}}
+\end{center}
+
+\vspace{0.5cm}
+
+% --- LLISTAT D'EXERCICIS ---
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    
+    % Exercici 1
+    \item Simplifica la fracció algèbrica:
+    \[
+    \frac{x^{3}-19x-30}{x^{3}-3x^{2}-10x} =
+    \]
+
+    % Exercici 2
+    \item Resoldre les equacions:
+    \begin{enumerate}[label=\alph*)]
+        \item $\displaystyle \frac{2x-3}{x^{2}-1}-\frac{3-x}{x+1}=0$
+        \vspace{0.3cm} % Espai extra entre apartats
+        \item $\displaystyle \frac{x}{x^{2}-4}+\frac{x-1}{x+2}=\frac{3}{x-2}-2$
+    \end{enumerate}
+
+    % Exercici 3
+    \item Simplifica l'expressió algèbrica:
+    \[
+    \frac{\frac{x-a}{x+a}-\frac{x^{2}+a^{2}}{x^{2}-a^{2}}}{\left(\frac{x-a}{x+a}\right)^{2}-1} =
+    \]
+
+    % Exercici 4
+    \item Resoldre les equacions:
+    \begin{enumerate}[label=\alph*)]
+        \item $x^{3}+2x^{2}-5x-6=0$
+        \item $-x^{4}+x^{3}-4x^{2}+4x=0$
+    \end{enumerate}
+
+    % Exercici 5
+    \item Resoldre el sistema d'inequacions:
+    \[
+    \begin{cases}
+    \displaystyle \frac{x+3}{2}-2x > \frac{5x-3}{3}-2 \\[10pt]
+    \displaystyle \frac{x-2}{3}+1 < \frac{x+3}{2}+x
+    \end{cases}
+    \]
+
+    % Exercici 6
+    \item Simplifica les expressions algèbriques:
+    \begin{enumerate}[label=\alph*)]
+        \item $\displaystyle \frac{x^{2}+4x}{2\cdot\sqrt{x^{2}+8x+16}} =$
+        \vspace{0.3cm}
+        \item $\displaystyle \frac{x^{2}+3x}{2\cdot\sqrt{x^{2}+6x+9}} =$
+    \end{enumerate}
+
+    % Exercici 7
+    \item Resoldre l'equació:
+    \[
+    \left[-\frac{3(x+1)^{2}-6(x+1)}{x^{2}-1}\right]\cdot(1+2x)=-4
+    \]
+
+    % Exercici 8
+    \item Simplifica l'expressió amb radicals:
+    \[
+    \frac{3\sqrt{6}+2\sqrt{2}}{3\sqrt{3}+2} =
+    \]
+
+    % Exercici 9
+    \item Resoldre l'equació en els cos dels nombres complexos:
+    \[
+    x^{6}+64=0
+    \]
+
+    % Exercici 10
+    \item Desenvolupar pel binomi de Newton:
+    \[
+    (2-3i)^{6} =
+    \]
+
+\end{enumerate}
+
+\end{document}

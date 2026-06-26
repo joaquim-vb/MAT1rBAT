@@ -1,0 +1,285 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multicol}
+
+% Marges i capçalera
+\geometry{top=3cm, bottom=3cm, left=2cm, right=2cm}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Matemàtiques 1r Batxillerat}
+\fancyhead[R]{Límits i el nombre $e$}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.0}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} El nombre $e$ i la indeterminació $1^\infty$ & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+% --- EXERCICI 0 ---
+\section*{Exercici 0: Familiaritzant-nos amb la funció $f(x) = e^x$}
+
+Abans de començar amb els límits, és vital conèixer els valors del nombre $e$ ($e \approx 2,718$). Completa la taula de valors i representa la funció en el gràfic. Et servirà per identificar els resultats dels exercicis posteriors.
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|c|}
+    \hline
+    $x$ & $f(x) = e^x$ & Valor aprox. \\ \hline
+    $-1$ & $e^{-1}$ & $0,367$ \\ \hline
+    $0$ & $e^0$ & $1$ \\ \hline
+    $1$ & $e^1$ & $2,718$ \\ \hline
+    $2$ & $e^2$ &  \\ \hline
+    $3$ & $e^3$ &  \\ \hline
+    $4$ & $e^4$ &  \\ \hline
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.65] % Pots ajustar l'escala si ho vols més gran o més petit
+    % Dibuixem la quadrícula (de x=-2 a x=5, i de y=-1 a y=8)
+    \draw[step=1cm, lightgray, very thin] (-2,-1) grid (5,8);
+    
+    % Dibuixem l'eix X (més llarg cap a la dreta)
+    \draw[thick, ->] (-2.5,0) -- (5.5,0) node[right] {$x$};
+    
+    % Dibuixem l'eix Y (poc espai a sota, molt espai a dalt)
+    \draw[thick, ->] (0,-1.5) -- (0,8.5) node[above] {$y$};
+    
+    % Posem els numerets a l'eix X
+    \foreach \x in {-2,-1,1,2,3,4,5}
+        \draw (\x,0.1) -- (\x,-0.1) node[below] {\scriptsize $\x$};
+        
+    % Posem els numerets a l'eix Y
+    \foreach \y in {1,2,3,4,5,6,7,8}
+        \draw (0.1,\y) -- (-0.1,\y) node[left] {\scriptsize $\y$};
+        
+    % Marquem l'origen
+    \node[below left] at (0,0) {\scriptsize $0$};
+\end{tikzpicture}
+\end{minipage}
+
+\vspace{0.8cm}
+
+% --- SECCIÓ 1 ---
+\section*{Exercici 1: Què passa a l'infinit? La paradoxa de l'$1^\infty$}
+
+Quan tenim una base que s'apropa a $1$ i un exponent que es fa gegant, estem davant d'una indeterminació. Agafa la calculadora i completa les taules (arrodoneix a 3 decimals):
+
+\vspace{0.3cm}
+\textbf{Funció A:} $\displaystyle f(x) = \left(1 + \frac{2}{x}\right)^x \quad \quad \quad$ \textbf{Funció B:} $\displaystyle g(x) = \left(1 + \frac{3}{x}\right)^x$
+
+\vspace{0.3cm}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|X|X|X|X|}
+    \hline
+    $x$ & $10$ & $100$ & $1.000$ & $10.000$ \\ \hline
+    $f(x)$ & $6,192$ & & & \\ \hline
+    $g(x)$ & & & & \\ \hline
+\end{tabularx}
+
+\vspace{0.4cm}
+Compara els resultats amb els valors de la taula de l'Exercici 0. Cap a quin valor tendeixen?
+\begin{itemize}
+    \item La Funció A tendeix a: \underline{\hspace{3cm}} (en potència de $e$)
+    \item La Funció B tendeix a: \underline{\hspace{3cm}} (en potència de $e$)
+\end{itemize}
+
+\vspace{0.8cm}
+
+% --- SECCIÓ 2: TEORIA ---
+\section*{2. Com ho resolem algebraicament? El mètode del "motlle"}
+
+L'objectiu principal és manipular el límit fins que tingui exactament la forma de la definició matemàtica del nombre $e$:
+\[ \lim_{x \to \infty} \left( 1 + \frac{1}{g(x)} \right)^{g(x)} = e \]
+
+\textbf{I si l'exponent és diferent?} \\
+Gràcies a les propietats de les potències, si tenim aquest mateix límit però tot elevat a un nombre $k$, el resultat serà $e^k$. Més formalment, si l'exponent inclou una altra funció $f(x)$ que multiplica a $g(x)$, tenim:
+\[ \lim_{x \to \infty} \left( 1 + \frac{1}{g(x)} \right)^{g(x) \cdot f(x)} = \lim_{x \to \infty} \left[ \left( 1 + \frac{1}{g(x)} \right)^{g(x)} \right]^{f(x)} = e^{\lim_{x \to \infty} f(x)} \]
+
+\vspace{0.3cm}
+\textbf{Exemple resolt:}
+Suposem que ens trobem amb el següent límit:
+\[ \lim_{x \to \infty} \left( 1 + \frac{1}{x-1} \right)^{3(x-1)} \]
+Ens adonem que la base té el "motlle" exacte d'$1 + \frac{1}{\text{alguna cosa}}$. Si separem l'exponent usant claudàtors:
+\[ \lim_{x \to \infty} \left[ \left( 1 + \frac{1}{x-1} \right)^{x-1} \right]^3 \]
+Tota la part de dins del claudàtor és exactament la definició de $e$. Per tant, el resultat directe és $\mathbf{e^3}$.
+
+\vspace{0.3cm}
+\textbf{Practica: Identifica el motlle} \\
+Resol directament els següents límits identificant el motlle bàsic del nombre $e$:
+\begin{enumerate}[label=\alph*)]
+    \item $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{1}{x+4} \right)^{x+4} = $ \vspace{0.2cm}
+    \item $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{1}{x^2} \right)^{5x^2} = $ \vspace{0.2cm}
+    \item $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{1}{2x-3} \right)^{-2(2x-3)} = $
+\end{enumerate}
+
+\vspace{0.8cm}
+
+\newpage
+% --- SECCIÓ 3: PRÀCTICA ---
+\section*{3. Ara et toca a tu: Construïm el nombre $e$ pas a pas}
+
+Moltes vegades el límit no ens vindrà preparat. Haurem de ser nosaltres els que "fabriquem" el motlle. Anem a fer-ho de forma progressiva.
+
+% -- NIVELL 1 --
+\subsection*{Nivell 1: Separar l'exponent}
+En aquests casos ja tenim l'$1 + \frac{1}{g(x)}$, però l'exponent és un múltiple del que necessitem.
+
+\textbf{Exemple resolt:} $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{1}{x} \right)^{4x}$
+\textit{Resolució:} Separem l'exponent de manera que ens quedi la $x$ a dins i el $4$ a fora: 
+$\displaystyle \lim_{x \to \infty} \left[ \left( 1 + \frac{1}{x} \right)^x \right]^4 = \mathbf{e^4}$
+
+
+\textbf{Resol:}
+\begin{multicols}{2}
+\begin{enumerate}[label=3.1.\arabic*.]
+    \item $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{1}{x} \right)^{-2x}$
+    \item $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{1}{x-5} \right)^{7(x-5)}$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.4cm}
+
+% -- NIVELL 2 --
+\subsection*{Nivell 2: Fabricar l'exponent ("Multiplicar i dividir")}
+Ja tenim l'$1 + \frac{1}{g(x)}$, però l'exponent no s'hi assembla. Haurem de multiplicar i dividir l'exponent pel que necessitem.
+
+\textbf{Exemple resolt:} $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{1}{x-2} \right)^x$
+
+\textit{Resolució:} Necessitem un $(x-2)$ a l'exponent. Multipliquem i dividim l'exponent original per $(x-2)$:
+\[ \lim_{x \to \infty} \left( 1 + \frac{1}{x-2} \right)^{ \frac{x-2}{x-2} \cdot x } = \lim_{x \to \infty} \left[ \left( 1 + \frac{1}{x-2} \right)^{x-2} \right]^{\frac{x}{x-2}} = e^{\displaystyle \lim_{x \to \infty} \frac{x}{x-2}} = e^1 = \mathbf{e} \]
+
+
+
+
+\textbf{Resol:}
+\begin{multicols}{3}
+\begin{enumerate}[label=3.2.\arabic*.]
+    \item $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{1}{2x+1} \right)^x$
+    \item $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{1}{x^2+3} \right)^{2x^2}$
+    \item $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{1}{x-1} \right)^{3x+2}$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.4cm}
+\newpage
+% -- NIVELL 3 --
+\subsection*{Nivell 3: Aconseguir l'1 al numerador (Baixar el numerador)}
+Tenim l'$1 + \dots$ però al numerador no hi ha un 1, sinó un altre nombre. Passem el numerador a sota dividint el denominador.
+
+\textbf{Exemple resolt:} $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{3}{x+1} \right)^{2x}$
+
+\textit{Resolució:} Passem el 3 a baix: $1 + \frac{1}{\frac{x+1}{3}}$. Ara necessitem exactament $\frac{x+1}{3}$ a l'exponent:
+\[ \lim_{x \to \infty} \left( 1 + \frac{1}{\frac{x+1}{3}} \right)^{ \frac{x+1}{3} \cdot \frac{3}{x+1} \cdot 2x } = e^{ \lim_{x \to \infty} \frac{6x}{x+1} } = \mathbf{e^6} \]
+
+\textbf{Resol:}
+\begin{multicols}{3}
+\begin{enumerate}[label=3.3.\arabic*.]
+    \item $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{2}{x} \right)^x$
+    \item $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{4}{x-2} \right)^{3x}$
+    \item $\displaystyle \lim_{x \to \infty} \left( 1 + \frac{-1}{2x+5} \right)^{x+1}$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.4cm}
+
+% -- NIVELL 4 --
+\subsection*{Nivell 4: Aconseguir l'"1+" inicial (Modificar la base)}
+Quan no tenim l'$1 + \dots$, el primer pas és forçar-ho. Si tenim un quocient de polinomis $\frac{P(x)}{Q(x)}$, fem la divisió i escrivim: $\frac{\text{Dividend}}{\text{Divisor}} = \text{Quocient} + \frac{\text{Residu}}{\text{Divisor}}$, on el quocient sempre serà 1 en aquests límits.
+
+\textbf{Exemple resolt:} $\displaystyle \lim_{x \to \infty} \left( \frac{x+5}{x+2} \right)^x$
+
+\textit{Resolució:} Fem la divisió entera o hi sumem zero (sumem i restem 2): $\frac{x+2+3}{x+2} = 1 + \frac{3}{x+2}$.
+Ara apliquem el que hem après als nivells 3 i 2:
+\[ \lim_{x \to \infty} \left( 1 + \frac{1}{\frac{x+2}{3}} \right)^{ \frac{x+2}{3} \cdot \frac{3}{x+2} \cdot x } = e^{ \lim_{x \to \infty} \frac{3x}{x+2} } = \mathbf{e^3} \]
+
+
+\textbf{Resol:}
+\begin{multicols}{3}
+\begin{enumerate}[label=3.4.\arabic*.]
+    \item $\displaystyle \lim_{x \to \infty} \left( \frac{x+4}{x} \right)^{2x}$
+    \item $\displaystyle \lim_{x \to \infty} \left( \frac{x-1}{x+3} \right)^x$
+    \item $\displaystyle \lim_{x \to \infty} \left( \frac{2x+3}{2x-1} \right)^{x+2}$
+\end{enumerate}
+\end{multicols}
+
+
+\newpage
+% ----------------------------------------------------------------------
+% PÀGINA DE SOLUCIONS
+% ----------------------------------------------------------------------
+\section*{Solucionari}
+
+\textbf{2. Practica: Identifica el motlle}
+\begin{multicols}{3}
+\begin{enumerate}[label=\alph*)]
+    \item $e^1 = \mathbf{e}$
+    \item $\mathbf{e^5}$
+    \item $\mathbf{e^{-2}}$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.4cm}
+
+\textbf{3. Ara et toca a tu: Construïm el nombre $e$ pas a pas}
+
+\textbf{Nivell 1: Separar l'exponent}
+\begin{multicols}{2}
+\begin{enumerate}[label=3.1.\arabic*.]
+    \item $\mathbf{e^{-2}}$
+    \item $\mathbf{e^7}$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.2cm}
+
+\textbf{Nivell 2: Fabricar l'exponent}
+\begin{multicols}{3}
+\begin{enumerate}[label=3.2.\arabic*.]
+    \item $e^{1/2} = \mathbf{\sqrt{e}}$
+    \item $\mathbf{e^2}$
+    \item $\mathbf{e^3}$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.2cm}
+
+\textbf{Nivell 3: Aconseguir l'1 al numerador}
+\begin{multicols}{3}
+\begin{enumerate}[label=3.3.\arabic*.]
+    \item $\mathbf{e^2}$
+    \item $\mathbf{e^{12}}$
+    \item $e^{-1/2} = \mathbf{\frac{1}{\sqrt{e}}}$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.2cm}
+
+\textbf{Nivell 4: Aconseguir l'"1+" inicial}
+\begin{multicols}{3}
+\begin{enumerate}[label=3.4.\arabic*.]
+    \item $\mathbf{e^8}$ \textit{(restant 1 dona 4/x)}
+    \item $\mathbf{e^{-4}}$ \textit{(restant 1 dona -4/(x+3))}
+    \item $\mathbf{e^2}$ \textit{(restant 1 dona 4/(2x-1))}
+\end{enumerate}
+\end{multicols}
+\end{document}

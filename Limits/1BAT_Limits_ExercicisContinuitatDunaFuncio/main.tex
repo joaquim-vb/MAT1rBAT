@@ -1,0 +1,213 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{multicol}
+
+% 1. MARGES I CAPÇALERA ORIGINALS RECUPERATS
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Logos recuperats de la plantilla original
+% (Assegura't de tenir els arxius Logo_Departament.png i Logo_Institut.png a la mateixa carpeta)
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Exercici 17 - Continuïtat & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+\subsection*{Exercici 17: Estudi de la continuïtat}
+
+Donades les funcions següents, estudiarem la seva continuïtat en els punts $x = -1$, $x = 0$ i $x = 1$.
+
+\subsubsection*{Funció $f(x)$}
+\[ f(x) = \frac{2x^2 + 2x}{x - x^3} \]
+
+Per facilitar el càlcul posterior dels límits (especialment per resoldre les indeterminacions), és molt recomanable factoritzar prèviament els polinomis del numerador i del denominador, tot i que treballarem inicialment amb la funció sense simplificar:
+\begin{itemize}
+    \item Numerador: $2x^2 + 2x = 2x(x + 1)$
+    \item Denominador: $x - x^3 = x(1 - x^2) = x(1 - x)(1 + x)$
+\end{itemize}
+
+\textbf{Estudi en $x = -1$:}
+\begin{itemize}
+    \item \textbf{Imatge:} Avaluant a la funció original: $f(-1) = \frac{2(-1)^2 + 2(-1)}{-1 - (-1)^3} = \frac{2 - 2}{-1 + 1} = \frac{0}{0}$. Com que el denominador s'anul·la, la funció no existeix en aquest punt.
+    \item \textbf{Límit:} $\lim_{x \to -1} \frac{2x^2 + 2x}{x - x^3} = \left[\frac{0}{0}\right]$. Ara fem servir l'expressió factoritzada per resoldre la indeterminació:
+    \[ \lim_{x \to -1} \frac{2x(x + 1)}{x(1 - x)(1 + x)} = \lim_{x \to -1} \frac{2}{1 - x} = \frac{2}{1 - (-1)} = \frac{2}{2} = 1 \]
+\end{itemize}
+Com que el límit existeix (val 1) però la funció no hi està definida, en $x = -1$ hi ha una \textbf{discontinuïtat evitable}.
+
+\textbf{Estudi en $x = 0$:}
+\begin{itemize}
+    \item \textbf{Imatge:} $f(0) = \frac{2(0)^2 + 2(0)}{0 - 0^3} = \frac{0}{0}$. No existeix.
+    \item \textbf{Límit:} $\lim_{x \to 0} \frac{2x^2 + 2x}{x - x^3} = \left[\frac{0}{0}\right]$. Resolent la indeterminació amb els factors:
+    \[ \lim_{x \to 0} \frac{2x(x + 1)}{x(1 - x)(1 + x)} = \lim_{x \to 0} \frac{2}{1 - x} = \frac{2}{1 - 0} = 2 \]
+\end{itemize}
+Com que el límit existeix (val 2) però la funció no hi està definida, en $x = 0$ hi ha una \textbf{discontinuïtat evitable}.
+
+\textbf{Estudi en $x = 1$:}
+\begin{itemize}
+    \item \textbf{Imatge:} $f(1) = \frac{2(1)^2 + 2(1)}{1 - 1^3} = \frac{4}{0}$. No existeix.
+    \item \textbf{Límit:} Com que ens dona $\frac{4}{0}$, sabem que el límit donarà infinit. Mirem els límits laterals:
+    \[ \lim_{x \to 1^-} f(x) = \frac{2}{0^+} = +\infty \]
+    \[ \lim_{x \to 1^+} f(x) = \frac{2}{0^-} = -\infty \]
+\end{itemize}
+Com que els límits laterals són infinits, en $x = 1$ hi ha una \textbf{discontinuïtat asimptòtica o de salt infinit}.
+
+\vspace{0.5cm}
+
+\subsubsection*{Funció $g(x)$}
+\[ g(x) = \begin{cases} \frac{-5x}{x+1} & \text{si } x < 0 \\ \frac{x^2}{x-1} & \text{si } x \ge 0 \end{cases} \]
+
+\textbf{Estudi en $x = -1$:}
+Aquest punt pertany al primer tram ($x < 0$). Estudiem-hi la funció amb la fórmula corresponent.
+\begin{itemize}
+    \item \textbf{Imatge:} $g(-1) = \frac{-5(-1)}{-1+1} = \frac{5}{0}$. No existeix.
+    \item \textbf{Límits laterals:} Com que obtenim $\frac{k}{0}$, avaluem els límits laterals:
+    \[ \lim_{x \to -1^-} \frac{-5x}{x+1} = \frac{5}{0^-} = -\infty \]
+    \[ \lim_{x \to -1^+} \frac{-5x}{x+1} = \frac{5}{0^+} = +\infty \]
+\end{itemize}
+En $x = -1$ hi ha una \textbf{discontinuïtat asimptòtica o de salt infinit}.
+
+\textbf{Estudi en $x = 0$:}
+Aquest és el punt de ruptura on la funció canvia de tram.
+\begin{itemize}
+    \item \textbf{Imatge:} Com que l'igual a zero està inclòs al segon tram ($x \ge 0$), fem servir aquella expressió: $g(0) = \frac{0^2}{0 - 1} = \frac{0}{-1} = 0$.
+    \item \textbf{Límits laterals:} Cal mirar cada tram per separat:
+    \[ \lim_{x \to 0^-} g(x) = \lim_{x \to 0^-} \frac{-5x}{x+1} = \frac{0}{1} = 0 \]
+    \[ \lim_{x \to 0^+} g(x) = \lim_{x \to 0^+} \frac{x^2}{x-1} = \frac{0}{-1} = 0 \]
+\end{itemize}
+Com que els límits laterals existeixen, coincideixen i són iguals a la imatge de la funció ($g(0) = \lim_{x \to 0} g(x) = 0$), la funció és \textbf{contínua} en $x = 0$.
+
+\textbf{Estudi en $x = 1$:}
+Aquest punt pertany estrictament al segon tram ($x \ge 0$).
+\begin{itemize}
+    \item \textbf{Imatge:} $g(1) = \frac{1^2}{1-1} = \frac{1}{0}$. No existeix.
+    \item \textbf{Límits laterals:} Com que dona $\frac{k}{0}$, l'estudiem lateralment:
+    \[ \lim_{x \to 1^-} \frac{x^2}{x-1} = \frac{1}{0^-} = -\infty \]
+    \[ \lim_{x \to 1^+} \frac{x^2}{x-1} = \frac{1}{0^+} = +\infty \]
+\end{itemize}
+En $x = 1$ hi ha una \textbf{discontinuïtat asimptòtica o de salt infinit}.
+
+\vspace{1cm}
+
+\subsection*{Exercici 18: Estudi de la continuïtat}
+
+Donada la funció:
+\[ f(x) = \frac{-2x^2 + 6x - 4}{1 - x^4} \]
+
+Com que no és una funció definida a trossos, només cal estudiar la seva continuïtat en els punts on no està definida, és a dir, els punts que anul·len el denominador (els punts de no domini).
+
+Trobem aquests punts igualant el denominador a zero:
+\[ 1 - x^4 = 0 \implies x^4 = 1 \implies x = 1 \text{ i } x = -1 \]
+Per tant, estudiarem la continuïtat en els punts $x = 1$ i $x = -1$.
+
+Per facilitar el càlcul dels límits i resoldre les indeterminacions, factoritzem tant el numerador com el denominador prèviament:
+\begin{itemize}
+    \item \textbf{Numerador:} Busquem les arrels resolent $-2x^2 + 6x - 4 = 0$. Ens dona $x=1$ i $x=2$. Per tant, el podem factoritzar com: $-2(x - 1)(x - 2)$.
+    \item \textbf{Denominador:} Podem aplicar Ruffini o utilitzar les identitats notables sabent que $1 - x^4 = (1 - x^2)(1 + x^2)$. Si tornem a desenvolupar la primera part, tenim $(1 - x)(1 + x)(1 + x^2)$. Per fer-ho més fàcil, podem treure un factor $-1$ a fora per tal de tenir directament el terme $(x - 1)$:
+    \[ 1 - x^4 = -(x - 1)(x + 1)(1 + x^2) \]
+\end{itemize}
+
+\textbf{Estudi en $x = 1$:}
+\begin{itemize}
+    \item \textbf{Imatge:} $f(1) = \frac{-2(1)^2 + 6(1) - 4}{1 - 1^4} = \frac{-2 + 6 - 4}{0} = \frac{0}{0}$. No existeix.
+    \item \textbf{Límit:} $\lim_{x \to 1} \frac{-2x^2 + 6x - 4}{1 - x^4} = \left[\frac{0}{0}\right]$. Utilitzem les expressions factoritzades per resoldre la indeterminació (fixa't que els signes negatius es cancel·len $\frac{-2}{-1} = 2$):
+    \[ \lim_{x \to 1} \frac{-2(x - 1)(x - 2)}{-(x - 1)(x + 1)(1 + x^2)} = \lim_{x \to 1} \frac{2(x - 2)}{(x + 1)(1 + x^2)} = \frac{2(1 - 2)}{(1 + 1)(1^2 + 1)} = \frac{-2}{4} = -\frac{1}{2} \]
+\end{itemize}
+Com que el límit existeix (val $-1/2$) però la funció no hi està definida, en $x = 1$ hi ha una \textbf{discontinuïtat evitable}.
+
+\textbf{Estudi en $x = -1$:}
+\begin{itemize}
+    \item \textbf{Imatge:} $f(-1) = \frac{-2(-1)^2 + 6(-1) - 4}{1 - (-1)^4} = \frac{-2 - 6 - 4}{0} = \frac{-12}{0}$. No existeix.
+    \item \textbf{Límit:} Com que ens dona $\frac{-12}{0}$, sabem que els límits laterals tendiran a infinit. Ho comprovem amb l'expressió simplificada $\frac{2(x - 2)}{(x + 1)(1 + x^2)}$:
+    \[ \lim_{x \to -1^-} \frac{2(x - 2)}{(x + 1)(1 + x^2)} = \frac{2(-3)}{0^- \cdot 2} = \frac{-6}{0^-} = +\infty \]
+    \[ \lim_{x \to -1^+} \frac{2(x - 2)}{(x + 1)(1 + x^2)} = \frac{2(-3)}{0^+ \cdot 2} = \frac{-6}{0^+} = -\infty \]
+\end{itemize}
+Com que els límits laterals són infinits, en $x = -1$ hi ha una \textbf{discontinuïtat asimptòtica o de salt infinit}.
+\vspace{1cm}
+
+\subsection*{Exercici 20: Estudi de la continuïtat}
+
+Donada la funció definida a trossos:
+\[ f(x) = \begin{cases} 
+2x + 1 & \text{si } x \le -1 \\ 
+\frac{x + 3}{2x} & \text{si } -1 < x \le 1 \\ 
+\frac{x}{x - 2} & \text{si } x > 1 
+\end{cases} \]
+
+Per estudiar la continuïtat d'aquesta funció, hem de comprovar els punts on canvia de tram (els punts de ruptura) i, molt important, els punts on s'anul·len els denominadors de les fraccions \textbf{si aquests punts pertanyen a l'interval on està definida la fracció}:
+\begin{itemize}
+    \item \textbf{Punts de ruptura:} $x = -1$ i $x = 1$.
+    \item \textbf{Possibles punts de no domini:}
+    \begin{itemize}
+        \item Al segon tram tenim $\frac{x+3}{2x}$. El denominador s'anul·la si $2x = 0 \implies x = 0$. Com que el $0$ està dins de l'interval $(-1, 1]$, hem d'estudiar la continuïtat en $x = 0$.
+        \item Al tercer tram tenim $\frac{x}{x-2}$. El denominador s'anul·la si $x - 2 = 0 \implies x = 2$. Com que el $2$ està dins de l'interval $(1, +\infty)$, hem d'estudiar la continuïtat en $x = 2$.
+    \end{itemize}
+\end{itemize}
+
+Per tant, estudiarem la continuïtat en els punts $x = -1$, $x = 0$, $x = 1$ i $x = 2$.
+
+\textbf{Estudi en $x = -1$ (punt de ruptura):}
+\begin{itemize}
+    \item \textbf{Imatge:} S'avalua al primer tram (on hi ha el $\le$): $f(-1) = 2(-1) + 1 = -2 + 1 = -1$.
+    \item \textbf{Límits laterals:}
+    \[ \lim_{x \to -1^-} f(x) = \lim_{x \to -1^-} (2x + 1) = 2(-1) + 1 = -1 \]
+    \[ \lim_{x \to -1^+} f(x) = \lim_{x \to -1^+} \frac{x+3}{2x} = \frac{-1+3}{2(-1)} = \frac{2}{-2} = -1 \]
+\end{itemize}
+Com que els límits laterals coincideixen i són iguals a la imatge ($f(-1) = \lim_{x \to -1} f(x) = -1$), la funció és \textbf{contínua} en $x = -1$.
+
+\textbf{Estudi en $x = 0$ (anul·la un denominador):}
+Pertany al segon tram.
+\begin{itemize}
+    \item \textbf{Imatge:} $f(0) = \frac{0+3}{2(0)} = \frac{3}{0}$. No existeix.
+    \item \textbf{Límits laterals:} Com que dona $\frac{k}{0}$, avaluem lateralment:
+    \[ \lim_{x \to 0^-} \frac{x+3}{2x} = \frac{3}{0^-} = -\infty \]
+    \[ \lim_{x \to 0^+} \frac{x+3}{2x} = \frac{3}{0^+} = +\infty \]
+\end{itemize}
+En $x = 0$ hi ha una \textbf{discontinuïtat asimptòtica o de salt infinit}.
+
+\textbf{Estudi en $x = 1$ (punt de ruptura):}
+\begin{itemize}
+    \item \textbf{Imatge:} S'avalua al segon tram (on hi ha el $\le$): $f(1) = \frac{1+3}{2(1)} = \frac{4}{2} = 2$.
+    \item \textbf{Límits laterals:}
+    \[ \lim_{x \to 1^-} f(x) = \lim_{x \to 1^-} \frac{x+3}{2x} = \frac{1+3}{2(1)} = 2 \]
+    \[ \lim_{x \to 1^+} f(x) = \lim_{x \to 1^+} \frac{x}{x-2} = \frac{1}{1-2} = \frac{1}{-1} = -1 \]
+\end{itemize}
+Com que els límits laterals existeixen però són diferents ($2 \neq -1$), en $x = 1$ hi ha una \textbf{discontinuïtat de salt finit}. El salt és de $|2 - (-1)| = 3$ unitats.
+
+\textbf{Estudi en $x = 2$ (anul·la un denominador):}
+Pertany al tercer tram.
+\begin{itemize}
+    \item \textbf{Imatge:} $f(2) = \frac{2}{2-2} = \frac{2}{0}$. No existeix.
+    \item \textbf{Límits laterals:} Com que dona $\frac{k}{0}$, avaluem lateralment:
+    \[ \lim_{x \to 2^-} \frac{x}{x-2} = \frac{2}{0^-} = -\infty \]
+    \[ \lim_{x \to 2^+} \frac{x}{x-2} = \frac{2}{0^+} = +\infty \]
+\end{itemize}
+En $x = 2$ hi ha una \textbf{discontinuïtat asimptòtica o de salt infinit}.
+\end{document}

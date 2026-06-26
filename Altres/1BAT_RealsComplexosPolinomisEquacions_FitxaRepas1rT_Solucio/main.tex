@@ -1,0 +1,209 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor} % Paquet per donar color a les solucions
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Assegura't que tens els fitxers d'imatge o comenta aquestes línies si no els tens
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Definició d'estil per a la solució
+\newcommand{\solucio}[1]{%
+    \par\vspace{5pt}\noindent\textcolor{blue}{\textbf{Solució:} #1}\par\vspace{10pt}%
+}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} EXERCICIS I SOLUCIONS (1r T) & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.8cm}
+
+\begin{center}
+    {\Large \textbf{SOLUCIONARI MATEMÀTIQUES (1r BATXILLERAT)}}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    
+    % Exercici 1
+    \item Simplifica la fracció algèbrica:
+    \[ \frac{x^{3}-19x-30}{x^{3}-3x^{2}-10x} \]
+    
+    \solucio{
+    Factoritzem el numerador per Ruffini (provem amb $x=-2$):
+    \[ x^3 - 19x - 30 = (x+2)(x^2-2x-15) = (x+2)(x-5)(x+3) \]
+    Factoritzem el denominador traient factor comú $x$ i resolent l'equació de 2n grau:
+    \[ x^3 - 3x^2 - 10x = x(x^2 - 3x - 10) = x(x-5)(x+2) \]
+    Simplifiquem:
+    \[ \frac{(x+2)(x-5)(x+3)}{x(x-5)(x+2)} = \boxed{\frac{x+3}{x}} \]
+    }
+
+    % Exercici 2
+    \item Resoldre les equacions:
+    \begin{enumerate}[label=\alph*)]
+        \item $\displaystyle \frac{2x-3}{x^{2}-1}-\frac{3-x}{x+1}=0$
+        
+        \solucio{
+        Factoritzem $x^2-1 = (x+1)(x-1)$. Multipliquem tot pel m.c.m. $(x+1)(x-1)$:
+        \[ (2x-3) - (3-x)(x-1) = 0 \]
+        \[ 2x-3 - (3x - 3 - x^2 + x) = 0 \implies 2x - 3 - 4x + 3 + x^2 = 0 \]
+        \[ x^2 - 2x = 0 \implies x(x-2) = 0 \]
+        Solucions possibles: $x=0$ i $x=2$. Comprovem que no anul·len el denominador.
+        \textbf{Resultat:} $x=0, x=2$.
+        }
+
+        \item $\displaystyle \frac{x}{x^{2}-4}+\frac{x-1}{x+2}=\frac{3}{x-2}-2$
+        
+        \solucio{
+        m.c.m. $= x^2-4 = (x+2)(x-2)$.
+        \[ x + (x-1)(x-2) = 3(x+2) - 2(x^2-4) \]
+        \[ x + (x^2 - 3x + 2) = 3x + 6 - 2x^2 + 8 \]
+        \[ x^2 - 2x + 2 = -2x^2 + 3x + 14 \implies 3x^2 - 5x - 12 = 0 \]
+        \[ x = \frac{5 \pm \sqrt{25 - 4(3)(-12)}}{6} = \frac{5 \pm 13}{6} \]
+        \textbf{Resultat:} $x_1 = 3$, $x_2 = -4/3$.
+        }
+    \end{enumerate}
+
+    % Exercici 3
+    \item Simplifica l'expressió algèbrica:
+    \[ \frac{\frac{x-a}{x+a}-\frac{x^{2}+a^{2}}{x^{2}-a^{2}}}{\left(\frac{x-a}{x+a}\right)^{2}-1} \]
+    
+    \solucio{
+    Numerador: m.c.m $(x+a)(x-a)$.
+    \[ \frac{(x-a)^2 - (x^2+a^2)}{x^2-a^2} = \frac{x^2-2ax+a^2-x^2-a^2}{x^2-a^2} = \frac{-2ax}{x^2-a^2} \]
+    Denominador:
+    \[ \frac{(x-a)^2}{(x+a)^2} - 1 = \frac{(x-a)^2 - (x+a)^2}{(x+a)^2} = \frac{(x^2-2ax+a^2) - (x^2+2ax+a^2)}{(x+a)^2} = \frac{-4ax}{(x+a)^2} \]
+    Divisió:
+    \[ \frac{-2ax}{(x-a)(x+a)} : \frac{-4ax}{(x+a)^2} = \frac{-2ax \cdot (x+a)^2}{-4ax \cdot (x-a)(x+a)} \]
+    Simplificant:
+    \[ \boxed{\frac{x+a}{2(x-a)}} \]
+    }
+
+    % Exercici 4
+    \item Resoldre les equacions:
+    \begin{enumerate}[label=\alph*)]
+        \item $x^{3}+2x^{2}-5x-6=0$
+        \solucio{
+        Ruffini amb $x=2$: $1(2)^3 + 2(2)^2 - 5(2) - 6 = 8+8-10-6=0$.
+        Queda $(x-2)(x^2+4x+3)=0$. Resolent la quadràtica:
+        \textbf{Solucions:} $x=2, x=-1, x=-3$.
+        }
+        
+        \item $-x^{4}+x^{3}-4x^{2}+4x=0$
+        \solucio{
+        Factor comú $-x$: $-x(x^3 - x^2 + 4x - 4) = 0 \implies x=0$.
+        Agrupant termes del parèntesi: $x^2(x-1) + 4(x-1) = (x^2+4)(x-1)$.
+        \textbf{Solucions reals:} $x=0, x=1$. (Les altres són $2i, -2i$).
+        }
+    \end{enumerate}
+
+    % Exercici 5
+    \item Resoldre el sistema d'inequacions:
+    \[ \begin{cases} \frac{x+3}{2}-2x > \frac{5x-3}{3}-2 \\ \frac{x-2}{3}+1 < \frac{x+3}{2}+x \end{cases} \]
+    
+    \solucio{
+    1a inequació ($\times 6$): $3(x+3) - 12x > 2(5x-3) - 12 \implies -9x + 9 > 10x - 18 \implies 27 > 19x \implies x < 27/19$.
+    \newline
+    2a inequació ($\times 6$): $2(x-2) + 6 < 3(x+3) + 6x \implies 2x + 2 < 9x + 9 \implies -7 < 7x \implies x > -1$.
+    \textbf{Solució interval:} $(-1, \frac{27}{19})$.
+    }
+
+    % Exercici 6
+    \item Simplifica les expressions algèbriques:
+    \begin{enumerate}[label=\alph*)]
+        \item $\displaystyle \frac{x^{2}+4x}{2\cdot\sqrt{x^{2}+8x+16}}$
+        \solucio{
+        $\sqrt{x^2+8x+16} = \sqrt{(x+4)^2} = x+4$.
+        \[ \frac{x(x+4)}{2(x+4)} = \boxed{\frac{x}{2}} \]
+        }
+
+        \item $\displaystyle \frac{x^{2}+3x}{2\cdot\sqrt{x^{2}+6x+9}}$
+        \solucio{
+        $\sqrt{x^2+6x+9} = x+3$.
+        \[ \frac{x(x+3)}{2(x+3)} = \boxed{\frac{x}{2}} \]
+        }
+    \end{enumerate}
+
+    % Exercici 7
+    \item Resoldre l'equació:
+    \[ \left[-\frac{3(x+1)^{2}-6(x+1)}{x^{2}-1}\right]\cdot(1+2x)=-4 \]
+    
+    \solucio{
+    Simplifiquem el claudàtor. Numerador: treiem factor comú $3(x+1)$:
+    \[ 3(x+1)[(x+1)-2] = 3(x+1)(x-1) \]
+    Denominador: $(x+1)(x-1)$.
+    La fracció és: $\frac{3(x+1)(x-1)}{(x+1)(x-1)} = 3$. Amb el signe menys davant queda $-3$.
+    Equació resultant: $-3(1+2x) = -4 \implies 1+2x = 4/3 \implies 2x = 1/3$.
+    \textbf{Solució:} $x = 1/6$.
+    }
+
+    % Exercici 8
+    \item Simplifica l'expressió amb radicals:
+    \[ \frac{3\sqrt{6}+2\sqrt{2}}{3\sqrt{3}+2} \]
+    
+    \solucio{
+    Racionalitzem multiplicant pel conjugat $(3\sqrt{3}-2)$:
+    Num: $(3\sqrt{6}+2\sqrt{2})(3\sqrt{3}-2) = 9\sqrt{18} - 6\sqrt{6} + 6\sqrt{6} - 4\sqrt{2} = 27\sqrt{2} - 4\sqrt{2} = 23\sqrt{2}$.
+    Denom: $(3\sqrt{3})^2 - 2^2 = 27 - 4 = 23$.
+    Resultat: $\frac{23\sqrt{2}}{23} = \boxed{\sqrt{2}}$.
+    }
+
+    % Exercici 9
+    \item Resoldre l'equació en els cos dels nombres complexos:
+    \[ x^{6}+64=0 \]
+    
+    \solucio{
+    $x^6 = -64$. En forma polar $-64 = 64_{180^{\circ}}$.
+    Les arrels sisenes són: $\sqrt[6]{64} = 2$. Angles: $\frac{180 + 360k}{6} = 30 + 60k$.
+    \textbf{Solucions:} $2_{30^{\circ}}, 2_{90^{\circ}}, 2_{150^{\circ}}, 2_{210^{\circ}}, 2_{270^{\circ}}, 2_{330^{\circ}}$.
+    En binòmica: $\sqrt{3}+i, 2i, -\sqrt{3}+i, -\sqrt{3}-i, -2i, \sqrt{3}-i$.
+    }
+
+    % Exercici 10
+    \item Desenvolupar pel binomi de Newton:
+    \[ (2-3i)^{6} \]
+    
+    \solucio{
+    Aplicant la fórmula $(a+b)^6 = \sum \binom{6}{k} a^{6-k}b^k$:
+    \[ \binom{6}{0}2^6 + \binom{6}{1}2^5(-3i) + \binom{6}{2}2^4(-3i)^2 + \binom{6}{3}2^3(-3i)^3 + \dots \]
+    Calculant els termes:
+    $T_0 = 64$, $T_1 = 6 \cdot 32 \cdot (-3i) = -576i$, $T_2 = 15 \cdot 16 \cdot (-9) = -2160$,
+    $T_3 = 20 \cdot 8 \cdot (27i) = 4320i$, $T_4 = 15 \cdot 4 \cdot 81 = 4860$,
+    $T_5 = 6 \cdot 2 \cdot (-243i) = -2916i$, $T_6 = -729$.
+    Sumem part real i imaginària:
+    Re: $64 - 2160 + 4860 - 729 = 2035$.
+    Im: $-576 + 4320 - 2916 = 828$.
+    \textbf{Resultat:} $2035 + 828i$.
+    }
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,359 @@
+\documentclass[12pt,a4paper]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{amsmath, amssymb}
+\usepackage{multicol} % Necessari per posar els apartats en diverses columnes
+\usepackage{pgfplots} % Necessari per dibuixar les gràfiques de l'ex 1
+\pgfplotsset{compat=1.18}
+
+% DESCOMENTA LA SEGÜENT LÍNIA PER MOSTRAR LES SOLUCIONS, COMENTA-LA PER AMAGAR-LES:
+\printanswers 
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=3.5cm, bottom=2.5cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.6cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.6cm]{Logo_Institut.png}}
+\renewcommand{\headrulewidth}{0.3pt}
+
+% 2. PEU DE PÀGINA
+\fancyfoot[C]{
+    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+        \hline
+        Institut Nou de Vic & Prova d'avaluació & Pàgina \thepage\ de \pageref{LastPage} \\ \hline
+    \end{tabularx}
+}
+
+\begin{document}
+
+% 3. TAULA DE DADES
+\noindent
+\begingroup
+\renewcommand{\arraystretch}{2} 
+\begin{tabularx}{\textwidth}{|>{\hsize=0.7\hsize}X|>{\hsize=1.3\hsize}X|c|}
+    \hline
+    \multicolumn{2}{|l|}{Cognoms i Nom:} & Qualificació \\ \hline
+    Data: & Curs: 1r BAT &  \\ \cline{1-2}
+    Matèria: Matemàtiques & Prova: Funcions Exponencials i Logaritmes & \\ \hline
+    \multicolumn{3}{|l|}{Observacions:} \\ \hline
+\end{tabularx}
+\endgroup
+
+
+% 4. EXERCICIS
+\begin{questions}
+
+\question \textbf{(1,25 punts)} Representar gràficament:
+\begin{multicols}{3}
+\begin{parts}
+    \part $y=3^{x}$
+    \part $y=\left(\frac{1}{3}\right)^{x}$
+    \part $y=\log_{3}x$
+\end{parts}
+\end{multicols}
+\begin{solution}
+    \textbf{a)} Funció exponencial creixent. Asímptota horitzontal a $y=0$ per a $x \to -\infty$.
+    \begin{center}
+    \begin{tikzpicture}
+    \begin{axis}[
+        width=7cm, height=6cm,
+        axis lines=middle, grid=both,
+        xmin=-3, xmax=3, ymin=-1, ymax=9,
+        xlabel=$x$, ylabel=$y$,
+        samples=100, domain=-2.5:2.5
+    ]
+    \addplot[blue, thick] {3^x};
+    \end{axis}
+    \end{tikzpicture}
+    \end{center}
+    
+    \textbf{b)} Funció exponencial decreixent. Asímptota horitzontal a $y=0$ per a $x \to +\infty$.
+    \begin{center}
+    \begin{tikzpicture}
+    \begin{axis}[
+        width=7cm, height=6cm,
+        axis lines=middle, grid=both,
+        xmin=-3, xmax=3, ymin=-1, ymax=9,
+        xlabel=$x$, ylabel=$y$,
+        samples=100, domain=-2.5:2.5
+    ]
+    \addplot[red, thick] {(1/3)^x};
+    \end{axis}
+    \end{tikzpicture}
+    \end{center}
+    
+    \textbf{c)} Funció logarítmica (inversa de l'apartat a). Asímptota vertical a $x=0$.
+    \begin{center}
+    \begin{tikzpicture}
+    \begin{axis}[
+        width=7cm, height=6cm,
+        axis lines=middle, grid=both,
+        xmin=-1, xmax=9, ymin=-3, ymax=3,
+        xlabel=$x$, ylabel=$y$,
+        samples=100, domain=0.01:9
+    ]
+    \addplot[green!50!black, thick] {ln(x)/ln(3)};
+    \end{axis}
+    \end{tikzpicture}
+    \end{center}
+\end{solution}
+
+\question \textbf{(1,25 punts)} Resoldre les equacions exponencials següents. Arrodoniu fins a les centèsimes.
+\begin{multicols}{2}
+\begin{parts}
+    \part $5^{x}=12$
+    \part $2^{3x-7}=10$
+\end{parts}
+\end{multicols}
+\begin{solution}
+    \textbf{a)} Apliquem logaritmes a banda i banda:
+    \begin{align*}
+        5^x &= 12 \\
+        \ln(5^x) &= \ln(12) \\
+        x \ln(5) &= \ln(12) \\
+        x &= \frac{\ln(12)}{\ln(5)} \\
+        &\boxed{x \approx 1,54}
+    \end{align*}
+    
+    \textbf{b)} Apliquem logaritmes a banda i banda:
+    \begin{align*}
+        2^{3x-7} &= 10 \\
+        \ln(2^{3x-7}) &= \ln(10) \\
+        (3x-7) \ln(2) &= \ln(10) \\
+        3x - 7 &= \frac{\ln(10)}{\ln(2)} \\
+        3x &= \frac{\ln(10)}{\ln(2)} + 7 \\
+        3x &\approx 3,32 + 7 \\
+        x &= \frac{10,32}{3} \\
+        &\boxed{x \approx 3,44}
+    \end{align*}
+\end{solution}
+
+\question \textbf{(1,25 punts)} Resoldre les equacions exponencials següents:
+\begin{multicols}{2}
+\begin{parts}
+    \part $2^{3x-5}=1024$
+    \part $25^{x-4}=\left(\frac{1}{5}\right)^{2x}$
+\end{parts}
+\end{multicols}
+\begin{solution}
+    \textbf{a)} Busquem la mateixa base a banda i banda:
+    \begin{align*}
+        2^{3x-5} &= 2^{10} \\
+        3x - 5 &= 10 \\
+        3x &= 15 \\
+        &\boxed{x = 5}
+    \end{align*}
+    
+    \textbf{b)} Expressem totes les bases com a potències de 5:
+    \begin{align*}
+        (5^2)^{x-4} &= (5^{-1})^{2x} \\
+        5^{2x-8} &= 5^{-2x} \\
+        2x - 8 &= -2x \\
+        4x &= 8 \\
+        &\boxed{x = 2}
+    \end{align*}
+\end{solution}
+
+\question \textbf{(1,25 punts)} Resoldre les equacions exponencials següents:
+\begin{multicols}{3}
+\begin{parts}
+    \part $9^{x-1}-2\cdot 3^{x}-27=0$
+    \part $2^{x+1}+2^{x}+2^{x-1}=112$
+    \part $5^{x}\cdot 5^{x+3}\cdot 5^{x-1}=625$
+\end{parts}
+\end{multicols}
+\begin{solution}
+    \textbf{a)} Escrivim les potències amb base 3 i fem un canvi de variable:
+    \begin{align*}
+        \frac{3^{2x}}{9} - 2\cdot 3^x - 27 &= 0
+    \end{align*}
+    Fem el canvi $t = 3^x$:
+    \begin{align*}
+        \frac{t^2}{9} - 2t - 27 &= 0 \\
+        t^2 - 18t - 243 &= 0 \\
+        t &= \frac{18 \pm \sqrt{324 + 972}}{2} \\
+        t &= \frac{18 \pm 36}{2}
+    \end{align*}
+    Obtenim $t_1 = 27$ i $t_2 = -9$. Desfem el canvi:
+    \begin{align*}
+        3^x &= 27 \implies \boxed{x = 3} \\
+        3^x &= -9 \implies \text{No té solució real}
+    \end{align*}
+    
+    \textbf{b)} Traiem factor comú de la potència amb l'exponent més petit ($2^{x-1}$):
+    \begin{align*}
+        2^{x-1} \left(2^2 + 2^1 + 1\right) &= 112 \\
+        2^{x-1} (4 + 2 + 1) &= 112 \\
+        2^{x-1} \cdot 7 &= 112 \\
+        2^{x-1} &= \frac{112}{7} \\
+        2^{x-1} &= 16 \\
+        2^{x-1} &= 2^4 \\
+        x - 1 &= 4 \\
+        &\boxed{x = 5}
+    \end{align*}
+    
+    \textbf{c)} Agrupem els exponents utilitzant les propietats de les potències:
+    \begin{align*}
+        5^{x + (x+3) + (x-1)} &= 5^4 \\
+        5^{3x+2} &= 5^4 \\
+        3x + 2 &= 4 \\
+        3x &= 2 \\
+        &\boxed{x = \frac{2}{3}}
+    \end{align*}
+\end{solution}
+
+\question \textbf{(1,25 punts)} Resoldre les equacions logarítmiques (aplicant la definició):
+\begin{multicols}{4}
+\begin{parts}
+    \part $\log_{2}64=x$
+    \part $\log_{x}5=-3$
+    \part $\log_{4}x=\frac{1}{2}$
+    \part $\log_{16}2=x$
+\end{parts}
+\end{multicols}
+\begin{solution}
+    \textbf{a)} 
+    \begin{align*}
+        2^x &= 64 \\
+        2^x &= 2^6 \\
+        &\boxed{x = 6}
+    \end{align*}
+    
+    \textbf{b)} 
+    \begin{align*}
+        x^{-3} &= 5 \\
+        \frac{1}{x^3} &= 5 \\
+        x^3 &= \frac{1}{5} \\
+        &\boxed{x = \sqrt[3]{\frac{1}{5}}}
+    \end{align*}
+    
+    \textbf{c)} 
+    \begin{align*}
+        4^{1/2} &= x \\
+        \sqrt{4} &= x \\
+        &\boxed{x = 2}
+    \end{align*}
+    
+    \textbf{d)} 
+    \begin{align*}
+        16^x &= 2 \\
+        (2^4)^x &= 2^1 \\
+        2^{4x} &= 2^1 \\
+        4x &= 1 \\
+        &\boxed{x = \frac{1}{4}}
+    \end{align*}
+\end{solution}
+
+\question \textbf{(1,25 punts)} Si $\log a=3$, $\log b=5$ i $\log c=-2$, desenvolupar i calcular \textbf{sense utilitzar calculadora} el valor de les expressions logarítmiques següents:
+\begin{multicols}{2}
+\begin{parts}
+    \part $\log(a^{2}\cdot b\cdot c^{2})$
+    \part $\log\left(\frac{b^{2}}{\sqrt{c}}\right)$
+\end{parts}
+\end{multicols}
+\begin{solution}
+    \textbf{a)} Apliquem propietats del logaritme d'un producte i d'una potència:
+    \begin{align*}
+        \log(a^{2}\cdot b\cdot c^{2}) &= \log(a^2) + \log(b) + \log(c^2) \\
+        &= 2\log(a) + \log(b) + 2\log(c) \\
+        &= 2(3) + 5 + 2(-2) \\
+        &= 6 + 5 - 4 \\
+        &\boxed{= 7}
+    \end{align*}
+    
+    \textbf{b)} Apliquem propietats del logaritme d'un quocient i d'una potència:
+    \begin{align*}
+        \log\left(\frac{b^{2}}{\sqrt{c}}\right) &= \log(b^2) - \log(c^{1/2}) \\
+        &= 2\log(b) - \frac{1}{2}\log(c) \\
+        &= 2(5) - \frac{1}{2}(-2) \\
+        &= 10 + 1 \\
+        &\boxed{= 11}
+    \end{align*}
+\end{solution}
+
+\question \textbf{(1,25 punts)} Resoldre les equacions logarítmiques següents:
+\begin{multicols}{2}
+\begin{parts}
+    \part $\log 4-2\cdot \log 5+\log(x+1)-\frac{1}{3}\log 8=1$
+    \part $\begin{cases} \log x+\log y=1 \\ \log x^{3}-2\cdot \log y=3 \end{cases}$
+\end{parts}
+\end{multicols}
+\begin{solution}
+    \textbf{a)} Entrem els coeficients com a exponents i agrupem:
+    \begin{align*}
+        \log 4 - \log(5^2) + \log(x+1) - \log(\sqrt[3]{8}) &= \log 10 \\
+        \log 4 - \log 25 + \log(x+1) - \log 2 &= \log 10 \\
+        \log(4) + \log(x+1) - (\log 25 + \log 2) &= \log 10 \\
+        \log(4(x+1)) - \log(25 \cdot 2) &= \log 10 \\
+        \log\left(\frac{4x+4}{50}\right) &= \log 10 \\
+        \frac{4x+4}{50} &= 10 \\
+        4x+4 &= 500 \\
+        4x &= 496 \\
+        &\boxed{x = 124}
+    \end{align*}
+    
+    \textbf{b)} Simplifiquem la segona equació aplicant propietats:
+    \begin{align*}
+        \begin{cases} \log x + \log y = 1 \\ 3\log x - 2\log y = 3 \end{cases}
+    \end{align*}
+    Fem el canvi de variable $U = \log x$ i $V = \log y$:
+    \begin{align*}
+        \begin{cases} U + V = 1 \\ 3U - 2V = 3 \end{cases}
+    \end{align*}
+    Aïllem $V$ a la primera ($V = 1 - U$) i substituïm a la segona:
+    \begin{align*}
+        3U - 2(1 - U) &= 3 \\
+        3U - 2 + 2U &= 3 \\
+        5U &= 5 \\
+        U &= 1 \implies V = 0
+    \end{align*}
+    Desfem el canvi de variable:
+    \begin{align*}
+        \log x &= 1 \implies \boxed{x = 10} \\
+        \log y &= 0 \implies \boxed{y = 1}
+    \end{align*}
+\end{solution}
+
+\question \textbf{(1,25 punts)} Resoldre les equacions logarítmiques següents:
+\begin{multicols}{2}
+\begin{parts}
+    \part $\log(5x+2)-\log(3x+20)=-1$
+    \part $\log_{x}(100)-\log_{x}(25)=2$
+\end{parts}
+\end{multicols}
+\begin{solution}
+    \textbf{a)} Expressem el $-1$ com a logaritme i apliquem propietats a l'esquerra:
+    \begin{align*}
+        \log\left(\frac{5x+2}{3x+20}\right) &= \log(10^{-1}) \\
+        \frac{5x+2}{3x+20} &= \frac{1}{10} \\
+        10(5x+2) &= 3x+20 \\
+        50x + 20 &= 3x + 20 \\
+        47x &= 0 \\
+        &\boxed{x = 0}
+    \end{align*}
+    
+    \textbf{b)} Apliquem la propietat de la resta de logaritmes:
+    \begin{align*}
+        \log_x\left(\frac{100}{25}\right) &= 2 \\
+        \log_x(4) &= 2
+    \end{align*}
+    Apliquem la definició de logaritme:
+    \begin{align*}
+        x^2 &= 4 \\
+        x &= \pm 2
+    \end{align*}
+    Com que la base d'un logaritme ha de ser estrictament positiva i diferent d'1, descartem la solució negativa. \\
+    \vspace{0.3cm}
+    \indent \boxed{x = 2}
+\end{solution}
+
+\end{questions}
+
+\end{document}

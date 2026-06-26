@@ -1,0 +1,138 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Assegura't que tens els fitxers d'imatge o comenta aquestes línies si no els tens
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Funcions, límits i derivades - Fitxa 1 & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.8cm}
+
+% --- EXERCICI 1 ---
+\section*{Activitat 1: Variables dependent i independent}
+
+Abans de començar, recorda:
+\begin{itemize}
+    \item \textbf{Variable independent ($x$)}: És la que decidim nosaltres o la que "causa" el canvi.
+    \item \textbf{Variable dependent ($y$ o $f(x)$)}: És la que "depèn" del valor de l'altra.
+\end{itemize}
+
+\textbf{Exemples resolts:}
+\begin{itemize}
+    \item \textit{El preu de les entrades de cinema segons el nombre de persones}: La variable independent és el \textbf{nombre de persones} i la dependent és el \textbf{preu total}.
+    \item \textit{La distància que recorre un tren que va a velocitat constant segons el temps que passa}: La variable independent és el \textbf{temps} i la dependent és la \textbf{distància}.
+\end{itemize}
+
+\textbf{Ara, determina quina és la variable dependent i la variable independent en els casos següents:}
+\begin{enumerate}[label=\alph*)]
+    \item L'import que cal pagar en una gasolinera i els litres de benzina que hi comprem.
+    \item El consum elèctric d'una llar i el nombre d'aparells encesos durant un dia.
+    \item L'espai recorregut per un cotxe i la velocitat a què circula.
+    \item El cost mensual d'un gimnàs segons els dies que hi assisteixes si la quota és per sessió.
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% --- EXERCICI 2 ---
+\section*{Activitat 2: Expressió algebraica}
+
+Representa la variable independent per $x$ i la dependent per $f(x)$. Determina l'expressió algebraica de les funcions de l'activitat anterior utilitzant aquestes dades:
+\begin{enumerate}[label=\alph*)]
+    \item Preu de la benzina: $1,65$ \euro/litre.
+    \item Cada aparell consumeix una mitjana de $0,5$ kWh en un d.
+    \item El cotxe circula durant un temps fix de $2$ hores. (Recorda: $d = v \cdot t$).
+    \item La matrícula és de $20$ € i cada sessió val $3$ €.
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% --- EXERCICI 3 ---
+\section*{Activitat 3: Domini de funcions geomètriques}
+
+\textbf{Exemples resolts:}
+\begin{itemize}
+    \item \textit{L'àrea d'un quadrat segons el seu costat ($x$)}: $f(x) = x^2$. El domini són els reals positius ($x > 0$) perquè un costat no pot ser negatiu ni zero.
+    \item \textit{El perímetre d'un triangle equilàter segons el costat ($x$)}: $f(x) = 3x$. Domini: $(0, +\infty)$.
+\end{itemize}
+
+\textbf{Escriu l'expressió algebraica i troba el domini de:}
+\begin{enumerate}[label=\alph*)]
+    \item L'expressió que, a cada valor del radi d'una esfera, li determina la seva superfície. (Indica la $x$ com el radi i $f(x)$ com la superfície).
+    \item L'expressió que determina la longitud de la diagonal d'un quadrat a partir de la longitud costat.
+    \item L'expressió que, a partir del radi d'una circumferència , li assigna l'àrea de l'hexàgon regular inscrit. \textit{(Pista: si no tens clara l'expressió, troba l'àrea de l'hexàgon regular inscrit d'una circumferència de radi 5 cm, i després canvia el 5 per la x}.
+    \item L'expressió que determina la longitud de l'aresta d'un cub en funció del seu volum.
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% --- EXERCICI 4 ---
+\section*{Activitat 4: Càlcul de dominis}
+
+Determina el domini de les funcions següents (para atenció a les restriccions dels denominadors i les arrels).:
+
+\begin{enumerate}[label=\alph*]
+    \item $f(x) = 3x - 7$
+    \item $g(x) = 2x^2 - 7x + 11$
+    \item $h(x) = \frac{1}{x + 1}$
+    \item $i(x) = \sqrt{x^2 - 9}$ \quad (Irracional de segon grau)
+    \item $j(x) = \sqrt[3]{x - 5}$ \quad (Arrel d'índex imparell)
+    \item $k(x) = \sqrt{x^2 + 1}$ 
+\end{enumerate}
+
+% --- EXERCICI 5: FUNCIONS A TROSSOS ---
+\section*{Activitat 5: Funcions definides a trossos}
+
+Recorda que per representar una funció a trossos:
+\begin{itemize}
+    \item Has de dibuixar cada "tros" només en l'interval de l'eix $x$ indicat.
+    \item Un signe $\leq$ o $\geq$ indica un \textbf{punt tancat} ($\bullet$), és a dir, el valor està inclòs.
+    \item Un signe $<$ o $>$ indica un \textbf{punt obert} ($\circ$), el valor no està inclòs.
+\end{itemize}
+
+\textbf{Exercici:} Representa gràficament la funció següent, que presenta dos punts de ruptura ($x = -2$ i $x = 3$):
+
+\[
+f(x) = \begin{cases} 
+x + 4 & \text{si } x < -2 \\
+-2x + 1 & \text{si } -2 \leq x < 3 \\
+x - 5 & \text{si } x \geq 3 
+\end{cases}
+\]
+
+\textbf{Passos recomanats:}
+\begin{enumerate}
+    \item Fes una petita taula de valors per a cada tram. (Assegura't que els valors de x formen part de l'interval correcte per a cada tram).
+    \item Identifica quins extrems són punts oberts i quins tancats.
+\end{enumerate}
+
+\vspace{0.5cm}
+\end{document}

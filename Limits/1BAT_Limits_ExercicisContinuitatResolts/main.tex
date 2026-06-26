@@ -1,0 +1,384 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{amssymb} % Afegit per als símbols matemàtics (R)
+
+% 1. MARGES I CAPÇALERA ORIGINALS RECUPERATS
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Logos recuperats de la plantilla original
+% (Assegura't de tenir els arxius Logo_Departament.png i Logo_Institut.png a la mateixa carpeta)
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+\hline
+\textbf{Matemàtiques 1r Batxillerat}  \\ \hline
+\textbf{Exercicis resolts continuitat} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+% --- ÍNDEX ---
+\renewcommand{\contentsname}{Índex}
+\tableofcontents
+\vspace{1cm}
+
+\section{Estudi de la continuïtat en un punt}
+
+\subsection{Teoria: Continuïtat en un punt i tipus de discontinuïtats}
+
+Perquè una funció $f(x)$ sigui contínua en un punt concret $x=a$, s'han de complir \textbf{tres condicions}:
+\begin{enumerate}
+    \item La funció ha d'estar definida en aquell punt, és a dir, ha d'existir la imatge $f(a)$.
+    \item Ha d'existir el límit de la funció quan $x$ tendeix a $a$: $\lim_{x \to a} f(x) = L$. En el cas de funcions definides a trossos on $a$ és el punt de canvi, o quan obtenim una indeterminació del tipus $k/0$, cal calcular els \textbf{límits laterals} i comprovar que coincideixen: $\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x)$.
+    \item La imatge i el límit han de coincidir: $f(a) = \lim_{x \to a} f(x)$.
+\end{enumerate}
+
+Si alguna d'aquestes condicions falla, la funció té una \textbf{discontinuïtat} en $x=a$. Depenent de què falli, la classifiquem en:
+\begin{itemize}
+    \item \textbf{Evitable:} El límit de la funció existeix i és un nombre real, però o bé la funció no està definida en $x=a$ (falta un forat), o bé la imatge $f(a)$ té un valor diferent al límit (el punt està desplaçat).
+    \item \textbf{De salt finit:} Els límits laterals existeixen i són nombres reals, però donen resultats diferents. La gràfica fa un "salt" calculable.
+    \item \textbf{De salt infinit (o asimptòtica):} Algun dels límits laterals (o tots dos) dóna $+\infty$ o $-\infty$. Això sol passar quan el denominador s'anul·la.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection{Exercici 9 (activitats finals)}
+
+\textbf{Classifica les discontinuïtats de cada funció per al valor de $x$ que s'indica:}
+
+\textbf{a)} $f(x) = \frac{1}{x-3} \quad \text{en } x=3$ \\
+Calculem la imatge i el límit en $x=3$:
+\begin{itemize}
+    \item Imatge: $f(3) = \frac{1}{3-3} = \frac{1}{0}$. No existeix, el punt no és del domini.
+    \item Límit: $\lim_{x \to 3} \frac{1}{x-3} = \frac{1}{0}$. Això implica calcular límits laterals.
+    \begin{align*}
+        \lim_{x \to 3^-} \frac{1}{x-3} = \frac{1}{0^-} = -\infty \\
+        \lim_{x \to 3^+} \frac{1}{x-3} = \frac{1}{0^+} = +\infty
+    \end{align*}
+\end{itemize}
+Com que els límits laterals tendeixen a l'infinit, hi ha una \textbf{discontinuïtat de salt infinit} (asimptòtica) en $x=3$.
+
+\vspace{0.3cm}
+\textbf{b)} $g(x) = \begin{cases} x & \text{si } x < -1 \\ x^2+2 & \text{si } x \ge -1 \end{cases} \quad \text{en } x=-1$ \\
+Calculem la imatge i el límit en el punt de canvi $x=-1$:
+\begin{itemize}
+    \item Imatge: $g(-1) = (-1)^2+2 = 1+2 = 3$ (fem servir la branca de baix perquè té el signe $\ge$).
+    \item Límit: Com que és un punt on la funció canvia de fórmula, fem els límits laterals:
+    \begin{align*}
+        \lim_{x \to -1^-} g(x) = \lim_{x \to -1} (x) = -1 \\
+        \lim_{x \to -1^+} g(x) = \lim_{x \to -1} (x^2+2) = (-1)^2+2 = 3
+    \end{align*}
+\end{itemize}
+Els límits laterals existeixen però no coincideixen ($-1 \neq 3$). Per tant, no hi ha límit global. Tenim una \textbf{discontinuïtat de salt finit} en $x=-1$. El salt és de magnitud $|3 - (-1)| = 4$.
+
+\vspace{0.5cm}
+
+\subsection{Exercici 10 (activitats finals)}
+
+\textbf{Estudia la continuïtat de la funció $f(x) = \frac{2x^2-8}{x^2-2x}$ en $x=0$ i $x=2$.}
+
+\textbf{Estudi en $x=0$:}
+\begin{itemize}
+    \item Imatge: $f(0) = \frac{2(0)^2-8}{0^2-2(0)} = \frac{-8}{0}$. No existeix.
+    \item Límit: $\lim_{x \to 0} \frac{2x^2-8}{x^2-2x} = \frac{-8}{0}$. Això dóna lloc a límits laterals infinits:
+    \begin{align*}
+        \lim_{x \to 0^-} \frac{2x^2-8}{x^2-2x} &= \frac{-8}{0^+} = -\infty \\
+        \lim_{x \to 0^+} \frac{2x^2-8}{x^2-2x} &= \frac{-8}{0^-} = +\infty
+    \end{align*}
+\end{itemize}
+Hi ha una \textbf{discontinuïtat de salt infinit} en $x=0$.
+
+\textbf{Estudi en $x=2$:}
+\begin{itemize}
+    \item Imatge: $f(2) = \frac{2(2)^2-8}{2^2-2(2)} = \frac{8-8}{4-4} = \frac{0}{0}$. No existeix (indeterminació).
+    \item Límit: Hem de resoldre la indeterminació $\frac{0}{0}$ factoritzant numerador i denominador.
+    \begin{align*}
+        2x^2-8 &= 2(x^2-4) = 2(x-2)(x+2) \\
+        x^2-2x &= x(x-2)
+    \end{align*}
+    Calculem de nou el límit:
+    \[ \lim_{x \to 2} \frac{2(x-2)(x+2)}{x(x-2)} = \lim_{x \to 2} \frac{2(x+2)}{x} = \frac{2(4)}{2} = 4 \]
+\end{itemize}
+El límit existeix i val $4$, però la funció no està definida al punt (imatge inexistent). Per tant, hi ha una \textbf{discontinuïtat evitable} en $x=2$.
+
+\vspace{0.5cm}
+
+\subsection{Exercici 8 (activitats finals)}
+
+\textbf{La funció $f(x) = \begin{cases} 1 & \text{si } x \le 0 \\ x+2 & \text{si } x > 0 \end{cases}$ és contínua en $x=0$? I en $x=1$? Raona les respostes.}
+
+\textbf{Estudi en $x=0$:}
+\begin{itemize}
+    \item Imatge: $f(0) = 1$ (branca superior).
+    \item Límits laterals (perquè és punt de canvi):
+    \begin{align*}
+        \lim_{x \to 0^-} f(x) = \lim_{x \to 0} 1 = 1 \\
+        \lim_{x \to 0^+} f(x) = \lim_{x \to 0} (x+2) = 0+2 = 2
+    \end{align*}
+\end{itemize}
+Els límits laterals no coincideixen, per tant no hi ha límit i la funció \textbf{no és contínua} en $x=0$. Presenta una \textbf{discontinuïtat de salt finit}.
+
+\textbf{Estudi en $x=1$:}
+\begin{itemize}
+    \item En aquest cas, $x=1$ no és un punt de canvi de la funció. Com que $1 > 0$, cau exclusivament dins la segona branca: $f(x) = x+2$.
+    \item Aquesta branca és un polinomi de primer grau (una recta), i els polinomis són sempre continus en tot el seu domini de definició.
+    \item Podem comprovar-ho: $f(1) = 1+2 = 3$. I el límit: $\lim_{x \to 1} (x+2) = 3$. 
+\end{itemize}
+Per tant, \textbf{sí que és contínua} en $x=1$.
+
+\vspace{0.5cm}
+
+\subsection{Exercici 2 (Autoavaluació)}
+
+\textbf{Estudia la continuïtat de la funció següent en $x=-1$ i en $x=2$.}
+\[ f(x) = \begin{cases} 5x+2 & \text{si } x \le -1 \\ 4 & \text{si } -1 < x \le 2 \\ x^2 & \text{si } x > 2 \end{cases} \]
+
+\textbf{Estudi en $x=-1$:}
+\begin{itemize}
+    \item Imatge: $f(-1) = 5(-1)+2 = -3$.
+    \item Límits laterals:
+    \begin{align*}
+        \lim_{x \to -1^-} f(x) = \lim_{x \to -1} (5x+2) = -3 \\
+        \lim_{x \to -1^+} f(x) = \lim_{x \to -1} 4 = 4
+    \end{align*}
+\end{itemize}
+Com que $-3 \neq 4$, la funció \textbf{no és contínua} en $x=-1$. Té una discontinuïtat de salt finit.
+
+\textbf{Estudi en $x=2$:}
+\begin{itemize}
+    \item Imatge: $f(2) = 4$.
+    \item Límits laterals:
+    \begin{align*}
+        \lim_{x \to 2^-} f(x) = \lim_{x \to 2} 4 = 4 \\
+        \lim_{x \to 2^+} f(x) = \lim_{x \to 2} x^2 = 2^2 = 4
+    \end{align*}
+\end{itemize}
+En aquest cas, imatge i límit coincideixen ($4 = 4$). La funció \textbf{és contínua} en $x=2$.
+
+\vspace{0.5cm}
+
+\subsection{Exercici 23 (activitats finals)}
+
+\textbf{Estudia la continuïtat en $x=1$ i $x=3$ de la funció:}
+\[ f(x) = \begin{cases} 3x-2 & \text{si } x \le 0 \\ \frac{2x^2}{x+1} & \text{si } 1 < x \le 3 \\ \frac{x-3}{x^2-3x} & \text{si } x > 3 \end{cases} \]
+\textit{Nota: Hi ha una errata a l'enunciat original. El primer tram hauria de ser $x \le 1$ en lloc de $x \le 0$ per poder estudiar la continuïtat a $x=1$. Assumirem $x \le 1$ per a la resolució.}
+
+\textbf{Estudi en $x=1$:}
+\begin{itemize}
+    \item Imatge: $f(1) = 3(1)-2 = 1$.
+    \item Límits laterals:
+    \begin{align*}
+        \lim_{x \to 1^-} f(x) &= \lim_{x \to 1} (3x-2) = 1 \\
+        \lim_{x \to 1^+} f(x) &= \lim_{x \to 1} \frac{2x^2}{x+1} = \frac{2(1)^2}{1+1} = \frac{2}{2} = 1
+    \end{align*}
+\end{itemize}
+Imatge i límit coincideixen. La funció \textbf{és contínua} en $x=1$.
+
+\textbf{Estudi en $x=3$:}
+\begin{itemize}
+    \item Imatge: $f(3) = \frac{2(3)^2}{3+1} = \frac{18}{4} = \frac{9}{2}$.
+    \item Límits laterals:
+    \begin{align*}
+        \lim_{x \to 3^-} f(x) &= \lim_{x \to 3} \frac{2x^2}{x+1} = \frac{9}{2} \\
+        \lim_{x \to 3^+} f(x) &= \lim_{x \to 3} \frac{x-3}{x^2-3x} = \frac{0}{0} \quad \text{(indeterminació)}
+    \end{align*}
+    Resolem la indeterminació del límit lateral dret factoritzant:
+    \[ \lim_{x \to 3^+} \frac{x-3}{x(x-3)} = \lim_{x \to 3^+} \frac{1}{x} = \frac{1}{3} \]
+\end{itemize}
+Com que $9/2 \neq 1/3$, els límits laterals no coincideixen. \textbf{No és contínua} en $x=3$, presenta una discontinuïtat de salt finit.
+
+\newpage
+% ========================================== %
+
+\section{Estudi de la continuïtat global d'una funció}
+
+\subsection{Teoria: Estudi de la continuïtat global}
+
+Quan ens demanen estudiar la continuïtat d'una funció (sense especificar-nos cap punt), hem d'analitzar tots aquells valors de $x$ on hi pot haver "problemes". Aquests punts conflictius són:
+\begin{enumerate}
+    \item \textbf{Els punts de no domini:} Valors que anul·len un denominador o que fan negatiu el radicand d'una arrel d'índex parell. La funció mai serà contínua en aquests punts (ja que no hi té imatge). Caldrà estudiar el límit per classificar la discontinuïtat.
+    \item \textbf{Els punts de canvi de branca:} En funcions definides a trossos, els punts d'unió entre les diferents expressions poden patir un "salt". Cal estudiar la imatge i els límits laterals.
+\end{enumerate}
+
+Per a tots els altres punts, afirmarem que la funció és contínua per estar formada per expressions matemàtiques que ho són en els seus respectius dominis (polinomis, racionals quan no s'anul·la el denominador, etc.).
+
+\vspace{0.5cm}
+
+\subsection{Exercici 13 (activitats finals)}
+
+\textbf{Estudia la continuïtat de la funció següent: $f(x) = \frac{3x-9}{2x^2-18}$}
+
+Aquesta és una funció racional (fracció d'una sola branca). Només tindrà problemes en els punts que no pertanyin al domini (és a dir, on s'anul·li el denominador).
+
+1) Busquem els punts conflictius:
+\[ 2x^2-18 = 0 \implies 2x^2 = 18 \implies x^2 = 9 \implies x = \pm 3 \]
+Per tant, la funció és \textbf{contínua a $\mathbb{R} - \{-3, 3\}$}. Estudiem què passa en aquests dos punts concrets.
+
+2) Estudi en $x=-3$:
+\begin{itemize}
+    \item No existeix imatge.
+    \item Límit: $\lim_{x \to -3} \frac{3x-9}{2x^2-18} = \frac{-9-9}{2(9)-18} = \frac{-18}{0}$. Dóna $\pm \infty$.
+\end{itemize}
+Hi ha una \textbf{discontinuïtat de salt infinit} en $x=-3$.
+
+3) Estudi en $x=3$:
+\begin{itemize}
+    \item No existeix imatge.
+    \item Límit: $\lim_{x \to 3} \frac{3x-9}{2x^2-18} = \frac{9-9}{18-18} = \frac{0}{0}$. Indeterminació. Factoritzem:
+    \begin{align*}
+        3x-9 &= 3(x-3) \\
+        2x^2-18 &= 2(x^2-9) = 2(x-3)(x+3)
+    \end{align*}
+    \[ \lim_{x \to 3} \frac{3(x-3)}{2(x-3)(x+3)} = \lim_{x \to 3} \frac{3}{2(x+3)} = \frac{3}{2(6)} = \frac{3}{12} = \frac{1}{4} \]
+\end{itemize}
+Com que hi ha límit, hi ha una \textbf{discontinuïtat evitable} en $x=3$.
+
+\vspace{0.5cm}
+
+\subsection{Exercici 3 (Autoavaluació)}
+
+\textbf{Esbrina el domini i estudia la continuïtat de la funció: $f(x) = \frac{2x-6}{x^2-9}$}
+
+1) Punts conflictius i Domini:
+\[ x^2-9 = 0 \implies x^2 = 9 \implies x = \pm 3 \]
+Domini: $\mathbb{R} - \{-3, 3\}$. La funció és contínua en tot el domini.
+
+2) Estudi en $x=-3$:
+\begin{itemize}
+    \item Límit: $\lim_{x \to -3} \frac{2x-6}{x^2-9} = \frac{-12}{0}$. Dóna $\pm \infty$.
+\end{itemize}
+Hi ha una \textbf{discontinuïtat de salt infinit} en $x=-3$.
+
+3) Estudi en $x=3$:
+\begin{itemize}
+    \item Límit: $\lim_{x \to 3} \frac{2x-6}{x^2-9} = \frac{0}{0}$. Factoritzem:
+    \[ \lim_{x \to 3} \frac{2(x-3)}{(x-3)(x+3)} = \lim_{x \to 3} \frac{2}{x+3} = \frac{2}{6} = \frac{1}{3} \]
+\end{itemize}
+Hi ha una \textbf{discontinuïtat evitable} en $x=3$.
+
+\vspace{0.5cm}
+
+\subsection{Exercici 17 (part teoria)}
+
+\textbf{Donades les funcions, estudia'n la continuïtat en $x=-1$, $x=0$ i $x=1$.}
+\textit{(Ho faré estudiant la continuïtat global, ja que el procés de resolució ens avalua justament aquests punts).}
+
+\textbf{Funció 1:} $f(x) = \frac{2x^2+2x}{x-x^3}$
+Punts que anul·len el denominador:
+\[ x-x^3 = 0 \implies x(1-x^2) = 0 \implies x=0 \text{ i } x=\pm 1 \]
+
+\begin{itemize}
+    \item En $x=-1$: $\lim_{x \to -1} \frac{2x(x+1)}{x(1-x)(1+x)} = \lim_{x \to -1} \frac{2}{1-x} = \frac{2}{2} = 1$. Discontinuïtat evitable.
+    \item En $x=0$: $\lim_{x \to 0} \frac{2x(x+1)}{x(1-x)(1+x)} = \lim_{x \to 0} \frac{2}{1-x} = 2$. Discontinuïtat evitable.
+    \item En $x=1$: Límit inicial de la forma $k/0$. $\lim_{x \to 1} \frac{2}{1-x} = \frac{2}{0} = \pm\infty$. Discontinuïtat asimptòtica (salt infinit).
+\end{itemize}
+
+\textbf{Funció 2:} $g(x) = \begin{cases} \frac{-5x}{x+1} & \text{si } x < 0 \\ \frac{x^2}{x-1} & \text{si } x \ge 0 \end{cases}$ \\
+Punts conflictius de les branques:
+- Branca 1 ($x < 0$): Denominador s'anul·la a $x=-1$ (vàlid perquè cau a la branca).  
+- Branca 2 ($x \ge 0$): Denominador s'anul·la a $x=1$ (vàlid perquè cau a la branca).  
+Punt de canvi: $x=0$.
+
+\begin{itemize}
+    \item En $x=-1$ (dins branca 1): $\lim_{x \to -1} \frac{-5x}{x+1} = \frac{5}{0} = \pm \infty$. Discontinuïtat de salt infinit.
+    \item En $x=1$ (dins branca 2): $\lim_{x \to 1} \frac{x^2}{x-1} = \frac{1}{0} = \pm \infty$. Discontinuïtat de salt infinit.
+    \item En $x=0$ (punt de canvi): 
+    $\lim_{x \to 0^-} \frac{-5x}{x+1} = 0$. 
+    $\lim_{x \to 0^+} \frac{x^2}{x-1} = 0$. 
+    $g(0) = 0$. Com que coincideixen, és contínua a $x=0$.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection{Exercici 18 (part teoria)}
+
+\textbf{Estudia la continuïtat de la funció: $f(x) = \frac{-2x^2+6x-4}{1-x^4}$}
+
+Denominador: $1-x^4 = 0 \implies x^4 = 1 \implies x = \pm 1$.
+
+\begin{itemize}
+    \item Estudi en $x=1$: \\
+    Límit: $\frac{-2(1)^2+6(1)-4}{1-1^4} = \frac{0}{0}$. Factoritzem per Ruffini o fórmules. Numerador arrels 1 i 2: $-2(x-1)(x-2)$. Denominador (diferència de quadrats): $(1-x^2)(1+x^2) = (1-x)(1+x)(1+x^2) = -(x-1)(x+1)(1+x^2)$.
+    \[ \lim_{x \to 1} \frac{-2(x-1)(x-2)}{-(x-1)(x+1)(x^2+1)} = \lim_{x \to 1} \frac{2(x-2)}{(x+1)(x^2+1)} = \frac{-2}{2(2)} = -\frac{1}{2} \]
+    Discontinuïtat evitable.
+    
+    \item Estudi en $x=-1$: \\
+    Límit inicial $\frac{-12}{0}$. Límits laterals infinits. Discontinuïtat de salt infinit.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection{Exercici 15 (activitats finals)}
+
+\textbf{Esbrina el domini i estudia la continuïtat de la funció:}
+\[ f(x) = \begin{cases} \frac{x^2+3x+1}{x+2} & \text{si } x < -1 \\ \frac{x^2-1}{x-1} & \text{si } -1 \le x < 1 \\ \frac{x+1}{2-x} & \text{si } x \ge 1 \end{cases} \]
+
+Punts a estudiar:
+- Denominadors: Branca 1 s'anul·la a $x=-2$ (cau a $x<-1$). Branca 2 s'anul·la a $x=1$ (no cau a l'interval $[-1, 1)$). Branca 3 s'anul·la a $x=2$ (cau a $x \ge 1$). 
+- Punts de canvi: $x=-1$ i $x=1$.
+
+Domini: $\mathbb{R} - \{-2, 2\}$.
+
+\begin{itemize}
+    \item En $x=-2$ (branca 1): Límits laterals donen $\pm\infty$. Salt infinit.
+    \item En $x=2$ (branca 3): Límits laterals donen $\pm\infty$. Salt infinit.
+    \item En $x=-1$ (punt de canvi): 
+    $\lim_{x \to -1^-} \frac{x^2+3x+1}{x+2} = \frac{-1}{1} = -1$. \\
+    $\lim_{x \to -1^+} \frac{x^2-1}{x-1} = \frac{0}{-2} = 0$. \\
+    No coincideixen. Salt finit.
+    \item En $x=1$ (punt de canvi):
+    $\lim_{x \to 1^-} \frac{x^2-1}{x-1} = \frac{0}{0} \implies \lim_{x \to 1^-} \frac{(x-1)(x+1)}{x-1} = \lim_{x \to 1^-} (x+1) = 2$. \\
+    $\lim_{x \to 1^+} \frac{x+1}{2-x} = \frac{2}{1} = 2$. \\
+    $f(1) = 2$. Coincideixen. És contínua a $x=1$.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection{Exercici 20 (activitats finals)}
+
+\textbf{Estudia la continuïtat de la funció:}
+\[ f(x) = \begin{cases} 2x+1 & \text{si } x \le -1 \\ \frac{x+3}{2x} & \text{si } -1 < x \le 1 \\ \frac{x}{x-2} & \text{si } x > 1 \end{cases} \]
+
+Punts a estudiar:
+- Denominadors: Branca 1 no en té. Branca 2 s'anul·la a $x=0$ (cau a l'interval). Branca 3 s'anul·la a $x=2$ (cau a l'interval).
+- Punts de canvi: $x=-1$ i $x=1$.
+
+\begin{itemize}
+    \item En $x=0$ (branca 2): Límit $3/0 \implies \pm\infty$. Salt infinit.
+    \item En $x=2$ (branca 3): Límit $2/0 \implies \pm\infty$. Salt infinit.
+    \item En $x=-1$ (punt de canvi):
+    Límit esquerra: $2(-1)+1 = -1$.
+    Límit dreta: $\frac{-1+3}{-2} = -1$.
+    Imatge = -1. Coincideixen. És contínua.
+    \item En $x=1$ (punt de canvi):
+    Límit esquerra i imatge: $\frac{1+3}{2} = 2$.
+    Límit dreta: $\frac{1}{1-2} = -1$.
+    No coincideixen. Discontinuïtat de salt finit.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,533 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+
+% ---- Colors ----
+\definecolor{taronja}{RGB}{220, 120, 30}
+\definecolor{blaufosc}{RGB}{30, 80, 160}
+\definecolor{verdfosc}{RGB}{40, 130, 60}
+\definecolor{grisnet}{RGB}{245, 245, 245}
+\definecolor{grisblavet}{RGB}{235, 240, 250}
+\definecolor{verdclar}{RGB}{232, 248, 232}
+\definecolor{lila}{RGB}{100, 60, 160}
+\definecolor{lilaclar}{RGB}{245, 238, 255}
+
+% ---- Marges i capçalera ----
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ---- Entorns ----
+\newmdenv[
+  backgroundcolor=grisnet,
+  linecolor=taronja,
+  linewidth=1.5pt,
+  roundcorner=4pt,
+  innertopmargin=7pt, innerbottommargin=7pt,
+  innerleftmargin=10pt, innerrightmargin=10pt,
+]{metodebox}
+
+\newmdenv[
+  backgroundcolor=verdclar,
+  linecolor=verdfosc,
+  linewidth=1pt,
+  roundcorner=4pt,
+  innertopmargin=5pt, innerbottommargin=5pt,
+  innerleftmargin=8pt, innerrightmargin=8pt,
+]{verificaciobox}
+
+\newmdenv[
+  backgroundcolor=lilaclar,
+  linecolor=lila,
+  linewidth=1.5pt,
+  roundcorner=4pt,
+  innertopmargin=7pt, innerbottommargin=7pt,
+  innerleftmargin=10pt, innerrightmargin=10pt,
+]{ampliaciobox}
+
+\tcbset{
+  exemplebox/.style={
+    enhanced,
+    colback=grisblavet,
+    colframe=blaufosc,
+    fonttitle=\bfseries\small,
+    title={Exemple resolt},
+    arc=3pt, boxrule=1.2pt,
+    left=8pt, right=8pt, top=6pt, bottom=6pt,
+    breakable
+  }
+}
+
+\newcounter{tipus}
+\setcounter{tipus}{0}
+\newcommand{\secciotipus}[1]{%
+  \stepcounter{tipus}
+  \vspace{0.45cm}
+  \noindent{\large\textbf{\color{taronja}Tipus \thetipus \quad #1}}
+  \vspace{0.12cm}\hrule height 1pt\vspace{0.25cm}
+}
+
+\newlist{exercicis}{enumerate}{1}
+\setlist[exercicis]{label=\textbf{\alph*)}, leftmargin=1.5cm, itemsep=0.35cm}
+
+% =====================================================================
+\begin{document}
+% =====================================================================
+
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Equacions logarítmiques & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.4cm}
+
+\begin{center}
+    {\Large \textbf{EQUACIONS LOGARÍTMIQUES}}\\[4pt]
+    {\small \textit{1r de Batxillerat --- Matemàtiques}}
+\end{center}
+
+\vspace{0.2cm}
+
+% ---- Caixa general de propietats ----
+\begin{metodebox}
+\textbf{Propietats clau} (per a $a>0$, $a\neq 1$, $x,z > 0$):
+\[
+\log_a x + \log_a z = \log_a(xz) \qquad
+\log_a x - \log_a z = \log_a\!\left(\tfrac{x}{z}\right) \qquad
+p\cdot\log_a x = \log_a x^p \qquad
+\log_a b = \frac{\log b}{\log a}
+\]
+\begin{verificaciobox}
+\textbf{Verificació obligatòria:} Substitueix cada solució a l'equació original i comprova que:
+(1) tots els arguments dels logaritmes són $>0$;\quad
+(2) si la base conté la incògnita, cal que $a \in (0,1)\cup(1,+\infty)$.
+\end{verificaciobox}
+\end{metodebox}
+
+\vspace{0.3cm}
+
+% =====================================================================
+% PAS PREVI
+% =====================================================================
+\noindent{\large\textbf{\color{taronja}Pas previ \quad La definició de logaritme}}
+\vspace{0.12cm}\hrule height 1pt\vspace{0.25cm}
+
+\begin{metodebox}
+La definició de logaritme: $\log_a b = c \;\Longleftrightarrow\; a^c = b$. Ens permet resoldre directament equacions del tipus:
+\[
+\log_a(\text{expr}) = n \;\longrightarrow\; \text{expr} = a^n
+\]
+\end{metodebox}
+
+\vspace{0.2cm}
+
+\begin{tcolorbox}[exemplebox]
+Resol $\;\log_3(2x - 1) = 3$
+\tcblower
+\[
+2x - 1 = 3^3 = 27 \;\longrightarrow\; 2x = 28 \;\longrightarrow\; \boldsymbol{x = 14}
+\]
+\textbf{Verificació:} $\log_3(27) = 3$ \checkmark \quad (argument $27 > 0$ \checkmark)
+\end{tcolorbox}
+
+\vspace{0.3cm}
+\noindent\textbf{Practica:}
+
+\begin{exercicis}
+    \item $\log_2(x + 3) = 4$
+    \item $\log_5(3x - 2) = 2$
+    \item $\log(x^2 - 19) = 1$
+\end{exercicis}
+\newpage
+% =====================================================================
+\noindent{\large\textbf{\color{taronja}1. Resta de logaritmes igual a un nombre}}
+% =====================================================================
+
+\begin{metodebox}
+\textbf{Mètode:}
+\begin{enumerate}[noitemsep, label=\arabic*.]
+    \item Convertir el nombre a logaritme: $n = \log_a a^n$.
+    \item Aplicar: $\log_a x - \log_a z = \log_a\!\left(\frac{x}{z}\right)$.
+    \item Igualar arguments i resoldre. \quad
+    \item Verificar el domini.
+\end{enumerate}
+\end{metodebox}
+
+\vspace{0.2cm}
+
+\begin{tcolorbox}[exemplebox]
+Resol $\;\log(x) - \log(x-9) = 1$
+\tcblower
+$\log\!\left(\frac{x}{x-9}\right) = \log 10 \;\longrightarrow\;
+\frac{x}{x-9} = 10 \;\longrightarrow\; x = 10x-90 \;\longrightarrow\; \boldsymbol{x = 10}$
+
+\textbf{Verificació:} $\log 10 - \log 1 = 1$ \checkmark \quad (arguments $10>0$, $1>0$ \checkmark)
+\end{tcolorbox}
+
+\vspace{0.3cm}
+\noindent\textbf{Practica:}
+
+\begin{exercicis}
+    \item $\log(5x) - \log(x-1) = 1$
+    \item $\log_3(x+6) - \log_3(x) = 1$
+    \item $\log_4(x) - \log_4(x-3) = 1$
+    \item $2\log(x) - \log(x-6) = 2 \quad$ \textit{(Pista: aplica primer $p\cdot\log_a x = \log_a x^p$)}
+    \item $\log(x) - \log(x+9) = -1$
+\end{exercicis}
+
+\newpage
+
+% =====================================================================
+
+
+\noindent{\large\textbf{\color{taronja}2. Suma de logaritmes igual a un nombre}}
+
+% =====================================================================
+
+\begin{metodebox}
+\textbf{Mètode:}
+\begin{enumerate}[noitemsep, label=\arabic*.]
+    \item Convertir el nombre a logaritme: $n = \log_a a^n$.
+    \item Aplicar: $\log_a x + \log_a z = \log_a(x \cdot z)$.
+    \item Igualar arguments i resoldre (sovint equació de 2n grau).
+    \item Verificar i descartar solucions fora del domini.
+\end{enumerate}
+\end{metodebox}
+
+\vspace{0.2cm}
+
+\begin{tcolorbox}[exemplebox]
+Resol $\;\log(x) + \log(x-3) = 1$
+\tcblower
+$\log(x(x-3)) = \log 10 \;\longrightarrow\; x^2-3x-10=0 \;\longrightarrow\; (x-5)(x+2)=0$
+\begin{itemize}[noitemsep]
+    \item $x_1=5$: $\log 5 + \log 2 = 1$ \checkmark
+    \item $x_2=-2$: $\log(-2)$ no existeix $\Rightarrow$ \textbf{descartada}
+\end{itemize}
+Solució: $\boldsymbol{x=5}$
+\end{tcolorbox}
+
+\vspace{0.3cm}
+\noindent\textbf{Practica:}
+
+\begin{exercicis}
+    \item $\log_3(x) + \log_3(x-8) = 2$
+    \item $\log_2(x) + \log_2(x+2) = 3$
+    \item $\log(x) + \log(x+21) = 2$
+    \item $\log_2(x+1) + \log_2(x-1) = 3$
+\end{exercicis}
+
+\newpage
+% =====================================================================
+
+\noindent{\large\textbf{\color{taronja}3. Quocient de logaritmes igual a un nombre}}
+% =====================================================================
+
+\begin{metodebox}
+\textbf{Mètode:}
+\begin{enumerate}[noitemsep, label=\arabic*.]
+    \item Multiplicar els dos costats pel logaritme del denominador.
+    \item Aplicar $p \cdot \log_a x = \log_a x^p$ i igualar arguments.
+    \item Verificar: a més del domini, el denominador no pot ser $\log_a(1) = 0$.
+\end{enumerate}
+\end{metodebox}
+
+\vspace{0.2cm}
+
+\begin{tcolorbox}[exemplebox]
+Resol $\;\dfrac{\log(x+6)}{\log(x)} = 2$
+\tcblower
+$\log(x+6) = 2\log(x) = \log(x^2) \;\longrightarrow\; x+6=x^2 \;\longrightarrow\; x^2-x-6=0$
+
+$(x-3)(x+2)=0$: \; $x_1=3$ \checkmark, \; $x_2=-2$ \textbf{desc.} \quad Solució: $\boldsymbol{x=3}$
+\end{tcolorbox}
+
+\vspace{0.3cm}
+\noindent\textbf{Practica:}
+
+\begin{exercicis}
+    \item $\dfrac{\log(3x-2)}{\log(x)} = 2$
+    \item $\dfrac{\log(x+5)}{\log(x-1)} = 2$
+    \item $\dfrac{\log(x+9)}{\log(x+3)} = 2$
+    \item $\dfrac{\log(2+x^2)}{\log(3+x)} = 2$
+\end{exercicis}
+
+\newpage
+
+% =====================================================================
+\noindent{\large\textbf{\color{taronja}4. Equació exponencial --- aplicar logaritme als dos costats}}
+\vspace{0.12cm}\hrule height 1pt\vspace{0.3cm}
+
+% =====================================================================
+
+\begin{metodebox}
+\textbf{Mètode:} Quan no podem igualar bases, apliquem $\log$ als dos costats i fem servir $\log a^n = n\cdot\log a$:
+\[
+a^{f(x)} = b \;\longrightarrow\; f(x)\cdot\log a = \log b \;\longrightarrow\; f(x) = \frac{\log b}{\log a}
+\]
+\textbf{Atenció:} El resultat conté logaritmes. Cal expressar-los sempre en base 10 o $e$.
+\end{metodebox}
+
+\vspace{0.2cm}
+
+\begin{tcolorbox}[exemplebox]
+Resol $\;2^x = 6$
+\tcblower
+$\log 2^x = \log 6 \;\longrightarrow\; x\cdot\log 2 = \log 6 \;\longrightarrow\; \boldsymbol{x = \dfrac{\log 6}{\log 2} \approx 2{,}58}$
+
+\textbf{Verificació:} $2^{2{,}58}\approx 6$ \checkmark
+\end{tcolorbox}
+
+\vspace{0.3cm}
+\noindent\textbf{Practica:}
+
+\begin{exercicis}
+    \item $3^x = 15$
+    \item $2^{3x} = 20$
+    \item $5^{x-1} = 12$
+    \item $4^x = 7^{x-2} \quad$ \textit{(Pista: aplica $\log$ als dos costats i desenvolupa)}
+\end{exercicis}
+
+\newpage
+% =====================================================================
+\noindent{\large\textbf{\color{taronja}5. Altres casos: base incògnita i incògnita fora del logaritme}}
+\vspace{0.12cm}\hrule height 1pt\vspace{0.3cm}
+% =====================================================================
+
+\begin{metodebox}
+\textbf{Cas A --- La base conté la incògnita:} Definició inversa: $\log_{f(x)} k = n \;\longrightarrow\; (f(x))^n = k$
+
+\textbf{Important:} Verifica que la base resultant pertanyi a $(0,1)\cup(1,+\infty)$.
+
+\medskip
+\textbf{Cas B --- La incògnita és fora de tot logaritme:} Aïlla la $x$. El logaritme queda com a terme numèric; expressa'l en base 10 amb el canvi de base.
+\end{metodebox}
+
+\vspace{0.1cm}
+
+\begin{tcolorbox}[exemplebox, title={Exemple resolt --- Cas A: base incògnita}]
+Resol $\;\log_{x+1} 9 = 2$
+\tcblower
+$(x+1)^2 = 9 \;\longrightarrow\; x+1=\pm 3 \;\longrightarrow\; x_1=2,\; x_2=-4$
+
+\textbf{Verificació:} $x_1=2$: base $=3$ \checkmark;\quad $x_2=-4$: base $=-3\notin(0,1)\cup(1,+\infty)$ \textbf{desc.}
+
+Solució: $\boldsymbol{x=2}$
+\end{tcolorbox}
+
+\vspace{0.15cm}
+
+\begin{tcolorbox}[exemplebox, title={Exemple resolt --- Cas B: incògnita fora del logaritme}]
+Resol $\;\log_2 5 = x - 1$
+\tcblower
+$x = 1 + \log_2 5 = 1 + \dfrac{\log 5}{\log 2} \approx 1 + 2{,}32 = \boldsymbol{3{,}32}$
+
+\textbf{Verificació:} $\log_2 5 \approx 2{,}32 = 3{,}32 - 1$ \checkmark
+\end{tcolorbox}
+
+\vspace{0.2cm}
+\noindent\textbf{Practica:}
+
+\noindent\textit{Cas A:}
+\begin{exercicis}
+    \item $\log_{x-1} 16 = 4$
+    \item $\log_{2x-1} 49 = 2$
+\end{exercicis}
+
+\noindent\textit{Cas B:}
+\begin{exercicis}[start=3]
+    \item $\log_3 10 = 2x + 1$
+    \item $\log_2 12 = x + 3$
+\end{exercicis}
+
+\newpage
+
+% =====================================================================
+% EXERCICI DE CONSOLIDACIÓ
+% =====================================================================
+\vspace{0.2cm}
+\noindent{\large\textbf{\color{taronja}6. Exercici de consolidació}}
+\vspace{0.12cm}\hrule height 1pt\vspace{0.3cm}
+
+\noindent Resol les equacions següents aplicant les tècniques apreses. En alguns casos cal combinar més d'una propietat o reordenar els termes abans de començar.
+
+\vspace{0.3cm}
+
+\begin{exercicis}
+    \item $\log_6(5x - 9) = 2$
+
+    \item $\log_{x+2} 25 = 2$
+
+    \item $\log_3 20 = x - 8$
+
+    \item $\log_2(4x) + \log_2(x-1) = 3 + \log_2(10)$
+    
+    \item $3\log_5(4+x) = \log_5(x^2) + \log_5(x+19)$
+
+    \item $\log_{12}(x+5) - \log_{12}(2x-3) = 1 - \log_{12}(x+4)$
+    
+    \item $\log_4 5 + \log_4(2x+7) = 3\log_4 7 - \log_4(5x)$
+    \quad
+
+    \item $\log_2(1+x) + 1 + \log_2(x-2) - \log_2(x-3) = \log_2(x+16)$
+    
+    
+    \item $\log_2 x^2 - \log_2\!\left(x - \dfrac{3}{4}\right) = 2$
+
+    \item $\dfrac{\log 2 + \log(11 - x^2)}{\log(5 - x)} = 2$
+
+    \item $2\bigl[1 - \log(2x+3)\bigr] = 4\log\sqrt{5x-3}$
+    
+\end{exercicis}
+
+\vspace{0.5cm}
+
+% =====================================================================
+% EXERCICI D'AMPLIACIÓ
+% =====================================================================
+
+
+\newpage
+
+% =====================================================================
+% SOLUCIONS
+% =====================================================================
+\begin{center}
+    {\Large \textbf{SOLUCIONS}}
+\end{center}
+\vspace{0.1cm}
+\begin{center}\textit{(Pàgina per al professor / autocorrecció)}\end{center}
+\vspace{0.3cm}
+
+% ---- Pas previ ----
+\noindent\textbf{Pas previ}
+
+\begin{multicols}{3}
+\begin{exercicis}
+    \item $x+3=16 \Rightarrow \boldsymbol{x=13}$
+    \item $3x-2=25 \Rightarrow \boldsymbol{x=9}$
+    \item $x^2=29 \Rightarrow \boldsymbol{x=\pm\sqrt{29}}$ \newline (les dues valen, $x^2-19>0$ \checkmark)
+\end{exercicis}
+\end{multicols}
+
+\vspace{0.25cm}
+
+% ---- Tipus 1 ----
+\noindent\textbf{1 --- Resta}
+
+\begin{multicols}{2}
+\begin{exercicis}
+    \item $\frac{5x}{x-1}=10 \Rightarrow \boldsymbol{x=2}$ \checkmark
+    \item $\frac{x+6}{x}=3 \Rightarrow \boldsymbol{x=3}$ \checkmark
+    \item $\frac{x}{x-3}=4 \Rightarrow \boldsymbol{x=4}$ \checkmark
+    \item $\frac{x^2}{x-6}=100 \Rightarrow x^2-100x+600=0$ \newline
+          $\boldsymbol{x_1\approx93{,}6}$, $\boldsymbol{x_2\approx6{,}4}$ (les dues valen)
+    \item $\dfrac{x}{x+9}=\dfrac{1}{10}\Rightarrow 10x=x+9\Rightarrow \boldsymbol{x=1}$ \checkmark
+\end{exercicis}
+\end{multicols}
+
+\vspace{0.25cm}
+
+% ---- Tipus 2 ----
+\noindent\textbf{2 --- Suma}
+
+\begin{multicols}{2}
+\begin{exercicis}
+    \item $x^2-8x-9=0\Rightarrow x_1=9$ \checkmark, $x_2=-1$ \textbf{desc.} $\;\boldsymbol{x=9}$
+    \item $x^2+2x-8=0\Rightarrow x_1=2$ \checkmark, $x_2=-4$ \textbf{desc.} $\;\boldsymbol{x=2}$
+    \item $x^2+21x-100=0\Rightarrow x_1=4$ \checkmark, $x_2=-25$ \textbf{desc.} $\;\boldsymbol{x=4}$
+    \item $x^2-1=8\Rightarrow x^2=9\Rightarrow x_1=3$ \checkmark, $x_2=-3$ \textbf{desc.} $\;\boldsymbol{x=3}$
+\end{exercicis}
+\end{multicols}
+
+\vspace{0.25cm}
+
+% ---- Tipus 3 ----
+\noindent\textbf{3 --- Quocient}
+
+\begin{multicols}{2}
+\begin{exercicis}
+    \item $3x-2=x^2\Rightarrow x^2-3x+2=0$ \newline $x=1$: denom.\ nul \textbf{desc.}; $\boldsymbol{x=2}$ \checkmark
+    \item $x+5=(x-1)^2\Rightarrow x^2-3x-4=0$ \newline $x_1=4$ \checkmark, $x_2=-1$ \textbf{desc.} $\;\boldsymbol{x=4}$
+    \item $x+9=(x+3)^2\Rightarrow x^2+5x=0$ \newline $x_1=0$ \checkmark, $x_2=-5$ \textbf{desc.} $\;\boldsymbol{x=0}$
+    \item $2+x^2=(3+x)^2\Rightarrow 6x=-7$ \newline $\boldsymbol{x=-\tfrac{7}{6}}$ \checkmark
+\end{exercicis}
+\end{multicols}
+
+\vspace{0.25cm}
+
+% ---- Tipus 4 ----
+\noindent\textbf{4 --- Exponencial}
+
+\begin{multicols}{2}
+\begin{exercicis}
+    \item $\boldsymbol{x=\dfrac{\log 15}{\log 3}\approx2{,}46}$
+    \item $\boldsymbol{x=\dfrac{\log 20}{3\log 2}\approx1{,}44}$
+    \item $\boldsymbol{x=\dfrac{\log 12}{\log 5}+1\approx2{,}54}$
+    \item $x\log4=(x-2)\log7$ \newline $x(\log4-\log7)=-2\log7$ \newline $\boldsymbol{x=\dfrac{-2\log7}{\log4-\log7}\approx5{,}23}$
+\end{exercicis}
+\end{multicols}
+
+\vspace{0.25cm}
+
+% ---- Tipus 5 ----
+\noindent\textbf{5 --- Casos especials}
+
+\begin{multicols}{2}
+\begin{exercicis}
+    \item $(x-1)^4=16\Rightarrow x-1=\pm2$ \newline $x_1=3$: base $=2$ \checkmark; $x_2=-1$: base $=-2$ \textbf{desc.} $\;\boldsymbol{x=3}$
+    \item $(2x-1)^2=49\Rightarrow 2x-1=\pm7$ \newline $x_1=4$: base $=7$ \checkmark; $x_2=-3$: base $=-7$ \textbf{desc.} $\;\boldsymbol{x=4}$
+    \item $2x=\dfrac{\log10}{\log3}-1 \Rightarrow \boldsymbol{x\approx0{,}55}$
+    \item $x=\dfrac{\log12}{\log2}-3 \Rightarrow \boldsymbol{x\approx0{,}58}$
+\end{exercicis}
+\end{multicols}
+
+\vspace{0.3cm}
+
+% ---- Consolidació ----
+\noindent\textbf{6 --- Exercici de consolidació}
+
+\begin{multicols}{2}
+\begin{exercicis}
+    \item $5x-9=36\Rightarrow\boldsymbol{x=9}$ \checkmark
+    \item $(x+2)^2=25\Rightarrow x+2=\pm5$ \newline $x_1=3$: base $=5$ \checkmark; $x_2=-7$: base $=-5$ \textbf{desc.} $\;\boldsymbol{x=3}$
+    \item $x=8+\log_3 20=8+\dfrac{\log20}{\log3}\approx\boldsymbol{10{,}73}$
+    \item $\log_2(4x(x-1))=\log_2(80)$ \newline $4x^2-4x-80=0\Rightarrow x^2-x-20=0$ \newline $x_1=5$ \checkmark, $x_2=-4$ \textbf{desc.} $\;\boldsymbol{x=5}$
+    \item $(4+x)^3=x^2(x+19)$ \newline $7x^2-48x-64=0$ \newline $x_1=8$ \checkmark, $x_2=-\tfrac{8}{7}$ \checkmark \newline $\boldsymbol{x_1=8,\;x_2=-\tfrac{8}{7}}$
+    \item $\dfrac{(x+5)(x+4)}{2x-3}=12$ \newline $x^2-15x+56=0$ \newline $\boldsymbol{x_1=7}$ \checkmark, $\boldsymbol{x_2=8}$ \checkmark
+    \item $\log_4(5(2x+7)\cdot5x)=\log_4(343)$ \newline $25x(2x+7)=343\Rightarrow50x^2+175x-343=0$ \newline $x_1=\tfrac{7}{5}=1{,}4$ \checkmark, $x_2=-4{,}9$: $5x<0$ \textbf{desc.} \newline $\boldsymbol{x=\tfrac{7}{5}}$
+    \item $\dfrac{2(1+x)(x-2)}{x-3}=x+16$ \newline $x^2-15x+44=0$ \newline $\boldsymbol{x_1=4}$ \checkmark, $\boldsymbol{x_2=11}$ \checkmark
+    \item $\dfrac{x^2}{x-\frac{3}{4}}=4\Rightarrow x^2-4x+3=0\Rightarrow(x-1)(x-3)=0$. \quad $x_1=1$ \checkmark, $x_2=3$ \checkmark. \quad $\boldsymbol{x_1=1,\;x_2=3}$
+
+    \item $\log(2(11-x^2))=\log(5-x)^2\Rightarrow22-2x^2=25-10x+x^2\Rightarrow3x^2-10x+3=0$ \newline $(3x-1)(x-3)=0$. \quad $x_1=\tfrac{1}{3}$ \checkmark, $x_2=3$ \checkmark. \quad $\boldsymbol{x_1=\tfrac{1}{3},\;x_2=3}$
+
+    \item $2-2\log(2x+3)=2\log(5x-3)\Rightarrow\log((2x+3)(5x-3))=1$ \newline $(2x+3)(5x-3)=10\Rightarrow10x^2+9x-19=0\Rightarrow(x-1)(10x+19)=0$ \newline $x_1=1$ \checkmark; $x_2=-\tfrac{19}{10}$: $2x+3=-\tfrac{4}{5}<0$ \textbf{desc.} \quad $\boldsymbol{x=1}$
+\end{exercicis}
+\end{multicols}
+
+\vspace{0.3cm}
+
+
+
+\end{document}

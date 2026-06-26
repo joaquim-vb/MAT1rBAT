@@ -1,0 +1,158 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Assegura't que tens els fitxers d'imatge o comenta aquestes línies si no els tens
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} NomActivitat & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.8cm}
+
+\section*{Exercici 10}
+Donada la funció $f(x) = \frac{x^2+x-2}{x^2+5x+6}$.
+
+\subsection*{Límit quan $x \to -3$}
+Primer substituïm el valor $x = -3$ directament (sense esquerra o dreta):
+\[ f(-3) = \frac{(-3)^2 + (-3) - 2}{(-3)^2 + 5(-3) + 6} = \frac{9 - 3 - 2}{9 - 15 + 6} = \frac{4}{0} \]
+Com que dona de la forma $k/0$, aleshores sí que substituïm per l'esquerra i per la dreta utilitzant decimals propers (per exemple $-3,0001$ i $-2,9999$) per determinar el signe de l'infinit. Prèviament factoritzem per simplificar càlculs: $f(x) = \frac{(x-1)(x+2)}{(x+3)(x+2)} = \frac{x-1}{x+3}$.
+\begin{align*}
+    \lim_{x \to -3^-} \frac{x-1}{x+3} & \approx \frac{-3,0001 - 1}{-3,0001 + 3} = \frac{-}{-} = +\infty \\
+    \lim_{x \to -3^+} \frac{x-1}{x+3} & \approx \frac{-2,9999 - 1}{-2,9999 + 3} = \frac{-}{+} = -\infty
+\end{align*}
+Com que el límit no és el mateix pels dos costats, \textbf{el límit quan $x \to -3$ no existeix}.
+
+\subsection*{Límit quan $x \to -2$}
+Primer substituïm el valor directament:
+\[ f(-2) = \frac{(-2)^2 - 2 - 2}{(-2)^2 - 10 + 6} = \frac{0}{0} \]
+Com que dona $0/0$, factoritzem el numerador i el denominador i simplifiquem:
+\[ \lim_{x \to -2} \frac{(x-1)(x+2)}{(x+3)(x+2)} = \lim_{x \to -2} \frac{x-1}{x+3} = \frac{-2-1}{-2+3} = \frac{-3}{1} = -3 \]
+Com que es pot calcular directament, el límit existeix, val $-3$, i és el mateix pels dos costats ($-2^-$ i $-2^+$ donen $-3$).
+
+\subsection*{Límit quan $x \to 1$}
+Primer substituïm el valor directament:
+\[ f(1) = \frac{1^2 + 1 - 2}{1^2 + 5(1) + 6} = \frac{0}{12} = 0 \]
+Es pot fer directament, no cal fer res més. El límit pels dos costats (i el límit global) és $0$.
+
+\vspace{0.5cm}
+\section*{Exercici 12}
+Donada la funció definida a trossos:
+\[ f(x) = \begin{cases} \frac{x^2-x}{2x^2+2x} & \text{si } x \le 1 \\ \frac{x^2-1}{2x-2} & \text{si } x > 1 \end{cases} \]
+
+\subsection*{Límit quan $x \to 0$}
+Com que $0 \le 1$, agafem el primer tros de la funció. Primer substituïm directament:
+\[ f(0) = \frac{0^2 - 0}{2(0)^2 + 0} = \frac{0}{0} \]
+Com que dona $0/0$, factoritzem i simplifiquem:
+\[ \lim_{x \to 0} \frac{x(x-1)}{2x(x+1)} = \lim_{x \to 0} \frac{x-1}{2(x+1)} = \frac{0-1}{2(0+1)} = -\frac{1}{2} \]
+Els límits laterals a $0^-$, $0^+$ i el límit global valen $-\frac{1}{2}$.
+
+\subsection*{Límit quan $x \to 1$}
+Com que $x=1$ és un punt de canvi de la funció, aleshores cal agafar les dues funcions per calcular els límits laterals, però no cal substituir decimals (tret que doni $k/0$). Substituïm directament a cada tros:
+\begin{align*}
+    \lim_{x \to 1^-} f(x) &= \lim_{x \to 1^-} \frac{x^2-x}{2x^2+2x} = \frac{1^2-1}{2+2} = \frac{0}{4} = 0 \\
+    \lim_{x \to 1^+} f(x) &= \lim_{x \to 1^+} \frac{x^2-1}{2x-2} = \frac{0}{0} \implies \text{Factoritzem i simplifiquem:} \\
+    \lim_{x \to 1^+} \frac{(x-1)(x+1)}{2(x-1)} &= \lim_{x \to 1^+} \frac{x+1}{2} = \frac{1+1}{2} = 1
+\end{align*}
+Com que el límit per l'esquerra ($0$) i per la dreta ($1$) no coincideixen, \textbf{el límit quan $x \to 1$ no existeix}.
+
+\subsection*{Límit quan $x \to 3$}
+Com que $3 > 1$, agafem el segon tros. Substituïm directament:
+\[ \lim_{x \to 3} \frac{x^2-1}{2x-2} = \frac{3^2-1}{2(3)-2} = \frac{8}{4} = 2 \]
+Tots els límits laterals ($3^-, 3^+$) i el global valen $2$.
+
+\vspace{0.5cm}
+\section*{Exercici 13}
+\subsection*{a) Límit de $f(x) = \frac{x^3-4x^2+3x}{x^2+x-2}$ quan $x \to -2$ i $x \to 1$}
+
+\textbf{Límit quan $x \to -2$}:
+Substituïm directament:
+\[ f(-2) = \frac{(-2)^3 - 4(-2)^2 + 3(-2)}{(-2)^2 - 2 - 2} = \frac{-8 - 16 - 6}{4 - 4} = \frac{-30}{0} \]
+Com que dona $k/0$, calculem límits laterals substituint per decimals propers a $-2$ (com $-2,0001$ i $-1,9999$). Podem simplificar abans la funció factoritzant per facilitar l'avaluació dels signes: $f(x) = \frac{x(x-1)(x-3)}{(x-1)(x+2)} = \frac{x(x-3)}{x+2}$.
+\begin{align*}
+    \lim_{x \to -2^-} \frac{x(x-3)}{x+2} & \approx \frac{(-2,0001)(-5,0001)}{-2,0001 + 2} = \frac{(+)}{-} = -\infty \\
+    \lim_{x \to -2^+} \frac{x(x-3)}{x+2} & \approx \frac{(-1,9999)(-4,9999)}{-1,9999 + 2} = \frac{(+)}{+} = +\infty
+\end{align*}
+No donen el mateix, per tant \textbf{el límit no existeix}.
+
+\textbf{Límit quan $x \to 1$}:
+Substituïm directament:
+\[ f(1) = \frac{1 - 4 + 3}{1 + 1 - 2} = \frac{0}{0} \]
+Com que dona $0/0$, factoritzem i simplifiquem:
+\[ \lim_{x \to 1} \frac{x(x-1)(x-3)}{(x-1)(x+2)} = \lim_{x \to 1} \frac{x(x-3)}{x+2} = \frac{1(1-3)}{1+2} = -\frac{2}{3} \]
+
+\vspace{0.5cm}
+\section*{Exercici 15}
+Donada $f(x) = \frac{x^3-5x^2+6x}{x^3-3x^2+2x}$, trobar límits en $x=0, x=1, x=2, x=3$.
+
+\textbf{Límit quan $x \to 0$}:
+Substituïm: $\frac{0}{0}$. Factoritzem i simplifiquem:
+\[ \lim_{x \to 0} \frac{x(x^2-5x+6)}{x(x^2-3x+2)} = \lim_{x \to 0} \frac{x(x-2)(x-3)}{x(x-1)(x-2)} = \lim_{x \to 0} \frac{x-3}{x-1} = \frac{-3}{-1} = 3 \]
+
+\textbf{Límit quan $x \to 1$}:
+Substituïm a la funció original: $\frac{1-5+6}{1-3+2} = \frac{2}{0}$. Com que dona $k/0$, fem límits laterals amb decimals propers a $1$ (usem l'expressió simplificada d'abans $\frac{x-3}{x-1}$):
+\begin{align*}
+    \lim_{x \to 1^-} \frac{x-3}{x-1} & \approx \frac{0,9999 - 3}{0,9999 - 1} = \frac{-}{-} = +\infty \\
+    \lim_{x \to 1^+} \frac{x-3}{x-1} & \approx \frac{1,0001 - 3}{1,0001 - 1} = \frac{-}{+} = -\infty
+\end{align*}
+El límit no existeix.
+
+\textbf{Límit quan $x \to 2$}:
+Substituïm: $\frac{8-20+12}{8-12+4} = \frac{0}{0}$. Usem l'expressió simplificada:
+\[ \lim_{x \to 2} \frac{x-3}{x-1} = \frac{2-3}{2-1} = \frac{-1}{1} = -1 \]
+
+\textbf{Límit quan $x \to 3$}:
+Substituïm directament: $\frac{27-45+18}{27-27+6} = \frac{0}{6} = 0$. Es pot fer directament.
+
+\vspace{0.5cm}
+\section*{Exercici 16}
+Donada $f(x) = \frac{3x}{x-x^3}$.
+
+\textbf{Límit quan $x \to -1$}:
+Substituïm directament: $\frac{-3}{-1 - (-1)} = \frac{-3}{0}$. És $k/0$, calculem laterals amb decimals propers a $-1$. Simplifiquem la funció traient factor comú primer: $\frac{3x}{x(1-x^2)} = \frac{3}{1-x^2}$.
+\begin{align*}
+    \lim_{x \to -1^-} \frac{3}{1-x^2} & \approx \frac{3}{1 - (-1,0001)^2} = \frac{3}{-} = -\infty \\
+    \lim_{x \to -1^+} \frac{3}{1-x^2} & \approx \frac{3}{1 - (-0,9999)^2} = \frac{3}{+} = +\infty
+\end{align*}
+El límit no existeix.
+
+\textbf{Límit quan $x \to 0$}:
+Substituïm directament: $\frac{0}{0}$. Factoritzem i simplifiquem:
+\[ \lim_{x \to 0} \frac{3x}{x(1-x^2)} = \lim_{x \to 0} \frac{3}{1-x^2} = \frac{3}{1} = 3 \]
+
+\textbf{Límit quan $x \to 1$}:
+Substituïm directament: $\frac{3}{1-1} = \frac{3}{0}$. És $k/0$, calculem laterals amb decimals propers a $1$:
+\begin{align*}
+    \lim_{x \to 1^-} \frac{3}{1-x^2} & \approx \frac{3}{1 - 0,9999^2} = \frac{3}{+} = +\infty \\
+    \lim_{x \to 1^+} \frac{3}{1-x^2} & \approx \frac{3}{1 - 1,0001^2} = \frac{3}{-} = -\infty
+\end{align*}
+El límit no existeix.
+\end{document}

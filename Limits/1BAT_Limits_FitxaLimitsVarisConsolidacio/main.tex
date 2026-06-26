@@ -1,0 +1,919 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Full de treball: Límits i Indeterminacions & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.6cm}
+
+% ═══════════════════════════════════════════════════════════
+%  EXERCICI 1  ─  [∞/∞]  amb  x → +∞
+% ═══════════════════════════════════════════════════════════
+\subsection*{1. Calcula els límits següents: $\left[\dfrac{\infty}{\infty}\right]$ \quad ($x \to +\infty$)}
+\begin{multicols}{2}
+\begin{enumerate}[label=1.\arabic*.]
+    \item $\displaystyle \lim_{x \to +\infty} x^{-4}$
+    \item $\displaystyle \lim_{x \to +\infty} \left[ \frac{2}{x^2+1} + \frac{3}{x+2} \right]$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^3}{\sqrt{x^2-2}}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^2-1}{x^3-1}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^3-x+6}{x^2+3x+2}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^3-1}{x^2+1}$
+    \item $\displaystyle \lim_{x \to +\infty} \left( \sqrt{18x^2+1}\cdot\frac{1}{\sqrt{32x^2-3}} \right)$
+    \item $\displaystyle \lim_{x \to +\infty} \left( \frac{2}{3} \right)^{\!x}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^3-5}{-x^2-4}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{4x^3-2}{\sqrt{x-3}}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{\sqrt{x^5+2x-6}}{x^3-4x+2}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{\sqrt{x^2+x}}{x}$
+    % ── A partir d'aquí estaven malament al fitxer original ──
+    \item $\displaystyle \lim_{x \to +\infty} \frac{5x-3}{\sqrt{4x^2+3x-1}}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{4x^2+x-1}{x^2+1}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{3x^3+2x^2-5}{2x^3-8x^2}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{-3x^2-2x+5}{4x^2-4}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^3-2x^2-5}{-2x^3-8x^2}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{-x^3-4x+2}{\sqrt{x^5+2x-6}}$
+\end{enumerate}
+\end{multicols}
+
+% ═══════════════════════════════════════════════════════════
+%  EXERCICI 2  ─  [∞/∞]  amb  x → −∞
+% ═══════════════════════════════════════════════════════════
+\subsection*{2. Calcula els límits següents: $\left[\dfrac{\infty}{\infty}\right]$ \quad ($x \to -\infty$)}
+\begin{multicols}{2}
+\begin{enumerate}[label=2.\arabic*.]
+    \item $\displaystyle \lim_{x \to -\infty} \frac{x^2+3x-1}{\sqrt{x^6-2x}}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{3-2\sqrt{x^4+1}}{\sqrt{2x^4+1}}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{4x^2+x-1}{x^2+1}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{x^3-1}{x^2+1}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{-x^3-4x+2}{\sqrt{-x^5+2x-6}}$
+    \item $\displaystyle \lim_{x \to -\infty} \left( \frac{3}{2} \right)^{\!x}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{5x^3-3x^2+6}{-2x^3+9x^2}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{-2x^2-5}{3x^2-8x}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{\sqrt{x^2+x}}{x}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{5x-3}{\sqrt{9x^2+3x-1}}$
+\end{enumerate}
+\end{multicols}
+
+% ═══════════════════════════════════════════════════════════
+%  EXERCICI 3  ─  [0/0]
+% ═══════════════════════════════════════════════════════════
+\subsection*{3. Calcula els límits següents: $\left[\dfrac{0}{0}\right]$}
+\begin{multicols}{2}
+\begin{enumerate}[label=3.\arabic*.]
+    \item $\displaystyle \lim_{x \to 2} \frac{x^2+x-6}{x^2-x-2}$
+    \item $\displaystyle \lim_{x \to 3} \frac{x^2-6x+9}{x-3}$
+    \item $\displaystyle \lim_{x \to 1} \frac{x^2-1}{x^3-1}$
+    \item $\displaystyle \lim_{x \to -2} \frac{x^2-x-6}{x^3+3x^2+2x}$
+    \item $\displaystyle \lim_{x \to 1} \sqrt[3]{\frac{2x^3-3x^2+1}{3x^3-8x^2+7x-2}}$
+    \item $\displaystyle \lim_{x \to 1} \frac{x^2-2x+1}{x-1}$
+    \item $\displaystyle \lim_{x \to 0} \frac{x}{1-\sqrt{1-x}}$
+    \item $\displaystyle \lim_{x \to 3} \frac{\sqrt{x+1}-2}{x-3}$
+    \item $\displaystyle \lim_{x \to 0} \frac{\sqrt{x+9}-3}{\sqrt{x+16}-4}$
+    \item $\displaystyle \lim_{x \to 0} \frac{\sqrt{2x+4}-2}{\sqrt{x+1}-1}$
+    \item $\displaystyle \lim_{x \to 0} \frac{2-\sqrt{4-x}}{x}$
+    \item $\displaystyle \lim_{x \to 1} \frac{x-1}{\sqrt{x}-1}$
+    \item $\displaystyle \lim_{x \to 0} \frac{x}{\sqrt{1+x}-\sqrt{1-x}}$
+    \item $\displaystyle \lim_{x \to 5} \frac{\sqrt{x}-\sqrt{5}}{x-5}$
+    \item $\displaystyle \lim_{x \to 1} \frac{x^3-1}{x^2-1}$
+    \item $\displaystyle \lim_{x \to 2} \frac{-2x^2+5x-2}{3x^2-2x-8}$
+    \item $\displaystyle \lim_{x \to 2} \frac{x^2+x-6}{x^2-x-2}$
+\end{enumerate}
+\end{multicols}
+
+% ═══════════════════════════════════════════════════════════
+%  EXERCICI 4  ─  [∞ − ∞]
+% ═══════════════════════════════════════════════════════════
+\subsection*{4. Calcula els límits següents: $[\infty - \infty]$}
+\begin{multicols}{2}
+\begin{enumerate}[label=4.\arabic*.]
+    \item $\displaystyle \lim_{x \to +\infty} \left(\sqrt{x+2}-\sqrt{x-2}\right)$
+    \item $\displaystyle \lim_{x \to +\infty} \left(\sqrt{x^2+x+1}-x\right)$
+    \item $\displaystyle \lim_{x \to +\infty} \left(\sqrt{x^2-x}-\sqrt{x^2+1}\right)$
+    \item $\displaystyle \lim_{x \to +\infty} \left(x-\sqrt{x^2+1}\right)$
+    \item $\displaystyle \lim_{x \to +\infty} \left(\sqrt{x^2-3x}-\sqrt{x^2-1}\right)$
+\end{enumerate}
+\end{multicols}
+
+% ═══════════════════════════════════════════════════════════
+%  EXERCICI 5  ─  [1^∞]
+% ═══════════════════════════════════════════════════════════
+\subsection*{5. Calcula els límits següents: $\left[1^{\infty}\right]$}
+\begin{multicols}{2}
+\begin{enumerate}[label=5.\arabic*.]
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left(\frac{x+5}{x-3}\right)^{\!x+2}$
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left(\frac{7x^2+1}{7x^2-1}\right)^{\!3x^2+2}$
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left(\frac{5x+1}{5x-1}\right)^{\!3x+2}$
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left(\frac{x^2+2x+1}{x^2}\right)^{\!\frac{x^2+1}{x-1}}$
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left(\frac{x^3-3x+1}{x^2-1}\right)^{\!\frac{x+1}{x-1}}$
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left(\frac{x^2-1}{x^3-3x+1}\right)^{\!\frac{x+1}{x^2-1}}$
+\end{enumerate}
+\end{multicols}
+
+% ═══════════════════════════════════════════════════════════
+%  EXERCICI 6  ─  [k/0]
+% ═══════════════════════════════════════════════════════════
+\subsection*{6. Calcula els límits següents: $\left[\dfrac{k}{0}\right]$}
+\begin{multicols}{2}
+\begin{enumerate}[label=6.\arabic*.]
+    \item $\displaystyle \lim_{x \to 0} \frac{x^2+3x+2}{x^2-x}$
+    \item $\displaystyle \lim_{x \to 2} \frac{x^2+5x+6}{x^2-x-2}$
+    \item $\displaystyle \lim_{x \to 0} \frac{x^2+6x+8}{x^2}$
+    \item $\displaystyle \lim_{x \to -1} \frac{x^2-5x+6}{x^2+2x+1}$
+    \item $\displaystyle \lim_{x \to 4} \frac{x^2-3x+2}{x^2-x-12}$
+    \item $\displaystyle \lim_{x \to 1} \frac{x^3-4x^2}{x^2-4x+3}$
+\end{enumerate}
+\end{multicols}
+
+% ═══════════════════════════════════════════════════════════
+%  EXERCICI 7  ─  Diverses indeterminacions
+% ═══════════════════════════════════════════════════════════
+\subsection*{7. Calcula els límits següents \emph{(diverses indeterminacions)}}
+\begin{multicols}{2}
+\begin{enumerate}[label=7.\arabic*.]
+    \item $\displaystyle \lim_{x \to -1}
+          \frac{3x^2+x-2}{x^3+x^2-x-1}$
+          
+
+    \item $\displaystyle \lim_{x \to 3}
+          \left[\frac{2x}{x^2-9}-\frac{x+1}{x-3}\right]$
+          
+
+    \item $\displaystyle \lim_{x \to 1}
+          \left(\frac{2x+4}{x^2-x+6}\right)^{\!\frac{3x}{x-1}}$
+          
+
+    \item $\displaystyle \lim_{x \to 2}
+          \left(\frac{3x-2}{x^2-2x+4}\right)^{\!\frac{x}{x-2}}$
+          
+
+    \item $\displaystyle \lim_{x \to 3}
+          \left(\frac{2x^2-x+1}{4x+4}\right)^{\!\frac{2x}{x-3}}$
+          
+
+    \item $\displaystyle \lim_{x \to 0}
+          \left(\frac{x^2-3x+1}{5x+1}\right)^{\!\frac{3}{x}}$
+          
+
+    \item $\displaystyle \lim_{x \to 1}
+          \left(\frac{x^2-2x+3}{x+1}\right)^{\!\frac{1}{x-1}}$
+          
+
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left(\frac{1+2x}{2x+5}\right)^{\!2x^2-1}$
+          
+
+    \item $\displaystyle \lim_{x \to -\infty}
+          \left(\frac{4x-2}{3x+5}\right)^{\!x^2-1}$
+          
+
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left(\frac{2x-2}{3+2x}\right)^{\!x+1}$
+          
+
+    \item $\displaystyle \lim_{x \to -\infty}
+          \left(\frac{4x^2-7}{3x^2+9x}\right)^{\!x}$
+          
+
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left(\frac{x^2+1}{x^2-2}\right)^{\!2x}$
+          
+
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left[\sqrt{x^2-3x}-\sqrt{x^2-1}\right]$
+          
+
+    \item $\displaystyle \lim_{x \to 3}
+          \frac{x-3}{x^3-5x^2+3x+9}$
+          
+
+    \item $\displaystyle \lim_{x \to 1}
+          \frac{x^3-x}{x^2-2x+1}$
+          
+
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left(\frac{3x-2}{4+3x}\right)^{\!x+1}$
+          
+
+    \item $\displaystyle \lim_{x \to 2}
+          \left(\frac{3x}{x^2-4}-\frac{x+1}{x-2}\right)$
+          
+
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left(\frac{3x^2}{x+1}-\frac{3x^3}{x^2-1}\right)$
+          
+
+    \item $\displaystyle \lim_{x \to 1}
+          \left(\frac{x+3}{2x+2}\right)^{\!\frac{1}{x-1}}$
+          
+
+    \item $\displaystyle \lim_{x \to +\infty}
+          \left[\frac{x^2-1}{x+2}-\frac{x^3}{x^2+1}\right]$
+          
+
+    \item $\displaystyle \lim_{x \to 0}
+          \left(\frac{1+x^2}{1-x^2}\right)^{\!\frac{1+3x^2}{x^2}}$
+          
+\end{enumerate}
+\end{multicols}
+
+\newpage
+
+% ═══════════════════════════════════════════════════════════
+%  SECCIÓ DE SOLUCIONS
+% ═══════════════════════════════════════════════════════════
+\section*{SOLUCIONS}
+
+\subsection*{Estratègies de resolució}
+\begin{itemize}
+    \item \textbf{Tipus $\infty/\infty$:} Comparem el grau del numerador ($n$) i del denominador ($m$). Si $n=m$, el límit és el quocient dels coeficients principals. Si $n>m$, tendeix a $\pm\infty$. Si $n<m$, tendeix a $0$.
+    \item \textbf{Tipus $1^\infty$:} S'aplica la fórmula $\displaystyle e^{\,\lim\, \text{exponent}\,\cdot\,(\text{base}-1)}$.
+    \item \textbf{Tipus $0/0$:} Cal factoritzar (Ruffini o identitats notables) i simplificar. Si hi ha arrels, multipliquem pel conjugat.
+    \item \textbf{Tipus $\infty-\infty$:} Multipliquem pel conjugat o posem factor comú.
+    \item \textbf{Tipus $k/0$:} El límit no existeix (o és $\pm\infty$); cal estudiar els laterals.
+\end{itemize}
+
+\subsection*{Solucionari Exercici 1}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=1.\arabic*]
+    \item $\displaystyle \lim_{x \to +\infty} x^{-4} = \mathbf{0}$
+    \item $\displaystyle \lim_{x \to +\infty} \left[ \frac{2}{x^2+1} + \frac{3}{x+2} \right] = \mathbf{0}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^3}{\sqrt{x^2-2}} = \mathbf{+\infty}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^2-1}{x^3-1} = \mathbf{0}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^3-x+6}{x^2+3x+2} = \mathbf{+\infty}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^3-1}{x^2+1} = \mathbf{+\infty}$
+    \item $\displaystyle \lim_{x \to +\infty} \left( \sqrt{18x^2+1}\cdot\frac{1}{\sqrt{32x^2-3}} \right) = \mathbf{3/4}$
+    \item $\displaystyle \lim_{x \to +\infty} \left( \frac{2}{3} \right)^{\!x} = \mathbf{0}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^3-5}{-x^2-4} = \mathbf{-\infty}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{4x^3-2}{\sqrt{x-3}} = \mathbf{+\infty}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{\sqrt{x^5+2x-6}}{x^3-4x+2} = \mathbf{0}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{\sqrt{x^2+x}}{x} = \mathbf{1}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{5x-3}{\sqrt{4x^2+3x-1}} = \mathbf{5/2}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{4x^2+x-1}{x^2+1} = \mathbf{4}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{3x^3+2x^2-5}{2x^3-8x^2} = \mathbf{3/2}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{-3x^2-2x+5}{4x^2-4} = \mathbf{-3/4}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{x^3-2x^2-5}{-2x^3-8x^2} = \mathbf{-1/2}$
+    \item $\displaystyle \lim_{x \to +\infty} \frac{-x^3-4x+2}{\sqrt{x^5+2x-6}} = \mathbf{-\infty}$
+\end{enumerate}
+\end{multicols}
+
+
+\subsection*{Solucions Exercici 2}
+\begin{multicols}{2}
+\begin{enumerate}[label=2.\arabic*]
+    \item $\displaystyle \lim_{x \to -\infty} \frac{x^2+3x-1}{\sqrt{x^6-2x}} = \mathbf{0}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{3-2\sqrt{x^4+1}}{\sqrt{2x^4+1}} = \mathbf{-\sqrt{2}}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{4x^2+x-1}{x^2+1} = \mathbf{4}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{x^3-1}{x^2+1} = \mathbf{-\infty}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{-x^3-4x+2}{\sqrt{-x^5+2x-6}} = \mathbf{+\infty}$
+    \item $\displaystyle \lim_{x \to -\infty} \left( \frac{3}{2} \right)^{\!x} = \mathbf{0}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{5x^3-3x^2+6}{-2x^3+9x^2} = \mathbf{-5/2}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{-2x^2-5}{3x^2-8x} = \mathbf{-2/3}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{\sqrt{x^2+x}}{x} = \mathbf{-1}$
+    \item $\displaystyle \lim_{x \to -\infty} \frac{5x-3}{\sqrt{9x^2+3x-1}} = \mathbf{-5/3}$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{Solucions Exercici 3}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=3.\arabic*.]
+    \item $\displaystyle \lim_{x \to 2} \frac{x^2+x-6}{x^2-x-2} = \mathbf{5/3}$
+    \item $\displaystyle \lim_{x \to 3} \frac{x^2-6x+9}{x-3} = \mathbf{0}$
+    \item $\displaystyle \lim_{x \to 1} \frac{x^2-1}{x^3-1} = \mathbf{2/3}$
+    \item $\displaystyle \lim_{x \to -2} \frac{x^2-x-6}{x^3+3x^2+2x} = \mathbf{-5/2}$
+    \item $\displaystyle \lim_{x \to 1} \sqrt[3]{\frac{2x^3-3x^2+1}{3x^3-8x^2+7x-2}} = \mathbf{\sqrt[3]{3}}$
+    \item $\displaystyle \lim_{x \to 1} \frac{x^2-2x+1}{x-1} = \mathbf{0}$
+    \item $\displaystyle \lim_{x \to 0} \frac{x}{1-\sqrt{1-x}} = \mathbf{2}$
+    \item $\displaystyle \lim_{x \to 3} \frac{\sqrt{x+1}-2}{x-3} = \mathbf{1/4}$
+    \item $\displaystyle \lim_{x \to 0} \frac{\sqrt{x+9}-3}{\sqrt{x+16}-4} = \mathbf{4/3}$
+    \item $\displaystyle \lim_{x \to 0} \frac{\sqrt{2x+4}-2}{\sqrt{x+1}-1} = \mathbf{1}$
+    \item $\displaystyle \lim_{x \to 0} \frac{2-\sqrt{4-x}}{x} = \mathbf{1/4}$
+    \item $\displaystyle \lim_{x \to 1} \frac{x-1}{\sqrt{x}-1} = \mathbf{2}$
+    \item $\displaystyle \lim_{x \to 0} \frac{x}{\sqrt{1+x}-\sqrt{1-x}} = \mathbf{1}$
+    \item $\displaystyle \lim_{x \to 5} \frac{\sqrt{x}-\sqrt{5}}{x-5} = \mathbf{\frac{\sqrt{5}}{10}}$
+    \item $\displaystyle \lim_{x \to 1} \frac{x^3-1}{x^2-1} = \mathbf{3/2}$
+    \item $\displaystyle \lim_{x \to 2} \frac{-2x^2+5x-2}{3x^2-2x-8} = \mathbf{-3/10}$
+    \item $\displaystyle \lim_{x \to 2} \frac{x^2+x-6}{x^2-x-2} = \mathbf{5/3}$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{Solucions Exercici 4}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=4.\arabic*]
+    \item $\displaystyle \lim_{x \to +\infty} (\sqrt{x+2}-\sqrt{x-2}) = \mathbf{0}$
+    \item $\displaystyle \lim_{x \to +\infty} (\sqrt{x^2+x+1}-x) = \mathbf{1/2}$
+    \item $\displaystyle \lim_{x \to +\infty} (\sqrt{x^2-x}-\sqrt{x^2+1}) = \mathbf{-1/2}$
+    \item $\displaystyle \lim_{x \to +\infty} (x-\sqrt{x^2+1}) = \mathbf{0}$
+    \item $\displaystyle \lim_{x \to +\infty} (\sqrt{x^2-3x}-\sqrt{x^2-1}) = \mathbf{-3/2}$
+\end{enumerate}
+\end{multicols}
+
+\subsection*{Solucions Exercici 5 (Corregit)}
+\begin{multicols}{2}
+\begin{enumerate}[label=5.\arabic*]
+    \item $\displaystyle \lim_{x \to +\infty} \left(\frac{x+5}{x-3}\right)^{x+2} = \mathbf{e^8}$
+    \item $\displaystyle \lim_{x \to +\infty} \left(\frac{7x^2+1}{7x^2-1}\right)^{3x^2+2} = \mathbf{e^{6/7}}$
+    \item $\displaystyle \lim_{x \to +\infty} \left(\frac{5x+1}{5x-1}\right)^{3x+2} = \mathbf{e^{6/5}}$
+    \item $\displaystyle \lim_{x \to +\infty} \left(\frac{x^2+2x+1}{x^2}\right)^{\frac{x^2+1}{x-1}} = \mathbf{e^2}$
+    \item $\displaystyle \lim_{x \to +\infty} \left(\frac{x^3-3x+1}{x^2-1}\right)^{\frac{x+1}{x-1}} = \mathbf{+\infty}$*
+    \item $\displaystyle \lim_{x \to +\infty} \left(\frac{x^2-1}{x^3-3x+1}\right)^{\frac{x+1}{x^2-1}} = \mathbf{1}$**
+\end{enumerate}
+\end{multicols}
+\textit{*Nota 5.5: És un límit de tipus $\infty^1$, per tant tendeix a infinit.}\\
+\textit{**Nota 5.6: És un límit de tipus $0^0$, que en aquest cas es resol donant 1.}
+
+
+\subsection*{Solucions Exercici 6}
+\begin{enumerate}[label=6.\arabic*.]
+    \item $\displaystyle \lim_{x \to 0} \frac{x^2+3x+2}{x^2-x} = \left[ \frac{2}{0} \right]$
+    \begin{itemize}
+        \item $\displaystyle \lim_{x \to 0^-} \frac{x^2+3x+2}{x(x-1)} = \frac{+}{(-)\cdot(-)} = +\infty$
+        \item $\displaystyle \lim_{x \to 0^+} \frac{x^2+3x+2}{x(x-1)} = \frac{+}{(+)\cdot(-)} = -\infty$
+        \item \textbf{Resultat: No existeix el límit.}
+    \end{itemize}
+
+    \item $\displaystyle \lim_{x \to 2} \frac{x^2+5x+6}{x^2-x-2} = \left[ \frac{20}{0} \right]$
+    \begin{itemize}
+        \item $\displaystyle \lim_{x \to 2^-} \frac{x^2+5x+6}{(x-2)(x+1)} = \frac{+}{(-)\cdot(+)} = -\infty$
+        \item $\displaystyle \lim_{x \to 2^+} \frac{x^2+5x+6}{(x-2)(x+1)} = \frac{+}{(+)\cdot(+)} = +\infty$
+        \item \textbf{Resultat: No existeix el límit.}
+    \end{itemize}
+
+    \item $\displaystyle \lim_{x \to 0} \frac{x^2+6x+8}{x^2} = \left[ \frac{8}{0} \right]$
+    \begin{itemize}
+        \item $\displaystyle \lim_{x \to 0^-} \frac{x^2+6x+8}{x^2} = \frac{8}{0^+} = +\infty$
+        \item $\displaystyle \lim_{x \to 0^+} \frac{x^2+6x+8}{x^2} = \frac{8}{0^+} = +\infty$
+        \item \textbf{Resultat: } $\mathbf{+\infty}$
+    \end{itemize}
+
+    \item $\displaystyle \lim_{x \to -1} \frac{x^2-5x+6}{x^2+2x+1} = \left[ \frac{12}{0} \right]$
+    \begin{itemize}
+        \item Denominador: $(x+1)^2$, sempre és positiu o zero.
+        \item $\displaystyle \lim_{x \to -1^-} \frac{x^2-5x+6}{(x+1)^2} = \frac{12}{0^+} = +\infty$
+        \item $\displaystyle \lim_{x \to -1^+} \frac{x^2-5x+6}{(x+1)^2} = \frac{12}{0^+} = +\infty$
+        \item \textbf{Resultat: } $\mathbf{+\infty}$
+    \end{itemize}
+
+    \item $\displaystyle \lim_{x \to 4} \frac{x^2-3x+2}{x^2-x-12} = \left[ \frac{6}{0} \right]$
+    \begin{itemize}
+        \item $\displaystyle \lim_{x \to 4^-} \frac{x^2-3x+2}{(x-4)(x+3)} = \frac{6}{(-)\cdot(+)} = -\infty$
+        \item $\displaystyle \lim_{x \to 4^+} \frac{x^2-3x+2}{(x-4)(x+3)} = \frac{6}{(+)\cdot(+)} = +\infty$
+        \item \textbf{Resultat: No existeix el límit.}
+    \end{itemize}
+
+    \item $\displaystyle \lim_{x \to 1} \frac{x^3-4x^2}{x^2-4x+3} = \left[ \frac{-3}{0} \right]$
+    \begin{itemize}
+        \item $\displaystyle \lim_{x \to 1^-} \frac{x^3-4x^2}{(x-1)(x-3)} = \frac{-3}{(-)\cdot(-)} = -\infty$
+        \item $\displaystyle \lim_{x \to 1^+} \frac{x^3-4x^2}{(x-1)(x-3)} = \frac{-3}{(+)\cdot(-)} = +\infty$
+        \item \textbf{Resultat: No existeix el límit.}
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{Solucions de l'Exercici 7}
+
+\begin{enumerate}[label=\textbf{7.\arabic*.}]
+    \item $\lim_{x \to -1} \frac{3x^2+x-2}{x^3+x^2-x-1}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $\frac{0}{0}$. Factoritzem numerador i denominador.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to -1} \frac{(x+1)(3x-2)}{(x-1)(x+1)^2} = \lim_{x \to -1} \frac{3x-2}{(x-1)(x+1)} = \left[ \frac{-5}{0} \right] $$
+            $$ \lim_{x \to -1^-} f(x) = -\infty; \quad \lim_{x \to -1^+} f(x) = +\infty $$
+            \item \textbf{Resultat:} No existeix el límit.
+        \end{itemize}
+
+    \item $\lim_{x \to 3} \left[ \frac{2x}{x^2-9} - \frac{x+1}{x-3} \right]$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $\infty - \infty$. Fem comú denominador $(x-3)(x+3)$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to 3} \frac{2x - (x+1)(x+3)}{x^2-9} = \lim_{x \to 3} \frac{-x^2-2x-3}{x^2-9} = \left[ \frac{-18}{0} \right] $$
+            \item \textbf{Resultat:} No existeix (laterals $+\infty$ i $-\infty$).
+        \end{itemize}
+
+    \item $\lim_{x \to 1} \left( \frac{2x+4}{x^2-x+6} \right)^{\frac{3x}{x-1}}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $1^\infty$. Transformem la base (sumant i restant 1) per buscar la forma $\left(1+\frac{1}{f(x)}\right)^{f(x)}=e$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to 1} \left( 1 + \frac{2x+4}{x^2-x+6} - 1 \right)^{\frac{3x}{x-1}} = \lim_{x \to 1} \left( 1 + \frac{-x^2+3x-2}{x^2-x+6} \right)^{\frac{3x}{x-1}} $$
+            $$ = \lim_{x \to 1} \left[ \left( 1 + \frac{1}{\frac{x^2-x+6}{-x^2+3x-2}} \right)^{\frac{x^2-x+6}{-x^2+3x-2}} \right]^{\frac{-x^2+3x-2}{x^2-x+6} \cdot \frac{3x}{x-1}} $$
+            $$ = e^{\lim_{x \to 1} \frac{-(x-1)(x-2) \cdot 3x}{(x^2-x+6)(x-1)}} = e^{\lim_{x \to 1} \frac{-3x(x-2)}{x^2-x+6}} = e^{3/6} = e^{1/2} $$
+            \item \textbf{Resultat:} $\sqrt{e}$
+        \end{itemize}
+
+    \item $\lim_{x \to 2} \left( \frac{3x-2}{x^2-2x+4} \right)^{\frac{x}{x-2}}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $1^\infty$. Busquem el número $e$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to 2} \left( 1 + \frac{3x-2}{x^2-2x+4} - 1 \right)^{\frac{x}{x-2}} = \lim_{x \to 2} \left( 1 + \frac{-x^2+5x-6}{x^2-2x+4} \right)^{\frac{x}{x-2}} $$
+            $$ = \lim_{x \to 2} \left[ \left( 1 + \frac{1}{\frac{x^2-2x+4}{-x^2+5x-6}} \right)^{\frac{x^2-2x+4}{-x^2+5x-6}} \right]^{\frac{-x^2+5x-6}{x^2-2x+4} \cdot \frac{x}{x-2}} $$
+            $$ = e^{\lim_{x \to 2} \frac{-(x-2)(x-3) \cdot x}{(x^2-2x+4)(x-2)}} = e^{\lim_{x \to 2} \frac{-x(x-3)}{x^2-2x+4}} = e^{2/4} = e^{1/2} $$
+            \item \textbf{Resultat:} $\sqrt{e}$
+        \end{itemize}
+
+    \item $\lim_{x \to 3} \left( \frac{2x^2-x+1}{4x+4} \right)^{\frac{2x}{x-3}}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $1^\infty$. Busquem el número $e$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to 3} \left( 1 + \frac{2x^2-x+1}{4x+4} - 1 \right)^{\frac{2x}{x-3}} = \lim_{x \to 3} \left( 1 + \frac{2x^2-5x-3}{4x+4} \right)^{\frac{2x}{x-3}} $$
+            $$ = \lim_{x \to 3} \left[ \left( 1 + \frac{1}{\frac{4x+4}{2x^2-5x-3}} \right)^{\frac{4x+4}{2x^2-5x-3}} \right]^{\frac{2x^2-5x-3}{4x+4} \cdot \frac{2x}{x-3}} $$
+            $$ = e^{\lim_{x \to 3} \frac{(x-3)(2x+1) \cdot 2x}{4(x+1)(x-3)}} = e^{\lim_{x \to 3} \frac{2x(2x+1)}{4(x+1)}} = e^{42/16} = e^{21/8} $$
+            \item \textbf{Resultat:} $e^{21/8}$
+        \end{itemize}
+
+    \item $\lim_{x \to 0} \left( \frac{x^2-3x+1}{5x+1} \right)^{\frac{3}{x}}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $1^\infty$. Busquem el número $e$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to 0} \left( 1 + \frac{x^2-3x+1}{5x+1} - 1 \right)^{\frac{3}{x}} = \lim_{x \to 0} \left( 1 + \frac{x^2-8x}{5x+1} \right)^{\frac{3}{x}} $$
+            $$ = \lim_{x \to 0} \left[ \left( 1 + \frac{1}{\frac{5x+1}{x^2-8x}} \right)^{\frac{5x+1}{x^2-8x}} \right]^{\frac{x^2-8x}{5x+1} \cdot \frac{3}{x}} $$
+            $$ = e^{\lim_{x \to 0} \frac{x(x-8) \cdot 3}{(5x+1) \cdot x}} = e^{\lim_{x \to 0} \frac{3(x-8)}{5x+1}} = e^{-24/1} = e^{-24} $$
+            \item \textbf{Resultat:} $e^{-24}$
+        \end{itemize}
+
+    \item $\lim_{x \to 1} \left( \frac{x^2-2x+3}{x+1} \right)^{\frac{1}{x-1}}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $1^\infty$. Busquem el número $e$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to 1} \left( 1 + \frac{x^2-2x+3}{x+1} - 1 \right)^{\frac{1}{x-1}} = \lim_{x \to 1} \left( 1 + \frac{x^2-3x+2}{x+1} \right)^{\frac{1}{x-1}} $$
+            $$ = \lim_{x \to 1} \left[ \left( 1 + \frac{1}{\frac{x+1}{x^2-3x+2}} \right)^{\frac{x+1}{x^2-3x+2}} \right]^{\frac{x^2-3x+2}{x+1} \cdot \frac{1}{x-1}} $$
+            $$ = e^{\lim_{x \to 1} \frac{(x-1)(x-2) \cdot 1}{(x+1)(x-1)}} = e^{\lim_{x \to 1} \frac{x-2}{x+1}} = e^{-1/2} $$
+            \item \textbf{Resultat:} $e^{-1/2} = \frac{1}{\sqrt{e}}$
+        \end{itemize}
+
+    \item $\lim_{x \to +\infty} \left( \frac{1+2x}{2x+5} \right)^{2x^2-1}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $1^\infty$. Busquem el número $e$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to +\infty} \left( 1 + \frac{1+2x}{2x+5} - 1 \right)^{2x^2-1} = \lim_{x \to +\infty} \left( 1 + \frac{-4}{2x+5} \right)^{2x^2-1} $$
+            $$ = \lim_{x \to +\infty} \left[ \left( 1 + \frac{1}{\frac{2x+5}{-4}} \right)^{\frac{2x+5}{-4}} \right]^{\frac{-4}{2x+5} \cdot (2x^2-1)} $$
+            $$ = e^{\lim_{x \to +\infty} \frac{-8x^2+4}{2x+5}} = e^{-\infty} = 0 $$
+            \item \textbf{Resultat:} $0$
+        \end{itemize}
+
+    \item $\lim_{x \to -\infty} \left( \frac{4x-2}{3x+5} \right)^{x^2-1}$
+        \begin{itemize}
+            \item \textbf{Explicació:} La base tendeix a $4/3 > 1$ i l'exponent a $+\infty$. No és indeterminació.
+            \item \textbf{Resultat:} $+\infty$
+        \end{itemize}
+
+    \item $\lim_{x \to +\infty} \left( \frac{2x-2}{3+2x} \right)^{x+1}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $1^\infty$. Busquem el número $e$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to +\infty} \left( 1 + \frac{2x-2}{2x+3} - 1 \right)^{x+1} = \lim_{x \to +\infty} \left( 1 + \frac{-5}{2x+3} \right)^{x+1} $$
+            $$ = \lim_{x \to +\infty} \left[ \left( 1 + \frac{1}{\frac{2x+3}{-5}} \right)^{\frac{2x+3}{-5}} \right]^{\frac{-5}{2x+3} \cdot (x+1)} $$
+            $$ = e^{\lim_{x \to +\infty} \frac{-5x-5}{2x+3}} = e^{-5/2} $$
+            \item \textbf{Resultat:} $e^{-5/2}$
+        \end{itemize}
+
+    \item $\lim_{x \to -\infty} \left( \frac{4x^2-7}{3x^2+9x} \right)^{x}$
+        \begin{itemize}
+            \item \textbf{Explicació:} La base tendeix a $4/3$ i l'exponent a $-\infty$. Com que $4/3 > 1$, el límit és $0$.
+            \item \textbf{Resultat:} $0$
+        \end{itemize}
+
+    \item $\lim_{x \to +\infty} \left( \frac{x^2+1}{x^2-2} \right)^{2x}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $1^\infty$. Busquem el número $e$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to +\infty} \left( 1 + \frac{x^2+1}{x^2-2} - 1 \right)^{2x} = \lim_{x \to +\infty} \left( 1 + \frac{3}{x^2-2} \right)^{2x} $$
+            $$ = \lim_{x \to +\infty} \left[ \left( 1 + \frac{1}{\frac{x^2-2}{3}} \right)^{\frac{x^2-2}{3}} \right]^{\frac{3}{x^2-2} \cdot 2x} $$
+            $$ = e^{\lim_{x \to +\infty} \frac{6x}{x^2-2}} = e^0 = 1 $$
+            \item \textbf{Resultat:} $1$
+        \end{itemize}
+
+    \item $\lim_{x \to +\infty} \left[ \sqrt{x^2-3x} - \sqrt{x^2-1} \right]$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $\infty - \infty$. Multipliquem pel conjugat.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to +\infty} \frac{(x^2-3x) - (x^2-1)}{\sqrt{x^2-3x} + \sqrt{x^2-1}} = \lim_{x \to +\infty} \frac{-3x+1}{\sqrt{x^2-3x} + \sqrt{x^2-1}} = \frac{-3}{1+1} $$
+            \item \textbf{Resultat:} $-3/2$
+        \end{itemize}
+
+    \item $\lim_{x \to 3} \frac{x-3}{x^3-5x^2+3x+9}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $\frac{0}{0}$. El denominador és $(x-3)^2(x+1)$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to 3} \frac{x-3}{(x-3)^2(x+1)} = \lim_{x \to 3} \frac{1}{(x-3)(x+1)} = \left[ \frac{1}{0} \right] $$
+            \item \textbf{Resultat:} No existeix (laterals $-\infty$ i $+\infty$).
+        \end{itemize}
+
+    \item $\lim_{x \to 1} \frac{x^3-x}{x^2-2x+1}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $\frac{0}{0}$. Factoritzem: $\frac{x(x-1)(x+1)}{(x-1)^2}$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to 1} \frac{x(x+1)}{x-1} = \left[ \frac{2}{0} \right] $$
+            \item \textbf{Resultat:} No existeix (laterals $-\infty$ i $+\infty$).
+        \end{itemize}
+
+    \item $\lim_{x \to +\infty} \left( \frac{3x-2}{4+3x} \right)^{x+1}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $1^\infty$. Busquem el número $e$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to +\infty} \left( 1 + \frac{3x-2}{3x+4} - 1 \right)^{x+1} = \lim_{x \to +\infty} \left( 1 + \frac{-6}{3x+4} \right)^{x+1} $$
+            $$ = \lim_{x \to +\infty} \left[ \left( 1 + \frac{1}{\frac{3x+4}{-6}} \right)^{\frac{3x+4}{-6}} \right]^{\frac{-6}{3x+4} \cdot (x+1)} $$
+            $$ = e^{\lim_{x \to +\infty} \frac{-6x-6}{3x+4}} = e^{-6/3} = e^{-2} $$
+            \item \textbf{Resultat:} $e^{-2}$
+        \end{itemize}
+
+    \item $\lim_{x \to 2} \left( \frac{3x}{x^2-4} - \frac{x+1}{x-2} \right)$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $\infty - \infty$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to 2} \frac{3x - (x+1)(x+2)}{x^2-4} = \lim_{x \to 2} \frac{-x^2-2}{x^2-4} = \left[ \frac{-6}{0} \right] $$
+            \item \textbf{Resultat:} No existeix.
+        \end{itemize}
+
+    \item $\lim_{x \to +\infty} \left( \frac{3x^2}{x+1} - \frac{3x^3}{x^2-1} \right)$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $\infty - \infty$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to +\infty} \frac{3x^2(x-1) - 3x^3}{x^2-1} = \lim_{x \to +\infty} \frac{-3x^2}{x^2-1} = -3 $$
+            \item \textbf{Resultat:} $-3$
+        \end{itemize}
+
+    \item $\lim_{x \to 1} \left( \frac{x+3}{2x+2} \right)^{\frac{1}{x-1}}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $1^\infty$. Busquem el número $e$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to 1} \left( 1 + \frac{x+3}{2x+2} - 1 \right)^{\frac{1}{x-1}} = \lim_{x \to 1} \left( 1 + \frac{-x+1}{2x+2} \right)^{\frac{1}{x-1}} $$
+            $$ = \lim_{x \to 1} \left[ \left( 1 + \frac{1}{\frac{2x+2}{-(x-1)}} \right)^{\frac{2x+2}{-(x-1)}} \right]^{\frac{-(x-1)}{2x+2} \cdot \frac{1}{x-1}} $$
+            $$ = e^{\lim_{x \to 1} \frac{-1(x-1)}{(2x+2)(x-1)}} = e^{\lim_{x \to 1} \frac{-1}{2x+2}} = e^{-1/4} $$
+            \item \textbf{Resultat:} $e^{-1/4}$
+        \end{itemize}
+
+    \item $\lim_{x \to +\infty} \left[ \frac{x^2-1}{x+2} - \frac{x^3}{x^2+1} \right]$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $\infty - \infty$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to +\infty} \frac{(x^2-1)(x^2+1) - x^3(x+2)}{(x+2)(x^2+1)} = \lim_{x \to +\infty} \frac{-2x^3-1}{x^3+2x^2+x+2} = -2 $$
+            \item \textbf{Resultat:} $-2$
+        \end{itemize}
+
+    \item $\lim_{x \to 0} \left( \frac{1+x^2}{1-x^2} \right)^{\frac{1+3x^2}{x^2}}$
+        \begin{itemize}
+            \item \textbf{Explicació:} Indeterminació $1^\infty$. Busquem el número $e$.
+            \item \textbf{Resolució:}
+            $$ \lim_{x \to 0} \left( 1 + \frac{1+x^2}{1-x^2} - 1 \right)^{\frac{1+3x^2}{x^2}} = \lim_{x \to 0} \left( 1 + \frac{2x^2}{1-x^2} \right)^{\frac{1+3x^2}{x^2}} $$
+            $$ = \lim_{x \to 0} \left[ \left( 1 + \frac{1}{\frac{1-x^2}{2x^2}} \right)^{\frac{1-x^2}{2x^2}} \right]^{\frac{2x^2}{1-x^2} \cdot \frac{1+3x^2}{x^2}} $$
+            $$ = e^{\lim_{x \to 0} \frac{2x^2(1+3x^2)}{(1-x^2)x^2}} = e^{\lim_{x \to 0} \frac{2(1+3x^2)}{1-x^2}} = e^{2/1} = e^2 $$
+            \item \textbf{Resultat:} $e^2$
+        \end{itemize}
+\end{enumerate}
+
+\newpage
+\section*{Resolucions pas per pas}
+
+
+
+\begin{enumerate}[label=\textbf{3.\arabic*.}, leftmargin=*, itemsep=0.8cm]
+
+    % 3.1
+    \item $\displaystyle \lim_{x \to 2} \frac{x^2+x-6}{x^2-x-2}$ \\
+    Factoritzem els polinomis de segon grau buscant les seves arrels:
+    \begin{align*}
+        \lim_{x \to 2} \frac{(x-2)(x+3)}{(x-2)(x+1)} = \lim_{x \to 2} \frac{x+3}{x+1} = \frac{2+3}{2+1} = \mathbf{\frac{5}{3}}
+    \end{align*}
+
+    % 3.2
+    \item $\displaystyle \lim_{x \to 3} \frac{x^2-6x+9}{x-3}$ \\
+    El numerador és una identitat notable (quadrat d'una resta):
+    \begin{align*}
+        \lim_{x \to 3} \frac{(x-3)^2}{x-3} = \lim_{x \to 3} (x-3) = 3 - 3 = \mathbf{0}
+    \end{align*}
+
+    % 3.3
+    \item $\displaystyle \lim_{x \to 1} \frac{x^2-1}{x^3-1}$ \\
+    Factoritzem el numerador (suma per diferència) i el denominador (Ruffini):
+    \begin{align*}
+        \lim_{x \to 1} \frac{(x-1)(x+1)}{(x-1)(x^2+x+1)} = \lim_{x \to 1} \frac{x+1}{x^2+x+1} = \frac{1+1}{1+1+1} = \mathbf{\frac{2}{3}}
+    \end{align*}
+
+    % 3.4
+    \item $\displaystyle \lim_{x \to -2} \frac{x^2-x-6}{x^3+3x^2+2x}$ \\
+    Traiem factor comú de la $x$ al denominador i factoritzem la resta:
+    \begin{align*}
+        \lim_{x \to -2} \frac{(x+2)(x-3)}{x(x^2+3x+2)} &= \lim_{x \to -2} \frac{(x+2)(x-3)}{x(x+2)(x+1)} \\
+        &= \lim_{x \to -2} \frac{x-3}{x(x+1)} = \frac{-2-3}{-2(-2+1)} = \frac{-5}{2} = \mathbf{-\frac{5}{2}}
+    \end{align*}
+
+    % 3.5
+    \item $\displaystyle \lim_{x \to 1} \sqrt[3]{\frac{2x^3-3x^2+1}{3x^3-8x^2+7x-2}}$ \\
+    Apliquem Ruffini dos cops a cada polinomi per trobar l'arrel $x=1$ repetida:
+    \begin{align*}
+        \lim_{x \to 1} \sqrt[3]{\frac{(x-1)^2(2x+1)}{(x-1)^2(3x-2)}} = \lim_{x \to 1} \sqrt[3]{\frac{2x+1}{3x-2}} = \sqrt[3]{\frac{2(1)+1}{3(1)-2}} = \sqrt[3]{\frac{3}{1}} = \mathbf{\sqrt[3]{3}}
+    \end{align*}
+
+    % 3.6
+    \item $\displaystyle \lim_{x \to 1} \frac{x^2-2x+1}{x-1}$ \\
+    El numerador és una identitat notable:
+    \begin{align*}
+        \lim_{x \to 1} \frac{(x-1)^2}{x-1} = \lim_{x \to 1} (x-1) = 1 - 1 = \mathbf{0}
+    \end{align*}
+
+    % 3.7
+    \item $\displaystyle \lim_{x \to 0} \frac{x}{1-\sqrt{1-x}}$ \\
+    Multipliquem numerador i denominador pel conjugat $1+\sqrt{1-x}$:
+    \begin{align*}
+        \lim_{x \to 0} \frac{x(1+\sqrt{1-x})}{(1-\sqrt{1-x})(1+\sqrt{1-x})} &= \lim_{x \to 0} \frac{x(1+\sqrt{1-x})}{1 - (1-x)} \\
+        &= \lim_{x \to 0} \frac{x(1+\sqrt{1-x})}{x} = \lim_{x \to 0} (1+\sqrt{1-x}) = 1+\sqrt{1} = \mathbf{2}
+    \end{align*}
+
+    % 3.8
+    \item $\displaystyle \lim_{x \to 3} \frac{\sqrt{x+1}-2}{x-3}$ \\
+    Multipliquem pel conjugat $\sqrt{x+1}+2$:
+    \begin{align*}
+        \lim_{x \to 3} \frac{(\sqrt{x+1}-2)(\sqrt{x+1}+2)}{(x-3)(\sqrt{x+1}+2)} &= \lim_{x \to 3} \frac{(x+1)-4}{(x-3)(\sqrt{x+1}+2)} \\
+        &= \lim_{x \to 3} \frac{x-3}{(x-3)(\sqrt{x+1}+2)} = \lim_{x \to 3} \frac{1}{\sqrt{x+1}+2} = \frac{1}{\sqrt{4}+2} = \mathbf{\frac{1}{4}}
+    \end{align*}
+
+    % 3.9
+    \item $\displaystyle \lim_{x \to 0} \frac{\sqrt{x+9}-3}{\sqrt{x+16}-4}$ \\
+    Doble conjugat! Multipliquem pels conjugats del numerador i del denominador:
+    \begin{align*}
+        &\lim_{x \to 0} \frac{(\sqrt{x+9}-3)(\sqrt{x+9}+3)(\sqrt{x+16}+4)}{(\sqrt{x+16}-4)(\sqrt{x+16}+4)(\sqrt{x+9}+3)} \\
+        &= \lim_{x \to 0} \frac{(x+9-9)(\sqrt{x+16}+4)}{(x+16-16)(\sqrt{x+9}+3)} = \lim_{x \to 0} \frac{x(\sqrt{x+16}+4)}{x(\sqrt{x+9}+3)} \\
+        &= \lim_{x \to 0} \frac{\sqrt{x+16}+4}{\sqrt{x+9}+3} = \frac{4+4}{3+3} = \frac{8}{6} = \mathbf{\frac{4}{3}}
+    \end{align*}
+
+    % 3.10
+    \item $\displaystyle \lim_{x \to 0} \frac{\sqrt{2x+4}-2}{\sqrt{x+1}-1}$ \\
+    Un altre doble conjugat:
+    \begin{align*}
+        &\lim_{x \to 0} \frac{(\sqrt{2x+4}-2)(\sqrt{2x+4}+2)(\sqrt{x+1}+1)}{(\sqrt{x+1}-1)(\sqrt{x+1}+1)(\sqrt{2x+4}+2)} \\
+        &= \lim_{x \to 0} \frac{(2x+4-4)(\sqrt{x+1}+1)}{(x+1-1)(\sqrt{2x+4}+2)} = \lim_{x \to 0} \frac{2x(\sqrt{x+1}+1)}{x(\sqrt{2x+4}+2)} \\
+        &= \lim_{x \to 0} \frac{2(\sqrt{x+1}+1)}{\sqrt{2x+4}+2} = \frac{2(1+1)}{2+2} = \frac{4}{4} = \mathbf{1}
+    \end{align*}
+
+    % 3.11
+    \item $\displaystyle \lim_{x \to 0} \frac{2-\sqrt{4-x}}{x}$ \\
+    Multipliquem pel conjugat $2+\sqrt{4-x}$:
+    \begin{align*}
+        \lim_{x \to 0} \frac{(2-\sqrt{4-x})(2+\sqrt{4-x})}{x(2+\sqrt{4-x})} &= \lim_{x \to 0} \frac{4 - (4-x)}{x(2+\sqrt{4-x})} \\
+        &= \lim_{x \to 0} \frac{x}{x(2+\sqrt{4-x})} = \lim_{x \to 0} \frac{1}{2+\sqrt{4-x}} = \frac{1}{2+2} = \mathbf{\frac{1}{4}}
+    \end{align*}
+
+    % 3.12
+    \item $\displaystyle \lim_{x \to 1} \frac{x-1}{\sqrt{x}-1}$ \\
+    Multipliquem pel conjugat del denominador:
+    \begin{align*}
+        \lim_{x \to 1} \frac{(x-1)(\sqrt{x}+1)}{(\sqrt{x}-1)(\sqrt{x}+1)} &= \lim_{x \to 1} \frac{(x-1)(\sqrt{x}+1)}{x-1} \\
+        &= \lim_{x \to 1} (\sqrt{x}+1) = \sqrt{1}+1 = \mathbf{2}
+    \end{align*}
+
+    % 3.13
+    \item $\displaystyle \lim_{x \to 0} \frac{x}{\sqrt{1+x}-\sqrt{1-x}}$ \\
+    Multipliquem pel conjugat del denominador:
+    \begin{align*}
+        \lim_{x \to 0} \frac{x(\sqrt{1+x}+\sqrt{1-x})}{(\sqrt{1+x}-\sqrt{1-x})(\sqrt{1+x}+\sqrt{1-x})} &= \lim_{x \to 0} \frac{x(\sqrt{1+x}+\sqrt{1-x})}{(1+x) - (1-x)} \\
+        &= \lim_{x \to 0} \frac{x(\sqrt{1+x}+\sqrt{1-x})}{2x} = \lim_{x \to 0} \frac{\sqrt{1+x}+\sqrt{1-x}}{2} \\
+        &= \frac{\sqrt{1}+\sqrt{1}}{2} = \frac{2}{2} = \mathbf{1}
+    \end{align*}
+
+    % 3.14
+    \item $\displaystyle \lim_{x \to 5} \frac{\sqrt{x}-\sqrt{5}}{x-5}$ \\
+    Multipliquem pel conjugat del numerador:
+    \begin{align*}
+        \lim_{x \to 5} \frac{(\sqrt{x}-\sqrt{5})(\sqrt{x}+\sqrt{5})}{(x-5)(\sqrt{x}+\sqrt{5})} &= \lim_{x \to 5} \frac{x-5}{(x-5)(\sqrt{x}+\sqrt{5})} \\
+        &= \lim_{x \to 5} \frac{1}{\sqrt{x}+\sqrt{5}} = \frac{1}{2\sqrt{5}} = \mathbf{\frac{\sqrt{5}}{10}} \text{ (racionalitzat)}
+    \end{align*}
+
+    % 3.15
+    \item $\displaystyle \lim_{x \to 1} \frac{x^3-1}{x^2-1}$ \\
+    Factoritzem numerador (Ruffini o diferència de cubs) i denominador:
+    \begin{align*}
+        \lim_{x \to 1} \frac{(x-1)(x^2+x+1)}{(x-1)(x+1)} = \lim_{x \to 1} \frac{x^2+x+1}{x+1} = \frac{1+1+1}{1+1} = \mathbf{\frac{3}{2}}
+    \end{align*}
+
+    % 3.16
+    \item $\displaystyle \lim_{x \to 2} \frac{-2x^2+5x-2}{3x^2-2x-8}$ \\
+    Busquem les arrels amb l'equació de segon grau. Arrels del numerador: $2$ i $1/2$. Arrels del denominador: $2$ i $-4/3$. Factoritzem:
+    \begin{align*}
+        \lim_{x \to 2} \frac{-2(x-2)(x-1/2)}{3(x-2)(x+4/3)} &= \lim_{x \to 2} \frac{-(2x-1)(x-2)}{(3x+4)(x-2)} \\
+        &= \lim_{x \to 2} \frac{-2x+1}{3x+4} = \frac{-4+1}{6+4} = \mathbf{-\frac{3}{10}}
+    \end{align*}
+
+    % 3.17
+    \item $\displaystyle \lim_{x \to 2} \frac{x^2+x-6}{x^2-x-2}$ \\
+    Aquest límit és exactament el mateix que l'apartat 3.1.
+    \begin{align*}
+        \lim_{x \to 2} \frac{(x-2)(x+3)}{(x-2)(x+1)} = \lim_{x \to 2} \frac{x+3}{x+1} = \frac{2+3}{2+1} = \mathbf{\frac{5}{3}}
+    \end{align*}
+
+\end{enumerate}
+
+
+% \subsection*{Resolució pas a pas: Exercici 7}
+
+% \begin{enumerate}[label=\textbf{}, leftmargin=*, itemsep=0.8cm]
+%     \item \textbf{7.1.} $\lim_{x \to -1} \frac{3x^2 + x - 2}{x^3 + x^2 - x - 1}$
+%         $$ \lim_{x \to -1} \frac{3x^2 + x - 2}{x^3 + x^2 - x - 1} = \left[ \frac{0}{0} \right] $$
+%         $$ \lim_{x \to -1} \frac{(x+1)(3x-2)}{(x-1)(x+1)^2} = \lim_{x \to -1} \frac{3x-2}{(x-1)(x+1)} = \frac{3(-1)-2}{(-1-1)(-1+1)} = \frac{-5}{0} = \infty $$
+    
+%     \item \textbf{7.2.} $\lim_{x \to 3} \left[ \frac{2x}{x^2 - 9} - \frac{x+1}{x-3} \right]$
+%         $$ \lim_{x \to 3} \left[ \frac{2x}{x^2 - 9} - \frac{x+1}{x-3} \right] = [\infty - \infty] $$
+%         $$ \lim_{x \to 3} \frac{2x - (x+1)(x+3)}{(x-3)(x+3)} = \lim_{x \to 3} \frac{2x - (x^2+4x+3)}{x^2-9} = \lim_{x \to 3} \frac{-x^2-2x-3}{x^2-9} = \frac{-18}{0} = \infty $$
+    
+%     \item \textbf{7.3.} $\lim_{x \to 1} \left( \frac{2x+4}{x^2 - x + 6} \right)^{\frac{3x}{x-1}}$
+%         $$ \lim_{x \to 1} \left( \frac{2x+4}{x^2 - x + 6} \right)^{\frac{3x}{x-1}} = [1^\infty] \implies e^L $$
+%         $$ L = \lim_{x \to 1} \frac{3x}{x-1} \left( \frac{2x+4}{x^2-x+6} - 1 \right) = \lim_{x \to 1} \frac{3x}{x-1} \left( \frac{2x+4-x^2+x-6}{x^2-x+6} \right) $$
+%         $$ L = \lim_{x \to 1} \frac{3x}{x-1} \cdot \frac{-x^2+3x-2}{x^2-x+6} = \lim_{x \to 1} \frac{3x \cdot (-(x-1)(x-2))}{(x-1)(x^2-x+6)} $$
+%         $$ L = \lim_{x \to 1} \frac{-3x(x-2)}{x^2-x+6} = \frac{-3(1)(1-2)}{1-1+6} = \frac{3}{6} = \frac{1}{2} $$
+%         $$ \text{Resultat} = e^{1/2} = \sqrt{e} $$
+%     \item \textbf{7.4.} $\lim_{x \to 2} \left( \frac{3x-2}{x^2-2x+4} \right)^{\frac{x}{x-2}}$
+%         $$ \lim_{x \to 2} \left( 1 + \frac{3x-2}{x^2-2x+4} - 1 \right)^{\frac{x}{x-2}} = \lim_{x \to 2} \left( 1 + \frac{-x^2+5x-6}{x^2-2x+4} \right)^{\frac{x}{x-2}} $$
+%         $$ = \lim_{x \to 2} \left( 1 + \frac{1}{\frac{x^2-2x+4}{-(x-2)(x-3)}} \right)^{\frac{x}{x-2}} = \lim_{x \to 2} \left[ \left( 1 + \frac{1}{f(x)} \right)^{f(x)} \right]^{\frac{1}{f(x)} \cdot \frac{x}{x-2}} $$
+%         $$ \text{Límit de l'exponent: } \lim_{x \to 2} \frac{-(x-2)(x-3)}{x^2-2x+4} \cdot \frac{x}{x-2} = \lim_{x \to 2} \frac{-x(x-3)}{x^2-2x+4} = \frac{-2(2-3)}{4-4+4} = \frac{1}{2} $$
+%         $$ \text{Resultat: } e^{1/2} = \sqrt{e} $$
+    
+%     \item \textbf{7.5.} $\lim_{x \to 3} \left( \frac{2x^2-x+1}{4x+4} \right)^{\frac{2x}{x-3}}$
+%         $$ \lim_{x \to 3} \left( 1 + \frac{2x^2-x+1-4x-4}{4x+4} \right)^{\frac{2x}{x-3}} = \lim_{x \to 3} \left( 1 + \frac{2x^2-5x-3}{4x+4} \right)^{\frac{2x}{x-3}} $$
+%         $$ = \lim_{x \to 3} \left( 1 + \frac{1}{\frac{4x+4}{(x-3)(2x+1)}} \right)^{\frac{2x}{x-3}} = \lim_{x \to 3} \left[ \left( 1 + \frac{1}{f(x)} \right)^{f(x)} \right]^{\frac{1}{f(x)} \cdot \frac{2x}{x-3}} $$
+%         $$ \text{Límit de l'exponent: } \lim_{x \to 3} \frac{(x-3)(2x+1)}{4x+4} \cdot \frac{2x}{x-3} = \lim_{x \to 3} \frac{2x(2x+1)}{4x+4} = \frac{6(7)}{16} = \frac{21}{8} $$
+%         $$ \text{Resultat: } e^{21/8} $$
+    
+%     \item \textbf{7.6.} $\lim_{x \to 0} \left( \frac{x^2-3x+1}{5x+1} \right)^{\frac{3}{x}}$
+%         $$ \lim_{x \to 0} \left( 1 + \frac{x^2-3x+1-5x-1}{5x+1} \right)^{\frac{3}{x}} = \lim_{x \to 0} \left( 1 + \frac{x^2-8x}{5x+1} \right)^{\frac{3}{x}} $$
+%         $$ = \lim_{x \to 0} \left( 1 + \frac{1}{\frac{5x+1}{x(x-8)}} \right)^{\frac{3}{x}} = \lim_{x \to 0} \left[ \left( 1 + \frac{1}{f(x)} \right)^{f(x)} \right]^{\frac{1}{f(x)} \cdot \frac{3}{x}} $$
+%         $$ \text{Límit de l'exponent: } \lim_{x \to 0} \frac{x(x-8)}{5x+1} \cdot \frac{3}{x} = \lim_{x \to 0} \frac{3(x-8)}{5x+1} = \frac{3(-8)}{1} = -24 $$
+%         $$ \text{Resultat: } e^{-24} = \frac{1}{e^{24}} $$
+    
+%     \item \textbf{7.7.} $\lim_{x \to 1} \left( \frac{x^2-2x+3}{x+1} \right)^{\frac{1}{x-1}}$
+%         $$ \lim_{x \to 1} \left( 1 + \frac{x^2-2x+3-x-1}{x+1} \right)^{\frac{1}{x-1}} = \lim_{x \to 1} \left( 1 + \frac{x^2-3x+2}{x+1} \right)^{\frac{1}{x-1}} $$
+%         $$ = \lim_{x \to 1} \left( 1 + \frac{1}{\frac{x+1}{(x-1)(x-2)}} \right)^{\frac{1}{x-1}} = \lim_{x \to 1} \left[ \left( 1 + \frac{1}{f(x)} \right)^{f(x)} \right]^{\frac{1}{f(x)} \cdot \frac{1}{x-1}} $$
+%         $$ \text{Límit de l'exponent: } \lim_{x \to 1} \frac{(x-1)(x-2)}{x+1} \cdot \frac{1}{x-1} = \lim_{x \to 1} \frac{x-2}{x+1} = \frac{1-2}{1+1} = -\frac{1}{2} $$
+%         $$ \text{Resultat: } e^{-1/2} = \frac{1}{\sqrt{e}} $$
+        
+%     \item \textbf{7.8.} $\lim_{x \to +\infty} \left( \frac{1+2x}{2x+5} \right)^{2x^2-1}$
+%         \begin{itemize}
+%             \item \textbf{Explicació:} Ens trobem davant una indeterminació $1^\infty$ quan $x \to +\infty$. Transformem la base per obtenir l'estructura $1 + 1/f(x)$, ajustem l'exponent per tancar la definició d' $e$ i resolem el límit de l'exponent restant.
+%             \item \textbf{Resolució:}
+%             $$ \lim_{x \to +\infty} \left( 1 + \frac{1+2x}{2x+5} - 1 \right)^{2x^2-1} = \lim_{x \to +\infty} \left( 1 + \frac{1+2x-2x-5}{2x+5} \right)^{2x^2-1} $$
+%             $$ = \lim_{x \to +\infty} \left( 1 + \frac{-4}{2x+5} \right)^{2x^2-1} = \lim_{x \to +\infty} \left( 1 + \frac{1}{\frac{2x+5}{-4}} \right)^{2x^2-1} $$
+%             $$ = \lim_{x \to +\infty} \left[ \left( 1 + \frac{1}{g(x)} \right)^{g(x)} \right]^{\frac{1}{g(x)} \cdot (2x^2-1)} \text{ on } g(x) = \frac{2x+5}{-4} $$
+%             \item \textbf{Límit de l'exponent:} 
+%             $$ L = \lim_{x \to +\infty} \frac{-4}{2x+5} \cdot (2x^2-1) = \lim_{x \to +\infty} \frac{-8x^2+4}{2x+5} $$
+%             Com que el grau del numerador ($2$) és major que el del denominador ($1$) i el coeficient principal és negatiu:
+%             $$ L = -\infty $$
+%             \item \textbf{Resultat final:}
+%             $$ e^{-\infty} = 0 $$
+%         \end{itemize}
+%         \item \textbf{7.9.} $\lim_{x \to -\infty} \left( \frac{4x-2}{3x+5} \right)^{x^2-1}$
+%     \begin{itemize}
+%         \item \textbf{Explicació:} Calculem primer el límit de la base i de l'exponent. Com que la base és major que 1 i l'exponent tendeix a $+\infty$, el resultat és directe.
+%         \item \textbf{Resolució:}
+%         $$ \text{Base: } \lim_{x \to -\infty} \frac{4x-2}{3x+5} = \frac{4}{3} > 1 $$
+%         $$ \text{Exponent: } \lim_{x \to -\infty} (x^2-1) = (-\infty)^2 = +\infty $$
+%         $$ \text{Resultat: } \left( \frac{4}{3} \right)^{+\infty} = +\infty $$
+%     \end{itemize}
+
+% \item \textbf{7.10.} $\lim_{x \to +\infty} \left( \frac{2x-2}{3+2x} \right)^{x+1}$
+%     \begin{itemize}
+%         \item \textbf{Explicació:} La base tendeix a 1 i l'exponent a $\infty$. Apliquem el mètode de construcció del número $e$.
+%         \item \textbf{Resolució:}
+%         $$ \lim_{x \to +\infty} \left( 1 + \frac{2x-2}{2x+3} - 1 \right)^{x+1} = \lim_{x \to +\infty} \left( 1 + \frac{-5}{2x+3} \right)^{x+1} = \lim_{x \to +\infty} \left( 1 + \frac{1}{\frac{2x+3}{-5}} \right)^{x+1} $$
+%         $$ = \lim_{x \to +\infty} \left[ \left( 1 + \frac{1}{f(x)} \right)^{f(x)} \right]^{\frac{-5}{2x+3} \cdot (x+1)} \text{ on } f(x) = \frac{2x+3}{-5} $$
+%         $$ \text{Límit de l'exponent: } \lim_{x \to +\infty} \frac{-5x-5}{2x+3} = -\frac{5}{2} $$
+%         $$ \text{Resultat: } e^{-5/2} = \frac{1}{\sqrt{e^5}} $$
+%     \end{itemize}
+    
+%     \item \textbf{7.11.} $\lim_{x \to -\infty} \left( \frac{4x^2-7}{3x^2+9x} \right)^x$
+%         \begin{itemize}
+%             \item \textbf{Explicació:} La base tendeix a $4/3$ (major que 1) i l'exponent a $-\infty$. 
+%             \item \textbf{Resolució:}
+%             $$ \text{Base: } \lim_{x \to -\infty} \frac{4x^2-7}{3x^2+9x} = \frac{4}{3} $$
+%             $$ \text{Resultat: } \left( \frac{4}{3} \right)^{-\infty} = \left( \frac{3}{4} \right)^{+\infty} = 0 $$
+%         \end{itemize}
+    
+%     \item \textbf{7.12.} $\lim_{x \to +\infty} \left( \frac{x^2+1}{x^2-2} \right)^{2x}$
+%         \begin{itemize}
+%             \item \textbf{Explicació:} Indeterminació $1^\infty$. Forcem l'estructura del número $e$.
+%             \item \textbf{Resolució:}
+%             $$ \lim_{x \to +\infty} \left( 1 + \frac{x^2+1}{x^2-2} - 1 \right)^{2x} = \lim_{x \to +\infty} \left( 1 + \frac{3}{x^2-2} \right)^{2x} = \lim_{x \to +\infty} \left( 1 + \frac{1}{\frac{x^2-2}{3}} \right)^{2x} $$
+%             $$ = \lim_{x \to +\infty} \left[ \left( 1 + \frac{1}{f(x)} \right)^{f(x)} \right]^{\frac{3}{x^2-2} \cdot 2x} \text{ on } f(x) = \frac{x^2-2}{3} $$
+%             $$ \text{Límit de l'exponent: } \lim_{x \to +\infty} \frac{6x}{x^2-2} = 0 \text{ (grau num < grau den)} $$
+%             $$ \text{Resultat: } e^0 = 1 $$
+%         \end{itemize}
+    
+%     \item \textbf{7.13.} $\lim_{x \to +\infty} [\sqrt{x^2-3x} - \sqrt{x^2-1}]$
+%         \begin{itemize}
+%             \item \textbf{Explicació:} Indeterminació $\infty - \infty$ amb arrels. Multipliquem i dividim pel conjugat per racionalitzar el numerador.
+%             \item \textbf{Resolució:}
+%             $$ \lim_{x \to +\infty} \frac{(\sqrt{x^2-3x} - \sqrt{x^2-1})(\sqrt{x^2-3x} + \sqrt{x^2-1})}{\sqrt{x^2-3x} + \sqrt{x^2-1}} = \lim_{x \to +\infty} \frac{(x^2-3x)-(x^2-1)}{\sqrt{x^2-3x} + \sqrt{x^2-1}} $$
+%             $$ = \lim_{x \to +\infty} \frac{-3x+1}{\sqrt{x^2-3x} + \sqrt{x^2-1}} = \frac{-3}{1+1} = -\frac{3}{2} $$
+%         \end{itemize}
+    
+%     \item \textbf{7.14.} $\lim_{x \to 3} \frac{x-3}{x^3-5x^2+3x+9}$
+%         \begin{itemize}
+%             \item \textbf{Explicació:} Indeterminació $0/0$. Factoritzem el denominador (que té l'arrel $x=3$ doble) per simplificar.
+%             \item \textbf{Resolució:}
+%             $$ \text{Denominador: } x^3-5x^2+3x+9 = (x-3)^2(x+1) $$
+%             $$ \lim_{x \to 3} \frac{x-3}{(x-3)^2(x+1)} = \lim_{x \to 3} \frac{1}{(x-3)(x+1)} = \frac{1}{0} $$
+%             \item \textbf{Límits laterals:}
+%             $$ \lim_{x \to 3^-} \frac{1}{(x-3)(x+1)} = \frac{1}{0^- \cdot 4} = -\infty $$
+%             $$ \lim_{x \to 3^+} \frac{1}{(x-3)(x+1)} = \frac{1}{0^+ \cdot 4} = +\infty $$
+%             $$ \text{Com que } \lim_{x \to 3^-} \neq \lim_{x \to 3^+}, \text{ el límit no existeix.} $$
+%         \end{itemize}
+    
+%     \item \textbf{7.15.} $\lim_{x \to 1} \frac{x^3-x}{x^2-2x+1}$
+%         \begin{itemize}
+%             \item \textbf{Explicació:} Indeterminació $0/0$. Factoritzem numerador i denominador per cancel·lar el factor $(x-1)$.
+%             \item \textbf{Resolució:}
+%             $$ \lim_{x \to 1} \frac{x(x-1)(x+1)}{(x-1)^2} = \lim_{x \to 1} \frac{x(x+1)}{x-1} = \frac{1(2)}{0} = \frac{2}{0} $$
+%             \item \textbf{Límits laterals:}
+%             $$ \lim_{x \to 1^-} \frac{x(x+1)}{x-1} = \frac{2}{0^-} = -\infty $$
+%             $$ \lim_{x \to 1^+} \frac{x(x+1)}{x-1} = \frac{2}{0^+} = +\infty $$
+%             $$ \text{Com que els límits laterals són diferents, el límit no existeix.} $$
+%         \end{itemize}
+% \item \textbf{7.16.} $\lim_{x \to +\infty} \left( \frac{3x-2}{4+3x} \right)^{x+1}$
+%     \begin{itemize}
+%         \item \textbf{Explicació:} La base tendeix a 1 ($3/3$) i l'exponent a $\infty$. Apliquem el mètode del número $e$.
+%         \item \textbf{Resolució:}
+%         $$ \lim_{x \to +\infty} \left( 1 + \frac{3x-2}{3x+4} - 1 \right)^{x+1} = \lim_{x \to +\infty} \left( 1 + \frac{-6}{3x+4} \right)^{x+1} = \lim_{x \to +\infty} \left( 1 + \frac{1}{\frac{3x+4}{-6}} \right)^{x+1} $$
+%         $$ \text{Límit de l'exponent: } \lim_{x \to +\infty} \frac{-6}{3x+4} \cdot (x+1) = \lim_{x \to +\infty} \frac{-6x-6}{3x+4} = \frac{-6}{3} = -2 $$
+%         $$ \text{Resultat: } e^{-2} = \frac{1}{e^2} $$
+%     \end{itemize}
+
+%     \item \textbf{7.17.} $\lim_{x \to 2} \left( \frac{3x}{x^2-4} - \frac{x+1}{x-2} \right)$
+%         \begin{itemize}
+%             \item \textbf{Explicació:} Indeterminació $\infty - \infty$. Operem les fraccions fent el mínim comú múltiple, recordant que $x^2-4 = (x-2)(x+2)$.
+%             \item \textbf{Resolució:}
+%             $$ \lim_{x \to 2} \frac{3x - (x+1)(x+2)}{x^2-4} = \lim_{x \to 2} \frac{3x - (x^2+3x+2)}{x^2-4} = \lim_{x \to 2} \frac{-x^2-2}{x^2-4} = \frac{-6}{0} $$
+%             \item \textbf{Límits laterals:}
+%             $$ \lim_{x \to 2^-} \frac{-x^2-2}{x^2-4} = \frac{-6}{0^-} = +\infty $$
+%             $$ \lim_{x \to 2^+} \frac{-x^2-2}{x^2-4} = \frac{-6}{0^+} = -\infty $$
+%             $$ \text{Resultat: No existeix el límit.} $$
+%         \end{itemize}
+    
+%     \item \textbf{7.18.} $\lim_{x \to +\infty} \left( \frac{3x^2}{x+1} - \frac{3x^3}{x^2-1} \right)$
+%         \begin{itemize}
+%             \item \textbf{Explicació:} Indeterminació $\infty - \infty$. Combinem les fraccions. Com que $x^2-1 = (x+1)(x-1)$, el mcm és $x^2-1$.
+%             \item \textbf{Resolució:}
+%             $$ \lim_{x \to +\infty} \frac{3x^2(x-1) - 3x^3}{x^2-1} = \lim_{x \to +\infty} \frac{3x^3 - 3x^2 - 3x^3}{x^2-1} = \lim_{x \to +\infty} \frac{-3x^2}{x^2-1} $$
+%             $$ \text{Resultat: } -3 $$
+%         \end{itemize}
+    
+%     \item \textbf{7.19.} $\lim_{x \to 1} \left( \frac{x+3}{2x+2} \right)^{\frac{1}{x-1}}$
+%         \begin{itemize}
+%             \item \textbf{Explicació:} Indeterminació $1^\infty$. Forcem l'estructura de $1 + 1/f(x)$.
+%             \item \textbf{Resolució:}
+%             $$ \lim_{x \to 1} \left( 1 + \frac{x+3}{2x+2} - 1 \right)^{\frac{1}{x-1}} = \lim_{x \to 1} \left( 1 + \frac{x+3-2x-2}{2x+2} \right)^{\frac{1}{x-1}} = \lim_{x \to 1} \left( 1 + \frac{-x+1}{2x+2} \right)^{\frac{1}{x-1}} $$
+%             $$ = \lim_{x \to 1} \left( 1 + \frac{1}{\frac{2x+2}{-(x-1)}} \right)^{\frac{1}{x-1}} \implies \text{Exponent: } \lim_{x \to 1} \frac{-(x-1)}{2x+2} \cdot \frac{1}{x-1} = \lim_{x \to 1} \frac{-1}{2x+2} = -\frac{1}{4} $$
+%             $$ \text{Resultat: } e^{-1/4} = \frac{1}{\sqrt[4]{e}} $$
+%         \end{itemize}
+    
+%     \item \textbf{7.20.} $\lim_{x \to +\infty} \left[ \frac{x^2-1}{x+2} - \frac{x^3}{x^2+1} \right]$
+%         \begin{itemize}
+%             \item \textbf{Explicació:} Indeterminació $\infty - \infty$. Operem les fraccions multiplicant en creu.
+%             \item \textbf{Resolució:}
+%             $$ \lim_{x \to +\infty} \frac{(x^2-1)(x^2+1) - x^3(x+2)}{(x+2)(x^2+1)} = \lim_{x \to +\infty} \frac{x^4 - 1 - (x^4 + 2x^3)}{x^3 + 2x^2 + x + 2} $$
+%             $$ \lim_{x \to +\infty} \frac{-2x^3 - 1}{x^3 + 2x^2 + x + 2} = -2 $$
+%             $$ \text{Resultat: } -2 $$
+%         \end{itemize}
+    
+%     \item \textbf{7.21.} $\lim_{x \to 0} \left( \frac{1+x^2}{1-x^2} \right)^{\frac{1+3x^2}{x^2}}$
+%         \begin{itemize}
+%             \item \textbf{Explicació:} Indeterminació $1^\infty$. Ajustem la base i l'exponent per obtenir el número $e$.
+%             \item \textbf{Resolució:}
+%             $$ \lim_{x \to 0} \left( 1 + \frac{1+x^2}{1-x^2} - 1 \right)^{\frac{1+3x^2}{x^2}} = \lim_{x \to 0} \left( 1 + \frac{1+x^2-1+x^2}{1-x^2} \right)^{\frac{1+3x^2}{x^2}} = \lim_{x \to 0} \left( 1 + \frac{2x^2}{1-x^2} \right)^{\frac{1+3x^2}{x^2}} $$
+%             $$ \text{Límit de l'exponent: } \lim_{x \to 0} \frac{2x^2}{1-x^2} \cdot \frac{1+3x^2}{x^2} = \lim_{x \to 0} \frac{2(1+3x^2)}{1-x^2} = \frac{2(1)}{1} = 2 $$
+%             $$ \text{Resultat: } e^2 $$
+%         \end{itemize}
+% \end{enumerate}
+
+\end{document}

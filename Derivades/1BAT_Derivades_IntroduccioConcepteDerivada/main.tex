@@ -1,0 +1,456 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{multicol}
+
+% 1. MARGES I CAPÇALERA
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}} 
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup: 1r Batxillerat} \\ \hline
+    \textbf{Activitat: Introducció a les Derivades}  & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.8cm}
+
+\section*{Conceptes previs: La Taxa de Variació Mitjana (TVM)}
+
+Recordem que la \textbf{Taxa de Variació Mitjana} d'una funció $f(x)$ en un interval $[a, b]$ mesura la variació relativa de la funció respecte a la variable independent:
+$$TVM[a, b] = \frac{f(b) - f(a)}{b - a}$$
+Geomètricament, aquest valor coincideix amb el \textbf{pendent de la recta secant} que passa pels punts $(a, f(a))$ i $(b, f(b))$.
+
+\subsection*{Exercici 1. Anàlisi gràfica de la TVM}
+
+Calcula la TVM en els intervals indicats per a cada una de les següents funcions. Fixa't en el primer exemple resolt:
+
+\begin{multicols}{2}
+
+% --- GRÀFIC 1 (EXEMPLE) ---
+\begin{center}
+    \begin{tikzpicture}[scale=0.8]
+    \begin{axis}[axis lines=middle, xmin=-1, xmax=5, ymin=-1, ymax=9, grid=major, xlabel=$x$, ylabel=$y$, title={$f(x) = x^2 - 2x + 2$}]
+        \addplot[domain=-0.5:4.2, blue, thick, samples=100] {x^2 - 2*x + 2};
+        \addplot[only marks, mark=*, red] coordinates {(1,1) (3,5)};
+        \draw[red, dashed, thick] (axis cs:1,1) -- (axis cs:3,5);
+    \end{axis}
+    \end{tikzpicture}
+\end{center}
+\columnbreak
+\textbf{Exemple Resolt (Interval $[1, 3]$):}
+\begin{itemize}
+    \item Identifiquem els punts: $f(1)=1$ i $f(3)=5$.
+    \item $TVM[1, 3] = \frac{f(3)-f(1)}{3-1} = \frac{5-1}{2} = \mathbf{2}$
+    \item \textit{Interpretació: Per cada unitat que avancem en $x$, la funció puja, de mitjana, 2 unitats.}
+\end{itemize}
+
+\end{multicols}
+
+\textbf{Prova tu en l'interval $[0, 4]$:}
+
+\vspace{0.5cm}
+
+\textbf{En quin dels dos intervals creix més ràpid la funció?}
+
+\newpage
+
+\begin{multicols}{2}
+% --- GRÀFIC 2 ---
+\begin{center}
+    \begin{tikzpicture}[scale=0.8]
+    \begin{axis}[axis lines=middle, xmin=-1, xmax=10, ymin=-1, ymax=4, grid=major, title={B) $g(x) = \sqrt{x+1}$}]
+        \addplot[domain=-1:10, green!60!black, thick, samples=100] {sqrt(x+1)};
+    \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\columnbreak
+Calcula la TVM de $g(x)$ en:
+\begin{enumerate}[label=\alph*)]
+    \item Interval $[0, 3]$:
+    \item Interval $[3, 8]$:
+\end{enumerate}
+\vspace{1cm}
+\textbf{En quin dels dos intervals creix més ràpid la funció?}
+\end{multicols}
+
+\vspace{0.5cm}
+
+\begin{multicols}{2}
+% --- GRÀFIC 3 ---
+\begin{center}
+    \begin{tikzpicture}[scale=0.8]
+    \begin{axis}[axis lines=middle, xmin=-3, xmax=3, ymin=-1, ymax=5, grid=major, title={C) $h(x) = 4 - x^2$}]
+        \addplot[domain=-2.5:2.5, orange, thick, samples=100] {4 - x^2};
+    \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\columnbreak
+Calcula la TVM de $h(x)$ en:
+\begin{enumerate}[label=\alph*)]
+    \item Interval $[-2, 0]$:
+    \item Interval $[0, 2]$:
+\end{enumerate}
+\vspace{1cm}
+\textbf{Què vol dir el signe de les TVMs que has calculat?}
+\end{multicols}
+
+\subsection*{Reflexió final de l'exercici}
+
+Com explicaries el significat de la taxa de variació mitjana (TVM) amb les teves paraules?
+
+\newpage
+
+\section*{Interpretació geomètrica: La Derivada en un punt}
+
+El pendent de la recta tangent a la funció en un punt $x = a$ s'anomena \textbf{derivada de la funció en el punt $a$}, i s'escriu $f'(a)$. 
+
+\subsection*{Exercici 2. Càlcul de la derivada a partir de la recta tangent}
+
+Observa les gràfiques següents. En cadascuna s'ha dibuixat la recta tangent (vermella i discontínua) en un punt marcat. Determina el valor de la derivada en aquest punt calculant el pendent de la recta ($m = \frac{\Delta y}{\Delta x}$).
+
+\begin{enumerate}[label=\textbf{\Alph*)}]
+    % --- APARTAT A (EXEMPLE RESOLT - PENDENT POSITIU 2) ---
+    \item \begin{minipage}[t]{0.45\textwidth}
+        \vspace{0pt}
+        \begin{tikzpicture}[scale=0.75]
+        \begin{axis}[axis lines=middle, xmin=-1, xmax=4, ymin=-1, ymax=6, grid=both, minor tick num=1, unit vector ratio=1 1]
+            \addplot[domain=-0.5:2.5, blue, thick, samples=100] {x^2 + 1};
+            \addplot[domain=0:2.5, red, dashed, thick] {2*x}; 
+            \addplot[only marks, mark=*, black] coordinates {(1,2)};
+        \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        \vspace{10pt}
+        \textbf{Exemple resolt: Càlcul de $f'(1)$}
+        \begin{itemize}
+            \item El punt de tangència és $(1, 2)$.
+            \item Veiem que si avancem 1 unitat a la dreta, la recta puja 2 unitats fins al punt $(2, 4)$.
+            \item $f'(1) = \frac{4 - 2}{2 - 1} = \frac{2}{1} = \mathbf{2}$
+        \end{itemize}
+    \end{minipage}
+
+    \vspace{0.8cm}
+
+    % --- APARTAT B (PENDENT POSITIU 1) ---
+    \item \begin{minipage}[t]{0.45\textwidth}
+        \vspace{0pt}
+        \begin{tikzpicture}[scale=0.75]
+        \begin{axis}[axis lines=middle, xmin=-1, xmax=5, ymin=-1, ymax=6, grid=both, minor tick num=1, unit vector ratio=1 1]
+            \addplot[domain=-0.5:4, green!60!black, thick, samples=100] {0.5*x^2 - x + 2};
+            \addplot[domain=0:5, red, dashed, thick] {1*x}; 
+            \addplot[only marks, mark=*, black] coordinates {(2,2)};
+        \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        \vspace{10pt}
+        \textbf{Calcula $f'(2)$:}
+        \\[2cm]
+        Resultat: $f'(2) =$
+    \end{minipage}
+
+    \vspace{0.8cm}
+
+    % --- APARTAT C (PENDENT NEGATIU -2) ---
+    \item \begin{minipage}[t]{0.45\textwidth}
+        \vspace{0pt}
+        \begin{tikzpicture}[scale=0.75]
+        \begin{axis}[axis lines=middle, xmin=-1, xmax=5, ymin=-1, ymax=6, grid=both, minor tick num=1, unit vector ratio=1 1]
+            \addplot[domain=-0.5:3.5, orange, thick, samples=100] {4 - 0.5*x^2};
+            \addplot[domain=0:4, red, dashed, thick] {-2*x + 6}; 
+            \addplot[only marks, mark=*, black] coordinates {(2, 2)};
+        \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        \vspace{10pt}
+        \textbf{Calcula $f'(2)$:}
+        \\[2cm]
+        Resultat: $f'(2) =$
+    \end{minipage}
+
+    \newpage
+
+    % --- APARTAT D (PENDENT NUL 0) ---
+    \item \begin{minipage}[t]{0.45\textwidth}
+        \vspace{0pt}
+        \begin{tikzpicture}[scale=0.75]
+        \begin{axis}[axis lines=middle, xmin=-1, xmax=6, ymin=-1, ymax=6, grid=both, minor tick num=1, unit vector ratio=1 1]
+            \addplot[domain=0.5:5.5, purple, thick, samples=100] {5 - 0.5*(x-3)^2};
+            \addplot[domain=1:5, red, dashed, thick] {5}; 
+            \addplot[only marks, mark=*, black] coordinates {(3, 5)};
+        \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        \vspace{10pt}
+        \textbf{Calcula $f'(3)$:}
+        \\[2cm]
+        Resultat: $f'(3) =$
+    \end{minipage}
+
+    \vspace{0.8cm}
+
+ % --- APARTAT E (PENDENT FRACCIONARI POSITIU 1/2) ---
+    \item \begin{minipage}[t]{0.45\textwidth}
+        \vspace{0pt}
+        \begin{tikzpicture}[scale=0.8]
+        \begin{axis}[axis lines=middle, xmin=-1, xmax=6, ymin=-1, ymax=6, grid=both, minor tick num=1, unit vector ratio=1 1]
+            % Funció: f(x) = 0.125*x^2 + 1.5 -> a x=2, y=2. f'(2)=0.5
+            \addplot[domain=-0.5:5.5, cyan!70!black, thick, samples=100] {0.125*x^2 + 1.5}; 
+            % Tangent: y = 0.5x + 1 (Passa per (2,2) i (4,3))
+            \addplot[domain=-0.5:5.5, red, dashed, thick] {0.5*x + 1}; 
+            \addplot[only marks, mark=*, black] coordinates {(2,2)};
+        \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        \vspace{10pt}
+        \textbf{Calcula $f'(2)$:}
+        \\[2.5cm]
+        Resultat: $f'(2) =$
+    \end{minipage}
+
+    \vspace{1.5cm}
+
+    % --- APARTAT F (PENDENT FRACCIONARI NEGATIU -1/2) ---
+    \item \begin{minipage}[t]{0.45\textwidth}
+        \vspace{0pt}
+        \begin{tikzpicture}[scale=0.8]
+        \begin{axis}[axis lines=middle, xmin=-1, xmax=6, ymin=-1, ymax=6, grid=both, minor tick num=1, unit vector ratio=1 1]
+            % Funció: f(x) = -0.125*(x-2)^2 - 0.5*(x-2) + 4 -> a x=2, y=4. f'(2)=-0.5
+            \addplot[domain=-0.5:5.5, gray, thick, samples=100] {-0.125*(x-2)^2 - 0.5*(x-2) + 4}; 
+            % Tangent: y = -0.5x + 5 (Passa per (2,4) i (4,3))
+            \addplot[domain=-0.5:5.5, red, dashed, thick] {-0.5*x + 5}; 
+            \addplot[only marks, mark=*, black] coordinates {(2,4)};
+        \end{axis}
+        \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        \vspace{10pt}
+        \textbf{Calcula $f'(2)$:}
+        \\[2.5cm]
+        Resultat: $f'(2) =$
+    \end{minipage}
+    \end{enumerate}
+\newpage
+
+\section*{Càlcul algebraic: La definició de derivada}
+
+Recordem que la derivada d'una funció $f(x)$ en un punt $x_0$ es defineix com el valor del següent límit:
+\[ f'(x_0) = \lim_{h \to 0} \frac{f(x_0+h) - f(x_0)}{h} \]
+
+\subsection*{Exercici 3. Càlcul de derivades mitjançant el límit}
+
+Calcula les següents derivades en els punts indicats utilitzant la definició formal.
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    % --- APARTAT 1: RESOLT PAS PER PAS ---
+    \item \textbf{Exemple resolt.} Donada $f(x) = 3x - 2$, calcula $f'(1)$:
+    
+    \textit{Resolució:}
+    \begin{itemize}
+        \item Identifiquem els elements: $x_0 = 1$, $f(x_0) = f(1) = 3(1)-2 = 1$.
+        \item Calculem $f(x_0+h) = f(1+h) = 3(1+h) - 2 = 3 + 3h - 2 = 1 + 3h$.
+        \item Apliquem el límit:
+        \[ f'(1) = \lim_{h \to 0} \frac{(1 + 3h) - (1)}{h} = \lim_{h \to 0} \frac{3h}{h} = \lim_{h \to 0} 3 = \mathbf{3} \]
+    \end{itemize}
+
+    \item Donada la funció \textbf{$h(x) = x^2 - 4x + 1$}, calcula les següents derivades puntuals aplicant el límit en cada cas (prepara't per escriure!):
+    \begin{enumerate}[label=\alph*)]
+        \item $h'(0) =$ \vspace{0.2cm}
+        \item $h'(2) =$ \vspace{0.2cm}
+        \item $h'(3) =$ \vspace{0.2cm}
+    \end{enumerate}
+
+    \item \textbf{Repte:} Calcula la derivada de la funció $k(x) = \frac{1}{x}$ en el punt $x_0=2$.
+\end{enumerate}
+
+\newpage 
+
+\section*{La Funció Derivada: La "Màquina" de Pendents}
+
+La \textbf{funció derivada} $f'(x)$ ens permet calcular el pendent de la recta tangent a $f(x)$ en \textbf{qualsevol} valor de $x$ sense haver de fer un límit cada vegada.
+\[ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \]
+
+\subsection*{Exercici 4. Connectant conceptes}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{La fòrmula general:} Troba la funció derivada $h'(x)$ de la funció que has usat a l'exercici anterior, $h(x) = x^2 - 4x + 1$, utilitzant el límit per a un $x$ genèric.
+    \vspace{0.2cm}
+
+    \item \textbf{Comprovació:} Substitueix els valors $x=0, x=2$ i $x=3$ en l'expressió de $h'(x)$ que acabes de trobar.
+    \begin{itemize}
+        \item $h'(0) = $
+        \item $h'(2) = $
+        \item $h'(3) = $
+    \end{itemize}
+    \textbf{Coincideixen els resultats amb els que has calculat a l'Exercici 3?}
+
+    \item \textbf{Reflexió:} Què t'ha semblat més eficient: calcular tres límits per a tres punts diferents (Ex. 3) o calcular una sola funció derivada i substituir (Ex. 4)? Si et demanés el pendent en 100 punts, quin mètode faries servir?
+    \vspace{0.2cm}
+
+    \item \textbf{Més pràctica de funcions derivades:} Troba $f'(x)$ de:
+    \begin{multicols}{2}
+    \begin{enumerate}[label=\alph*)]
+        \item $f(x) = 2x^2 - 5$
+        \item $f(x) = (x + 2)^3$
+    \end{enumerate}
+    \end{multicols}
+\end{enumerate}
+
+\newpage
+\section*{Solucionari}
+
+\subsection*{Exercici 1. Anàlisi gràfica de la TVM}
+\begin{itemize}
+    \item \textbf{Funció $f(x)$ en $[0, 4]$}: $f(0)=2, f(4)=10$. $TVM[0, 4] = \frac{10-2}{4-0} = \mathbf{2}$.
+    \item \textbf{Comparació}: En els dos intervals ($[1,3]$ i $[0,4]$) la funció creix igual de ràpid de mitjana (TVM = 2).
+    \item \textbf{Funció $g(x)$}:
+    \begin{itemize}
+        \item a) $TVM[0, 3] = \frac{2-1}{3-0} = \mathbf{1/3 \approx 0,33}$
+        \item b) $TVM[3, 8] = \frac{3-2}{8-3} = \mathbf{1/5 = 0,2}$
+        \item Creix més ràpid en l'interval \textbf{[0, 3]}.
+    \end{itemize}
+    \item \textbf{Funció $h(x)$}:
+    \begin{itemize}
+        \item a) $TVM[-2, 0] = \frac{4-0}{0-(-2)} = \mathbf{2}$
+        \item b) $TVM[0, 2] = \frac{0-4}{2-0} = \mathbf{-2}$
+        \item \textbf{Significat}: El signe positiu indica que la funció creix en l'interval, i el negatiu indica que decreix.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Exercici 2. Càlcul de la derivada a partir de la recta tangent}
+\begin{itemize}
+    \item \textbf{B)} $f'(2) = \mathbf{1}$
+    \item \textbf{C)} $f'(2) = \mathbf{-2}$
+    \item \textbf{D)} $f'(3) = \mathbf{0}$
+    \item \textbf{E)} $f'(2) = \mathbf{1/2}$ o $\mathbf{0,5}$
+    \item \textbf{F)} $f'(2) = \mathbf{-1/2}$ o $\mathbf{-0,5}$
+\end{itemize}
+
+\subsection*{Exercici 3. Càlcul de derivades mitjançant el límit}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \setcounter{enumerate}{1}
+    \item \textbf{$h(x) = x^2 - 4x + 1$}:
+    \begin{itemize}
+        \item a) $h'(0) = \lim_{h \to 0} \frac{(h^2-4h+1)-1}{h} = \lim_{h \to 0} (h-4) = \mathbf{-4}$
+        \item b) $h'(2) = \lim_{h \to 0} \frac{((2+h)^2-4(2+h)+1)-(-3)}{h} = \dots = \mathbf{0}$
+        \item c) $h'(3) = \dots = \mathbf{2}$ 
+    \end{itemize}
+    \item \textbf{Repte $k(x) = 1/x$}: $k'(2) = \mathbf{-1/4}$ o $\mathbf{-0,25}$ 
+\end{enumerate}
+
+\subsection*{Exercici 4. Connectant conceptes}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{Funció derivada $h'(x)$}:
+    \[ h'(x) = \lim_{h \to 0} \frac{[(x+h)^2-4(x+h)+1] - [x^2-4x+1]}{h} = \dots = \mathbf{2x - 4} \]
+    \item \textbf{Comprovació}:
+    \begin{itemize}
+        \item $h'(0) = 2(0)-4 = \mathbf{-4}$
+        \item $h'(2) = 2(2)-4 = \mathbf{0}$
+        \item $h'(3) = 2(3)-4 = \mathbf{2}$
+    \end{itemize}
+    \textit{Els resultats han de coincidir exactament amb l'exercici 3.}
+    \item És mès eficient calcular la funció derivada si cal fer més d'un punt
+    \item \textbf{Altres derivades}: \\
+\vspace{1cm}
+\noindent\textbf{Resolució detallada de l'Exercici 4.4 (Més pràctica de funcions derivades)}
+
+A continuació es detalla el càlcul de la derivada utilitzant la definició mitjançant el límit per a les dues funcions proposades.
+
+\vspace{0.5cm}
+\textbf{a) $f(x) = 2x^2 - 5$}
+
+\begin{enumerate}
+    \item \textbf{Plantegem el límit:}
+    \[ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \]
+    
+    \item \textbf{Substituïm la funció:}
+    \[ f'(x) = \lim_{h \to 0} \frac{[2(x+h)^2 - 5] - [2x^2 - 5]}{h} \]
+    
+    \item \textbf{Desenvolupem el quadrat del binomi:}
+    Recordem que $(a+b)^2 = a^2 + 2ab + b^2$. Per tant, $(x+h)^2 = x^2 + 2xh + h^2$.
+    \[ f'(x) = \lim_{h \to 0} \frac{[2(x^2 + 2xh + h^2) - 5] - [2x^2 - 5]}{h} \]
+    
+    \item \textbf{Multipliquem i traiem parèntesis:}
+    \[ f'(x) = \lim_{h \to 0} \frac{2x^2 + 4xh + 2h^2 - 5 - 2x^2 + 5}{h} \]
+    
+    \item \textbf{Simplifiquem termes al numerador:}
+    Els termes $2x^2$ i $-2x^2$ s'anul·len, igual que $-5$ i $+5$.
+    \[ f'(x) = \lim_{h \to 0} \frac{4xh + 2h^2}{h} \]
+    
+    \item \textbf{Traiem factor comú i resolem el límit:}
+    \[ f'(x) = \lim_{h \to 0} \frac{h(4x + 2h)}{h} = \lim_{h \to 0} (4x + 2h) = 4x + 2(0) = \mathbf{4x} \]
+\end{enumerate}
+
+
+\vspace{0.5cm}
+\textbf{b) $f(x) = (x + 2)^3$}
+
+\textit{Nota prèvia: Com desenvolupar $(x+h+2)^3$?}
+Per evitar confusions, ho farem pas a pas. Considerarem $(x+2+h)^3$ i ho separarem com a la multiplicació d'un binomi al quadrat pel mateix binomi: $[(x+2)+h]^2 \cdot [(x+2)+h]$. 
+Per fer-ho més senzill, podem agrupar $x+2 = A$. Així hem de calcular $(A+h)^3$.
+\begin{align*}
+(A+h)^3 &= (A+h)^2 \cdot (A+h) \\
+&= (A^2 + 2Ah + h^2) \cdot (A+h) \\
+&= A^3 + A^2h + 2A^2h + 2Ah^2 + Ah^2 + h^3 \\
+&= A^3 + 3A^2h + 3Ah^2 + h^3
+\end{align*}
+Si substituïm $A = x+2$, tenim la fórmula per avançar. 
+
+Anem a la resolució del límit:
+
+\begin{enumerate}
+    \item \textbf{Plantegem el límit:}
+    \[ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \]
+    
+    \item \textbf{Substituïm la funció i apliquem l'agrupació $A = x+2$:}
+    \[ f'(x) = \lim_{h \to 0} \frac{((x+h)+2)^3 - (x+2)^3}{h} = \lim_{h \to 0} \frac{(A+h)^3 - A^3}{h} \]
+    
+    \item \textbf{Apliquem el desenvolupament que hem trobat abans:}
+    \[ f'(x) = \lim_{h \to 0} \frac{(A^3 + 3A^2h + 3Ah^2 + h^3) - A^3}{h} \]
+    
+    \item \textbf{Simplifiquem els termes $A^3$:}
+    \[ f'(x) = \lim_{h \to 0} \frac{3A^2h + 3Ah^2 + h^3}{h} \]
+    
+    \item \textbf{Traiem factor comú la $h$ al numerador:}
+    \[ f'(x) = \lim_{h \to 0} \frac{h(3A^2 + 3Ah + h^2)}{h} \]
+    
+    \item \textbf{Cancelem la $h$ i resolem el límit quan $h \to 0$:}
+    \[ f'(x) = \lim_{h \to 0} (3A^2 + 3Ah + h^2) = 3A^2 + 3A(0) + (0)^2 = 3A^2 \]
+    
+    \item \textbf{Desfem el canvi $A = x+2$ per donar el resultat final:}
+    \[ f'(x) = \mathbf{3(x+2)^2} \]
+\end{enumerate}
+\end{enumerate}
+
+
+\end{document}

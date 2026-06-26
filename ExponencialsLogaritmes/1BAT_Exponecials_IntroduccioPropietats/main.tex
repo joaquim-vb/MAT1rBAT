@@ -1,0 +1,449 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{mdframed}
+\usepackage{xcolor}
+
+% Colors
+\definecolor{taronja}{RGB}{220, 120, 30}
+\definecolor{blaufosc}{RGB}{30, 80, 160}
+\definecolor{verdfosc}{RGB}{40, 130, 60}
+\definecolor{grisnet}{RGB}{245, 245, 245}
+
+% Marges i capcalera
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyfoot[L]{}
+\fancyfoot[C]{Pagina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Caixa de recordatori
+\newmdenv[
+  backgroundcolor=grisnet,
+  linecolor=taronja,
+  linewidth=1.5pt,
+  roundcorner=4pt,
+  innertopmargin=6pt,
+  innerbottommargin=6pt,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+]{recordatori}
+
+\begin{document}
+
+% --- CAPCALERA D'IDENTIFICACIO ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+    \hline
+    \textbf{Nom i cognoms:} & \textbf{Grup:} \\ \hline
+    \textbf{Activitat:} Funcions exponencials & \textbf{Data:} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+\begin{center}
+    {\Large \textbf{ACTIVITAT: LA FUNCI\'O EXPONENCIAL}}\\[4pt]
+    {\small \textit{1r de Batxillerat --- Matem\`atiques}}
+\end{center}
+
+\vspace{0.3cm}
+
+% =====================================================================
+\section*{Exercici 1 \quad Relaciona les gr\`afiques amb les expressions}
+% =====================================================================
+
+\begin{recordatori}
+\textbf{Recorda:}
+\begin{itemize}[noitemsep]
+    \item Si $a > 1$, la funci\'o $f(x)=a^x$ \'es \textbf{creixent} (puja cap a la dreta).
+    \item Si $0 < a < 1$, la funci\'o $f(x)=a^x$ \'es \textbf{decreixent} (baixa cap a la dreta).
+    \item Com m\'es gran \'es la base $a > 1$, m\'es r\`apid creix la funci\'o.
+    \item Les funcions $f(x)=a^x$ i $g(x)=\left(\tfrac{1}{a}\right)^x$ s\'on \textbf{sim\`etriques} respecte l'eix d'ordenades.
+    \item Totes les funcions exponencials passen pel punt $(0,1)$.
+\end{itemize}
+\end{recordatori}
+
+\vspace{0.4cm}
+
+A continuaci\'o tens \textbf{dos gr\`afics}, cada un amb \textbf{dues funcions}. A sota hi ha \textbf{quatre expressions algebraiques}. Relaciona cada gr\`afica amb la seva expressi\'o i justifica la resposta a la taula.
+
+\vspace{0.4cm}
+
+% ---- DOS GRAFICS EN PARAL.LEL ----
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\textbf{Gr\`afic 1} \quad ($f_1$ i $f_2$)
+
+\vspace{0.2cm}
+\begin{tikzpicture}
+\begin{axis}[
+    width=7.5cm, height=6.5cm,
+    xmin=-3, xmax=3,
+    ymin=-0.2, ymax=9,
+    axis lines=center,
+    xlabel={$x$}, ylabel={$y$},
+    xtick={-3,-2,-1,0,1,2,3},
+    ytick={1,2,3,4,5,6,7,8},
+    grid=both,
+    grid style={line width=0.3pt, draw=gray!30},
+    tick label style={font=\small},
+    label style={font=\small},
+    legend pos=north west,
+    legend style={font=\small, draw=gray}
+]
+\addplot[domain=-3:3, samples=80, color=blaufosc, line width=1.8pt] {2^x};
+\addlegendentry{$f_1$}
+\addplot[domain=-3:2.1, samples=80, color=taronja, line width=1.8pt, dashed] {3^x};
+\addlegendentry{$f_2$}
+\addplot[only marks, mark=*, mark size=2pt, color=black] coordinates {(0,1)};
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\textbf{Gr\`afic 2} \quad ($f_3$ i $f_4$)
+
+\vspace{0.2cm}
+\begin{tikzpicture}
+\begin{axis}[
+    width=7.5cm, height=6.5cm,
+    xmin=-3, xmax=3,
+    ymin=-0.2, ymax=9,
+    axis lines=center,
+    xlabel={$x$}, ylabel={$y$},
+    xtick={-3,-2,-1,0,1,2,3},
+    ytick={1,2,3,4,5,6,7,8},
+    grid=both,
+    grid style={line width=0.3pt, draw=gray!30},
+    tick label style={font=\small},
+    label style={font=\small},
+    legend pos=north east,
+    legend style={font=\small, draw=gray}
+]
+\addplot[domain=-3:3, samples=80, color=verdfosc, line width=1.8pt] {(0.5)^x};
+\addlegendentry{$f_3$}
+\addplot[domain=-2.1:3, samples=80, color=red!70!black, line width=1.8pt, dashed] {(0.333)^x};
+\addlegendentry{$f_4$}
+\addplot[only marks, mark=*, mark size=2pt, color=black] coordinates {(0,1)};
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+
+\vspace{0.5cm}
+
+\noindent\textbf{Expressions algebraiques:}
+
+\vspace{0.3cm}
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{(A)} $\displaystyle f(x)=\left(\frac{1}{3}\right)^x$ &
+\textbf{(B)} $\displaystyle f(x)=3^x$ &
+\textbf{(C)} $\displaystyle f(x)=2^x$ &
+\textbf{(D)} $\displaystyle f(x)=\left(\frac{1}{2}\right)^x$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+
+\noindent\textbf{Respostes i justificaci\'o:}
+
+\begin{center}
+\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{|c|p{3cm}|p{8cm}|}
+\hline
+\textbf{Funci\'o} & \textbf{Expressi\'o (A/B/C/D)} & \textbf{Justificaci\'o} \\
+\hline
+$f_1$ & & \\
+\hline
+$f_2$ & & \\
+\hline
+$f_3$ & & \\
+\hline
+$f_4$ & & \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+% =====================================================================
+\section*{Exercici 2 \quad Propietats de les pot\`encies i les exponencials}
+% =====================================================================
+
+\begin{recordatori}
+\textbf{Propietats fonamentals} (per a $a, b \in \mathbb{R}^+$, $x, z \in \mathbb{R}$):
+\[
+a^x \cdot a^z = a^{x+z} \qquad \frac{a^x}{a^z} = a^{x-z} \qquad (a^x)^z = a^{xz}
+\]
+\[
+(ab)^x = a^x \cdot b^x \qquad \left(\frac{a}{b}\right)^x = \frac{a^x}{b^x} \qquad a^0 = 1 \qquad a^{-x} = \frac{1}{a^x}
+\]
+\end{recordatori}
+
+\vspace{0.4cm}
+
+\noindent\textbf{2.1 \; Simplifica les expressions seg\"uents (amb n\'umeros):}
+
+\vspace{0.2cm}
+Expressa cada resultat com una \'unica pot\`encia o n\'umero.
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\alph*)}, leftmargin=1.2cm, itemsep=0.6cm]
+    \item $2^3 \cdot 2^5$
+    \item $\dfrac{5^7}{5^3}$
+    \item $(3^2)^4$
+    \item $4^3 \cdot 2^3$
+    \item $\left(\dfrac{2}{3}\right)^{-2}$
+    \item $\dfrac{6^5}{2^5}$
+    \item $7^0 \cdot 7^3$
+    \item $\dfrac{2^8 \cdot 2^{-3}}{2^2}$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.6cm}
+
+\noindent\textbf{2.2 \; Simplifica les expressions amb lletres:}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\alph*)}, leftmargin=1.2cm, itemsep=0.6cm]
+    \item $a^4 \cdot a^{-1} \cdot a^3$
+    \item $\dfrac{a^{2x+1}}{a^{x-2}}$
+    \item $(a^3)^x \cdot a^{2-x}$
+    \item $\left(\dfrac{a^2}{b}\right)^3 \cdot b^2$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.6cm}
+
+\noindent\textbf{2.3 \; Resol les equacions exponencials (troba $x$):}
+
+\vspace{0.2cm}
+\begin{recordatori}
+\textbf{Clau:} Si $a^x = a^z$, aleshores $x = z$ (per a $a > 0$, $a \neq 1$). Intenta expressar els dos membres amb la \textbf{mateixa base}.
+\end{recordatori}
+
+\vspace{0.2cm}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\alph*)}, leftmargin=1.2cm, itemsep=0.6cm]
+    \item $2^x = 2^5$
+    \item $3^{x+1} = 3^4$
+    \item $4^x = 2^6$ \quad \textit{(Pista: escriu $4 = 2^2$)}
+    \item $9^x = 27$ \quad \textit{(Pista: escriu $9=3^2$ i $27=3^3$)}
+    \item $5^{2x-1} = 5^{x+3}$
+    \item $\left(\dfrac{1}{2}\right)^x = 8$ \quad \textit{(Pista: $8=2^3$)}
+\end{enumerate}
+\end{multicols}
+
+\newpage
+
+% =====================================================================
+\section*{Exercici 3 (opcional) \quad Problemes de modelitzaci\'o exponencial}
+% =====================================================================
+
+\begin{recordatori}
+\textbf{Recorda:} Molts fen\`omens naturals segueixen una llei exponencial del tipus
+\[
+f(t) = C \cdot a^t
+\]
+on $C$ \'es el valor inicial (quan $t=0$) i $a$ \'es el factor de creixement/decreixement per unitat de temps.
+\begin{itemize}[noitemsep]
+    \item Si $a > 1$: la funci\'o \textbf{creix} (reproducci\'o, inter\`es compost, etc.).
+    \item Si $0 < a < 1$: la funci\'o \textbf{decreix} (desintegraci\'o radioactiva, filtrat, etc.).
+\end{itemize}
+\end{recordatori}
+
+\vspace{0.5cm}
+
+% ---- Problema 3.1 ----
+\noindent\textbf{Problema 3.1 --- Reproducci\'o d'insectes}
+
+\vspace{0.2cm}
+\noindent Una col\`onia de mosques de la fruita comen\c{c}a amb \textbf{5 individus}. Cada setmana, la poblaci\'o es \textbf{triplica}.
+
+\begin{enumerate}[label=\alph*), leftmargin=1.5cm, itemsep=0.3cm]
+    \item Escriu l'expressi\'o algebraica $P(t)$ que dona el nombre d'individus en funci\'o de les setmanes $t$.
+
+    \item Calcula quants individus hi haur\`a al cap de \textbf{4 setmanes}.
+
+    \item Quant de temps trigar\`a la col\`onia a superar els \textbf{1000 individus}? Completa la taula:
+
+    \vspace{0.3cm}
+    \begin{center}
+    \renewcommand{\arraystretch}{2}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    $t$ (setmanes) & 0 & 1 & 2 & 3 & 4 & 5 \\
+    \hline
+    $P(t)$ (individus) & & & & & & \\
+    \hline
+    \end{tabular}
+    \end{center}
+
+    \item \textbf{Reflexi\'o:} Si la poblaci\'o comen\c{c}\'es amb \textbf{10 individus} per\`o nom\'es es \textbf{dobl\'es} cada setmana, quina seria la nova funci\'o $Q(t)$? Calcula $Q(5)$ i compara-ho amb $P(5)$. Quin creixement \'es m\'es r\`apid?
+\end{enumerate}
+
+\vspace{0.6cm}
+
+% ---- Problema 3.2 ----
+\noindent\textbf{Problema 3.2 --- Contaminaci\'o d'un llac}
+
+\vspace{0.2cm}
+\noindent Un llac cont\'e \textbf{800 kg} d'una subst\`ancia contaminant. Gr\`acies a un sistema de filtratge, cada mes es \textbf{redueix a la meitat} la quantitat de contaminant present.
+
+\begin{enumerate}[label=\alph*), leftmargin=1.5cm, itemsep=0.3cm]
+    \item Escriu la funci\'o $C(t)$ que expressa la quantitat de contaminant (en kg) en funci\'o dels mesos $t$.
+
+    \item Completa la taula:
+
+    \vspace{0.3cm}
+    \begin{center}
+    \renewcommand{\arraystretch}{2}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    $t$ (mesos) & 0 & 1 & 2 & 3 & 4 & 5 \\
+    \hline
+    $C(t)$ (kg) & & & & & & \\
+    \hline
+    \end{tabular}
+    \end{center}
+
+    \item Quin \'es el comportament de $C(t)$ quan $t \to +\infty$? Arribar\`a a ser mai exactament zero? Justifica-ho a partir de les propietats de la funci\'o exponencial.
+
+    \item La funci\'o $C(t)$ \'es creixent o decreixent? Indica quina \'es la seva base i per quina ra\'o determina el comportament.
+\end{enumerate}
+
+\newpage
+
+% =====================================================================
+% SOLUCIONS
+% =====================================================================
+
+\begin{center}
+    {\Large \textbf{SOLUCIONS}}
+\end{center}
+
+\vspace{0.2cm}
+\begin{center}
+\textit{(P\`agina per al professor / autocorrecci\'o)}
+\end{center}
+
+\vspace{0.4cm}
+
+% ---- Sol. Ex. 1 ----
+\noindent\textbf{Solucions Exercici 1 --- Gr\`afiques i expressions}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.8}
+\begin{tabular}{|c|c|l|}
+\hline
+\textbf{Funci\'o} & \textbf{Expressi\'o} & \textbf{Justificaci\'o} \\
+\hline
+$f_1$ & (C) $2^x$ & Creixent, base 2. Passa per $(1,2)$. Creix m\'es lentament que $f_2$. \\
+\hline
+$f_2$ & (B) $3^x$ & Creixent, base 3. Passa per $(1,3)$. Creix m\'es r\`apid que $f_1$. \\
+\hline
+$f_3$ & (D) $(1/2)^x$ & Decreixent. Sim\`etrica de $f_1=2^x$ respecte l'eix $y$. \\
+\hline
+$f_4$ & (A) $(1/3)^x$ & Decreixent. Sim\`etrica de $f_2=3^x$ respecte l'eix $y$. \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+% ---- Sol. Ex. 2 ----
+\noindent\textbf{Solucions Exercici 2 --- Propietats}
+
+\vspace{0.2cm}
+\noindent\textit{Apartat 2.1:}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\alph*)}, leftmargin=1.2cm, itemsep=0.2cm]
+    \item $2^3 \cdot 2^5 = 2^{8} = 256$
+    \item $\dfrac{5^7}{5^3} = 5^{4} = 625$
+    \item $(3^2)^4 = 3^{8} = 6561$
+    \item $4^3 \cdot 2^3 = (4 \cdot 2)^3 = 8^3 = 512$
+    \item $\left(\dfrac{2}{3}\right)^{-2} = \left(\dfrac{3}{2}\right)^2 = \dfrac{9}{4}$
+    \item $\dfrac{6^5}{2^5} = \left(\dfrac{6}{2}\right)^5 = 3^5 = 243$
+    \item $7^0 \cdot 7^3 = 1 \cdot 7^3 = 343$
+    \item $\dfrac{2^8 \cdot 2^{-3}}{2^2} = \dfrac{2^{5}}{2^2} = 2^3 = 8$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.3cm}
+\noindent\textit{Apartat 2.2:}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\alph*)}, leftmargin=1.2cm, itemsep=0.2cm]
+    \item $a^4 \cdot a^{-1} \cdot a^3 = a^{6}$
+    \item $\dfrac{a^{2x+1}}{a^{x-2}} = a^{x+3}$
+    \item $(a^3)^x \cdot a^{2-x} = a^{2x+2}$
+    \item $\left(\dfrac{a^2}{b}\right)^3 \cdot b^2 = \dfrac{a^6}{b}$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.3cm}
+\noindent\textit{Apartat 2.3:}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=\textbf{\alph*)}, leftmargin=1.2cm, itemsep=0.2cm]
+    \item $2^x = 2^5 \Rightarrow \boldsymbol{x = 5}$
+    \item $3^{x+1} = 3^4 \Rightarrow x+1=4 \Rightarrow \boldsymbol{x=3}$
+    \item $(2^2)^x = 2^6 \Rightarrow 2x=6 \Rightarrow \boldsymbol{x=3}$
+    \item $(3^2)^x = 3^3 \Rightarrow 2x=3 \Rightarrow \boldsymbol{x=\tfrac{3}{2}}$
+    \item $2x-1=x+3 \Rightarrow \boldsymbol{x=4}$
+    \item $2^{-x}=2^3 \Rightarrow -x=3 \Rightarrow \boldsymbol{x=-3}$
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.5cm}
+
+% ---- Sol. Ex. 3 ----
+\noindent\textbf{Solucions Exercici 3 --- Problemes}
+
+\vspace{0.2cm}
+\noindent\textit{Problema 3.1:}
+\begin{enumerate}[label=\alph*), leftmargin=1.5cm, itemsep=0.2cm]
+    \item $P(t) = 5 \cdot 3^t$
+    \item $P(4) = 5 \cdot 3^4 = 5 \cdot 81 = \mathbf{405}$ individus
+    \item $P(0)=5$,\ $P(1)=15$,\ $P(2)=45$,\ $P(3)=135$,\ $P(4)=405$,\ $P(5)=1215$. Supera 1000 a la \textbf{5a setmana}.
+    \item $Q(t) = 10 \cdot 2^t$. $Q(5) = 10 \cdot 32 = 320 < 1215 = P(5)$. Tot i tenir el doble d'individus inicials, triplicar \'es un creixement molt m\'es r\`apid.
+\end{enumerate}
+
+\vspace{0.3cm}
+\noindent\textit{Problema 3.2:}
+\begin{enumerate}[label=\alph*), leftmargin=1.5cm, itemsep=0.2cm]
+    \item $C(t) = 800 \cdot \left(\dfrac{1}{2}\right)^t$
+    \item $C(0)=800$,\ $C(1)=400$,\ $C(2)=200$,\ $C(3)=100$,\ $C(4)=50$,\ $C(5)=25$ kg.
+    \item Quan $t \to +\infty$, $C(t) \to 0$: l'eix $x$ \'es una \textbf{as\'imptota horitzontal}. Mai ser\`a exactament $0$ perqu\`e $\left(\frac{1}{2}\right)^t > 0$ per a tot $t \in \mathbb{R}$.
+    \item \textbf{Decreixent}, ja que la base $a = \frac{1}{2}$ compeix $0 < a < 1$.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,198 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[catalan]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{hyperref}
+
+% 1. MARGES I CAPÇALERA ORIGINALS RECUPERATS
+\geometry{top=4cm, bottom=3cm, left=2cm, right=2cm, headheight=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+% Logos recuperats de la plantilla original
+% (Assegura't de tenir els arxius Logo_Departament.png i Logo_Institut.png a la mateixa carpeta si vols que es mostrin)
+\fancyhead[L]{\includegraphics[height=1.8cm]{Logo_Departament.png}}
+\fancyhead[R]{\includegraphics[height=1.8cm]{Logo_Institut.png}}
+\fancyhead[C]{}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{Pàgina \thepage\ de \pageref{LastPage}}
+\fancyfoot[R]{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Configuració dels enllaços de l'índex
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Exercicis resolts d'operacions amb funcions},
+}
+
+\begin{document}
+
+% --- CAPÇALERA D'IDENTIFICACIÓ ---
+\begingroup
+\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{\textwidth}{|X|p{4cm}|}
+\hline
+\textbf{Matemàtiques 1r Batxillerat}\\ \hline
+\textbf{Exercicis resolts d'operacions amb funcions} \\ \hline
+\end{tabularx}
+\endgroup
+
+\vspace{0.5cm}
+
+% Índex
+\tableofcontents
+\vspace{1cm}
+
+\newpage
+
+\section{Exercici 23: Operacions, dominis i inversa}
+
+\textbf{Enunciat:} Siguin $f(x) = \frac{2x - 1}{x + 1}$ i $g(x) = \frac{x^2 - 1}{3x}$:
+
+\subsection{Apartat a) Determina les funcions}
+
+\textit{Consell: En operacions amb fraccions algebraiques, recordeu sempre factoritzar els polinomis quan sigui possible per poder simplificar factors comuns entre el numerador i el denominador abans i després d'operar.}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Suma ($f + g$):}
+    \begin{align*}
+    (f + g)(x) &= \frac{2x - 1}{x + 1} + \frac{x^2 - 1}{3x} = \frac{3x(2x - 1) + (x + 1)(x^2 - 1)}{3x(x + 1)} \\
+    &= \frac{6x^2 - 3x + x^3 - x + x^2 - 1}{3x^2 + 3x} = \mathbf{\frac{x^3 + 7x^2 - 4x - 1}{3x^2 + 3x}}
+    \end{align*}
+
+    \item \textbf{Producte ($f \cdot g$):}
+    Aquí és molt convenient adonar-se que $x^2 - 1$ és una identitat notable i es pot factoritzar com $(x+1)(x-1)$ per simplificar amb el denominador de $f(x)$.
+    \begin{align*}
+    (f \cdot g)(x) &= \frac{2x - 1}{x + 1} \cdot \frac{x^2 - 1}{3x} = \frac{(2x - 1) \cdot (x + 1)(x - 1)}{(x + 1) \cdot 3x} \\
+    &= \frac{(2x - 1)(x - 1)}{3x} = \mathbf{\frac{2x^2 - 3x + 1}{3x}}
+    \end{align*}
+
+    \item \textbf{Divisió ($\frac{f}{g}$):}
+    \begin{align*}
+    \left(\frac{f}{g}\right)(x) &= \frac{\frac{2x - 1}{x + 1}}{\frac{x^2 - 1}{3x}} = \frac{3x(2x - 1)}{(x + 1)(x^2 - 1)} = \mathbf{\frac{6x^2 - 3x}{x^3 + x^2 - x - 1}}
+    \end{align*}
+
+    \item \textbf{Composició ($f \circ f$):}
+    \begin{align*}
+    (f \circ f)(x) &= f(f(x)) = f\left(\frac{2x - 1}{x + 1}\right) = \frac{2\left(\frac{2x - 1}{x + 1}\right) - 1}{\frac{2x - 1}{x + 1} + 1} \\
+    &= \frac{\frac{4x - 2 - (x + 1)}{x + 1}}{\frac{2x - 1 + x + 1}{x + 1}} = \frac{\frac{3x - 3}{x + 1}}{\frac{3x}{x + 1}} = \frac{3x - 3}{3x} = \mathbf{\frac{x - 1}{x}}
+    \end{align*}
+    \textit{Noteu com s'ha simplificat dividint entre 3 el numerador i el denominador al pas final.}
+
+    \item \textbf{Composició ($g \circ g$):}
+    \begin{align*}
+    (g \circ g)(x) &= g(g(x)) = g\left(\frac{x^2 - 1}{3x}\right) = \frac{\left(\frac{x^2 - 1}{3x}\right)^2 - 1}{3\left(\frac{x^2 - 1}{3x}\right)} \\
+    &= \frac{\frac{x^4 - 2x^2 + 1}{9x^2} - 1}{\frac{x^2 - 1}{x}} = \frac{\frac{x^4 - 11x^2 + 1}{9x^2}}{\frac{x^2 - 1}{x}} = \frac{x(x^4 - 11x^2 + 1)}{9x^2(x^2 - 1)} \\
+    &= \mathbf{\frac{x^4 - 11x^2 + 1}{9x(x^2 - 1)}} = \mathbf{\frac{x^4 - 11x^2 + 1}{9x^3 - 9x}}
+    \end{align*}
+
+    \item \textbf{Inversa ($f^{-1}$):}
+    Per trobar la funció inversa de $f(x)$, canviem $f(x)$ per $y$, aïllem la $x$ i després intercanviem les variables.
+    \begin{align*}
+    y &= \frac{2x - 1}{x + 1} \implies y(x + 1) = 2x - 1 \implies yx + y = 2x - 1 \\
+    yx - 2x &= -1 - y \implies x(y - 2) = -(y + 1) \implies x = \frac{-(y + 1)}{y - 2} = \frac{y + 1}{2 - y}
+    \end{align*}
+    Per tant, la funció inversa és: \textbf{$f^{-1}(x) = \frac{x + 1}{2 - x}$}
+\end{itemize}
+
+\subsection{Apartat b) Esbrina el domini de les funcions}
+
+\begin{itemize}[leftmargin=*]
+    \item $\mathbf{Dom(f + g):}$ El domini és la intersecció dels dominis originals. $x \neq -1$ (per $f$) i $x \neq 0$ (per $g$).  $\mathbf{Dom = \mathbb{R} - \{-1, 0\}}$.
+    \item $\mathbf{Dom(f \cdot g):}$ Tot i que la funció simplificada és $\frac{2x^2 - 3x + 1}{3x}$, la funció prové de multiplicar $f$ i $g$, així que hem de mantenir la restricció del domini original de $f(x)$. $\mathbf{Dom = \mathbb{R} - \{-1, 0\}}$.
+    \item $\mathbf{Dom\left(\frac{f}{g}\right):}$ A banda de $x \neq -1$ i $x \neq 0$, ara el denominador no pot ser zero, per tant $g(x) \neq 0 \implies x^2 - 1 \neq 0 \implies x \neq \pm 1$. $\mathbf{Dom = \mathbb{R} - \{-1, 0, 1\}}$.
+    \item $\mathbf{Dom(f \circ f):}$ Necessitem que $x$ estigui al domini de $f$ ($x \neq -1$) i que $f(x)$ estigui al domini de $f$ (és a dir, $f(x) \neq -1$). $\frac{2x-1}{x+1} \neq -1 \implies 2x - 1 \neq -x - 1 \implies 3x \neq 0 \implies x \neq 0$. $\mathbf{Dom = \mathbb{R} - \{-1, 0\}}$.
+    \item $\mathbf{Dom(g \circ g):}$ Necessitem que $x \neq 0$ i que $g(x) \neq 0 \implies x \neq \pm 1$. $\mathbf{Dom = \mathbb{R} - \{-1, 0, 1\}}$.
+    \item $\mathbf{Dom(f^{-1}):}$ El denominador no pot ser zero. $2 - x \neq 0 \implies x \neq 2$. $\mathbf{Dom = \mathbb{R} - \{2\}}$.
+\end{itemize}
+
+\subsection{Apartat c) Comprova que $f^{-1}$ és la funció inversa de $f$}
+
+Per comprovar-ho, cal demostrar que $(f^{-1} \circ f)(x) = x$:
+\begin{align*}
+(f^{-1} \circ f)(x) &= f^{-1}(f(x)) = f^{-1}\left(\frac{2x - 1}{x + 1}\right) = \frac{\left(\frac{2x - 1}{x + 1}\right) + 1}{2 - \left(\frac{2x - 1}{x + 1}\right)} \\
+&= \frac{\frac{2x - 1 + x + 1}{x + 1}}{\frac{2(x + 1) - (2x - 1)}{x + 1}} = \frac{3x}{2x + 2 - 2x + 1} = \frac{3x}{3} = \mathbf{x}
+\end{align*}
+Queda comprovat ja que ens retorna exactament la variable $x$.
+
+\newpage
+
+\section{Exercici 24: Càlcul de la funció inversa i comprovació}
+
+\textbf{Enunciat:} Calcula la funció inversa de cadascuna de les funcions següents i fes-ne en cada cas la comprovació:
+
+\subsection{Apartat a) $f(x) = \frac{x - 1}{x + 2}$}
+\begin{align*}
+y &= \frac{x - 1}{x + 2} \implies y(x + 2) = x - 1 \implies yx + 2y = x - 1 \\
+yx - x &= -2y - 1 \implies x(y - 1) = -2y - 1 \implies x = \frac{-2y - 1}{y - 1} = \frac{2y + 1}{1 - y}
+\end{align*}
+\textbf{Inversa:} $\mathbf{f^{-1}(x) = \frac{2x + 1}{1 - x}}$
+
+\textbf{Comprovació ($f(f^{-1}(x)) = x$):}
+\begin{align*}
+f\left(\frac{2x + 1}{1 - x}\right) &= \frac{\frac{2x + 1}{1 - x} - 1}{\frac{2x + 1}{1 - x} + 2} = \frac{\frac{2x + 1 - (1 - x)}{1 - x}}{\frac{2x + 1 + 2(1 - x)}{1 - x}} \\
+&= \frac{2x + 1 - 1 + x}{2x + 1 + 2 - 2x} = \frac{3x}{3} = \mathbf{x}
+\end{align*}
+
+\subsection{Apartat b) $f(x) = \sqrt{x^2 - 2}$}
+\textit{Nota: Aquesta funció no és injectiva en tot el seu domini, per tant s'ha de restringir a un dels seus braços (ex: $x \ge \sqrt{2}$) perquè la inversa sigui una funció vàlida.}
+\begin{align*}
+y &= \sqrt{x^2 - 2} \implies y^2 = x^2 - 2 \implies x^2 = y^2 + 2 \implies x = \sqrt{y^2 + 2}
+\end{align*}
+Prenem la branca positiva: \textbf{Inversa:} $\mathbf{f^{-1}(x) = \sqrt{x^2 + 2}}$
+
+\textbf{Comprovació:}
+\begin{align*}
+f(f^{-1}(x)) &= f\left(\sqrt{x^2 + 2}\right) = \sqrt{\left(\sqrt{x^2 + 2}\right)^2 - 2} = \sqrt{x^2 + 2 - 2} = \sqrt{x^2} = \mathbf{x} \quad (\text{per } x \ge 0)
+\end{align*}
+
+\subsection{Apartat c) $f(x) = \frac{1}{2}x + 3$}
+\begin{align*}
+y &= \frac{1}{2}x + 3 \implies y - 3 = \frac{1}{2}x \implies x = 2(y - 3) = 2y - 6
+\end{align*}
+\textbf{Inversa:} $\mathbf{f^{-1}(x) = 2x - 6}$
+
+\textbf{Comprovació:}
+\begin{align*}
+f(2x - 6) &= \frac{1}{2}(2x - 6) + 3 = x - 3 + 3 = \mathbf{x}
+\end{align*}
+
+\subsection{Apartat d) $f(x) = \frac{2 - x}{1 + 2x}$}
+\begin{align*}
+y &= \frac{2 - x}{1 + 2x} \implies y(1 + 2x) = 2 - x \implies y + 2xy = 2 - x \\
+2xy + x &= 2 - y \implies x(2y + 1) = 2 - y \implies x = \frac{2 - y}{2y + 1}
+\end{align*}
+\textbf{Inversa:} $\mathbf{f^{-1}(x) = \frac{2 - x}{2x + 1}}$
+
+\textbf{Comprovació:}
+\begin{align*}
+f\left(\frac{2 - x}{2x + 1}\right) &= \frac{2 - \frac{2 - x}{2x + 1}}{1 + 2\left(\frac{2 - x}{2x + 1}\right)} = \frac{\frac{2(2x + 1) - (2 - x)}{2x + 1}}{\frac{2x + 1 + 2(2 - x)}{2x + 1}} \\
+&= \frac{4x + 2 - 2 + x}{2x + 1 + 4 - 2x} = \frac{5x}{5} = \mathbf{x}
+\end{align*}
+
+\subsection{Apartat e) $f(x) = \frac{4}{3}x - \frac{2}{5}$}
+\begin{align*}
+y &= \frac{4}{3}x - \frac{2}{5} \implies y + \frac{2}{5} = \frac{4}{3}x \implies x = \frac{3}{4}\left(y + \frac{2}{5}\right) = \frac{3}{4}y + \frac{6}{20} = \frac{3}{4}y + \frac{3}{10}
+\end{align*}
+\textbf{Inversa:} $\mathbf{f^{-1}(x) = \frac{3}{4}x + \frac{3}{10}}$
+
+\textbf{Comprovació:}
+\begin{align*}
+f\left(\frac{3}{4}x + \frac{3}{10}\right) &= \frac{4}{3}\left(\frac{3}{4}x + \frac{3}{10}\right) - \frac{2}{5} = x + \frac{12}{30} - \frac{2}{5} = x + \frac{2}{5} - \frac{2}{5} = \mathbf{x}
+\end{align*}
+
+\end{document}
