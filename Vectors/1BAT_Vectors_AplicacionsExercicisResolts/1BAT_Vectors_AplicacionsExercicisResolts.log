@@ -1,0 +1,1217 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.22)  26 JUN 2026 12:59
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./main.tex
+(main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-05-26>
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen150
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/05/20 v26.8 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
+\babel@savecnt=\count284
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2084.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2086.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2088.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2089.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2090.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2092.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2117.
+\U@D=\dimen151
+\l@unhyphenated=\language79
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count285
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4228.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/ca\babel
+-catalan.tex)
+Package babel Info: Importing font and identification data for catalan
+(babel)             from babel-ca.ini. Reported on input line 4356.
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/babel-catalan\catalan.l
+df
+Language: catalan 2005/03/29 v2.2p Catalan support from the babel system
+Package babel Info: Making " an active character on input line 91.
+Warning: You are using encoding OT1 instead of T1.
+Some word breaks will not be found.
+\leftllkern=\dimen152
+\rightllkern=\dimen153
+\raiselldim=\dimen154
+))
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen155
+\Gin@req@width=\dimen156
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count286
+\Gm@cntv=\count287
+\c@Gm@tempcnt=\count288
+\Gm@bindingoffset=\dimen157
+\Gm@wd@mp=\dimen158
+\Gm@odd@mp=\dimen159
+\Gm@even@mp=\dimen160
+\Gm@layoutwidth=\dimen161
+\Gm@layoutheight=\dimen162
+\Gm@layouthoffset=\dimen163
+\Gm@layoutvoffset=\dimen164
+\Gm@dimlist=\toks20
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip51
+\f@nch@offset@elh=\skip52
+\f@nch@offset@erh=\skip53
+\f@nch@offset@olh=\skip54
+\f@nch@offset@orh=\skip55
+\f@nch@offset@elf=\skip56
+\f@nch@offset@erf=\skip57
+\f@nch@offset@olf=\skip58
+\f@nch@offset@orf=\skip59
+\f@nch@height=\skip60
+\f@nch@footalignment=\skip61
+\f@nch@widthL=\skip62
+\f@nch@widthC=\skip63
+\f@nch@widthR=\skip64
+\@temptokenb=\toks21
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
+\col@sep=\dimen165
+\ar@mcellbox=\box53
+\extrarowheight=\dimen166
+\NC@list=\toks22
+\extratabsurround=\skip65
+\backup@length=\skip66
+\ar@cellbox=\box54
+)
+\TX@col@width=\dimen167
+\TX@old@table=\dimen168
+\TX@old@col=\dimen169
+\TX@target=\dimen170
+\TX@delta=\dimen171
+\TX@cols=\count289
+\TX@ftn=\toks23
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
+Package: lastpage 2025/08/14 v2.1h lastpage: 2.09 or 2e? (HMM)
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
+Package: lastpage2e 2025/08/14 v2.1h Decide which 2e lastpage version to use (H
+MM)
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpagemodern
+.sty
+Package: lastpagemodern 2025-08-14 v2.1h Refers to last page's name (HMM; JPG)
+\c@lastpagecount=\count290
+) 
+))
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip67
+\enit@outerparindent=\dimen172
+\enit@toks=\toks24
+\enit@inbox=\box55
+\enit@count@id=\count291
+\enitdp@description=\count292
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2026/05/19 v2.18d AMS math features
+\@mathmargin=\skip68
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks25
+\ex@=\dimen173
+))
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen174
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count293
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count294
+\leftroot@=\count295
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count296
+\DOTSCASE@=\count297
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box56
+\strutbox@=\box57
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen175
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count298
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count299
+\dotsspace@=\muskip17
+\c@parentequation=\count300
+\dspbrk@lvl=\count301
+\tag@help=\toks26
+\row@=\count302
+\column@=\count303
+\maxfields@=\count304
+\andhelp@=\toks27
+\eqnshift@=\dimen176
+\alignsep@=\dimen177
+\tagshift@=\dimen178
+\tagwidth@=\dimen179
+\totwidth@=\dimen180
+\lineht@=\dimen181
+\@envbody=\toks28
+\multlinegap=\skip69
+\multlinetaggap=\skip70
+\mathdisplay@stack=\toks29
+LaTeX Info: Redefining \[ on input line 2965.
+LaTeX Info: Redefining \] on input line 2966.
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count305
+\float@exts=\toks30
+\float@box=\box58
+\@float@everytoks=\toks31
+\@floatcapt=\box59
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count306
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count307
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen182
+\Hy@linkcounter=\count308
+\Hy@pagecounter=\count309
+ (C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count310
+ (C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4466.
+\c@Hy@tempcnt=\count311
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen183
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count312
+\Field@Width=\dimen184
+\Fld@charsize=\dimen185
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count313
+\c@Item=\count314
+\c@Hfootnote=\count315
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
+\Fld@listcount=\count316
+\c@bookmark@seq@number=\count317
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip71
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count318
+) (1BAT_Vectors_AplicacionsExercicisResolts.aux
+Package babel Info: 'catalan' activates 'catalan' shorthands.
+(babel)             Reported on input line 8.
+)
+\openout1 = `1BAT_Vectors_AplicacionsExercicisResolts.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Info: Redefining \l on input line 28.
+LaTeX Info: Redefining \L on input line 28.
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count319
+\scratchdimen=\dimen186
+\scratchbox=\box60
+\nofMPsegments=\count320
+\nofMParguments=\count321
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count322
+\MPscratchDim=\dimen187
+\MPnumerator=\count323
+\makeMPintoPDFobject=\count324
+\everyMPtoPDFconversion=\toks33
+)
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\jotav\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(113.81102pt, 645.87756pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=645.87756pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-54.59085pt
+* \headheight=71.13188pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 28.
+(1BAT_Vectors_AplicacionsExercicisResolts.out)
+(1BAT_Vectors_AplicacionsExercicisResolts.out)
+\@outlinefile=\write3
+\openout3 = `1BAT_Vectors_AplicacionsExercicisResolts.out'.
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 37--39
+[][] 
+ []
+
+<Vectors - 42 - Paral·lelogram - Intersecció diagonals_1.png, id=16, 352.5365
+9pt x 199.5357pt>
+File: Vectors - 42 - Paral·lelogram - Intersecció diagonals_1.png Graphic fil
+e (type png)
+<use Vectors - 42 - Paral·lelogram - Intersecció diagonals_1.png>
+Package pdftex.def Info: Vectors - 42 - Paral·lelogram - Intersecció diagonal
+s_1.png  used on input line 70.
+(pdftex.def)             Requested size: 284.52756pt x 161.04453pt.
+<Logo_Departament.png, id=18, 488.0634pt x 183.5658pt>
+File: Logo_Departament.png Graphic file (type png)
+<use Logo_Departament.png>
+Package pdftex.def Info: Logo_Departament.png  used on input line 80.
+(pdftex.def)             Requested size: 136.1653pt x 51.21504pt.
+<Logo_Institut.png, id=19, 209.1012pt x 132.9768pt>
+File: Logo_Institut.png Graphic file (type png)
+<use Logo_Institut.png>
+Package pdftex.def Info: Logo_Institut.png  used on input line 80.
+(pdftex.def)             Requested size: 80.53452pt x 51.21504pt.
+[1
+
+{C:/Users/jotav/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Logo_Depar
+tament.png> <./Logo_Institut.png> <./Vectors - 42 - Paral·lelogram - Intersecc
+ió diagonals_1.png>]
+<Vectors - 42 - Paral·lelogram - Intersecció diagonals_3.png, id=41, 352.5365
+9pt x 199.5357pt>
+File: Vectors - 42 - Paral·lelogram - Intersecció diagonals_3.png Graphic fil
+e (type png)
+<use Vectors - 42 - Paral·lelogram - Intersecció diagonals_3.png>
+Package pdftex.def Info: Vectors - 42 - Paral·lelogram - Intersecció diagonal
+s_3.png  used on input line 87.
+(pdftex.def)             Requested size: 284.52756pt x 161.04453pt.
+<Vectors - 42 - Paral·lelogram - Intersecció diagonals_4.png, id=42, 352.5365
+9pt x 199.5357pt>
+File: Vectors - 42 - Paral·lelogram - Intersecció diagonals_4.png Graphic fil
+e (type png)
+<use Vectors - 42 - Paral·lelogram - Intersecció diagonals_4.png>
+Package pdftex.def Info: Vectors - 42 - Paral·lelogram - Intersecció diagonal
+s_4.png  used on input line 97.
+(pdftex.def)             Requested size: 284.52756pt x 161.04453pt.
+File: Logo_Departament.png Graphic file (type png)
+<use Logo_Departament.png>
+Package pdftex.def Info: Logo_Departament.png  used on input line 98.
+(pdftex.def)             Requested size: 136.1653pt x 51.21504pt.
+File: Logo_Institut.png Graphic file (type png)
+<use Logo_Institut.png>
+Package pdftex.def Info: Logo_Institut.png  used on input line 98.
+(pdftex.def)             Requested size: 80.53452pt x 51.21504pt.
+ [2 <./Vectors - 42 - Paral·lelogram - Intersecció diagonals_3.png>]
+<Vectors - 42 - Paral·lelogram - Intersecció diagonals_5.png, id=52, 352.5365
+9pt x 199.5357pt>
+File: Vectors - 42 - Paral·lelogram - Intersecció diagonals_5.png Graphic fil
+e (type png)
+<use Vectors - 42 - Paral·lelogram - Intersecció diagonals_5.png>
+Package pdftex.def Info: Vectors - 42 - Paral·lelogram - Intersecció diagonal
+s_5.png  used on input line 114.
+(pdftex.def)             Requested size: 284.52756pt x 161.04453pt.
+<Vectors - 42 - Paral·lelogram - Intersecció diagonals_6.png, id=53, 352.5365
+9pt x 199.5357pt>
+File: Vectors - 42 - Paral·lelogram - Intersecció diagonals_6.png Graphic fil
+e (type png)
+<use Vectors - 42 - Paral·lelogram - Intersecció diagonals_6.png>
+Package pdftex.def Info: Vectors - 42 - Paral·lelogram - Intersecció diagonal
+s_6.png  used on input line 120.
+(pdftex.def)             Requested size: 284.52756pt x 161.04453pt.
+File: Logo_Departament.png Graphic file (type png)
+<use Logo_Departament.png>
+Package pdftex.def Info: Logo_Departament.png  used on input line 121.
+(pdftex.def)             Requested size: 136.1653pt x 51.21504pt.
+File: Logo_Institut.png Graphic file (type png)
+<use Logo_Institut.png>
+Package pdftex.def Info: Logo_Institut.png  used on input line 121.
+(pdftex.def)             Requested size: 80.53452pt x 51.21504pt.
+ [3 <./Vectors - 42 - Paral·lelogram - Intersecció diagonals_4.png> <./Vector
+s - 42 - Paral·lelogram - Intersecció diagonals_5.png>]
+File: Logo_Departament.png Graphic file (type png)
+<use Logo_Departament.png>
+Package pdftex.def Info: Logo_Departament.png  used on input line 123.
+(pdftex.def)             Requested size: 136.1653pt x 51.21504pt.
+File: Logo_Institut.png Graphic file (type png)
+<use Logo_Institut.png>
+Package pdftex.def Info: Logo_Institut.png  used on input line 123.
+(pdftex.def)             Requested size: 80.53452pt x 51.21504pt.
+
+[4 <./Vectors - 42 - Paral·lelogram - Intersecció diagonals_6.png>]
+<Vectors - 44 - Dividir punt en 3 segments_1.png, id=69, 526.23787pt x 295.7456
+8pt>
+File: Vectors - 44 - Dividir punt en 3 segments_1.png Graphic file (type png)
+<use Vectors - 44 - Dividir punt en 3 segments_1.png>
+Package pdftex.def Info: Vectors - 44 - Dividir punt en 3 segments_1.png  used 
+on input line 143.
+(pdftex.def)             Requested size: 284.52756pt x 159.90787pt.
+<Vectors - 44 - Dividir punt en 3 segments_2.png, id=70, 526.23787pt x 295.7456
+8pt>
+File: Vectors - 44 - Dividir punt en 3 segments_2.png Graphic file (type png)
+<use Vectors - 44 - Dividir punt en 3 segments_2.png>
+Package pdftex.def Info: Vectors - 44 - Dividir punt en 3 segments_2.png  used 
+on input line 151.
+(pdftex.def)             Requested size: 284.52756pt x 159.90787pt.
+File: Logo_Departament.png Graphic file (type png)
+<use Logo_Departament.png>
+Package pdftex.def Info: Logo_Departament.png  used on input line 156.
+(pdftex.def)             Requested size: 136.1653pt x 51.21504pt.
+File: Logo_Institut.png Graphic file (type png)
+<use Logo_Institut.png>
+Package pdftex.def Info: Logo_Institut.png  used on input line 156.
+(pdftex.def)             Requested size: 80.53452pt x 51.21504pt.
+ [5 <./Vectors - 44 - Dividir punt en 3 segments_1.png> <./Vectors - 44 - Divid
+ir punt en 3 segments_2.png>]
+<Vectors - 44 - Dividir punt en 3 segments_3.png, id=83, 526.23787pt x 295.7456
+8pt>
+File: Vectors - 44 - Dividir punt en 3 segments_3.png Graphic file (type png)
+<use Vectors - 44 - Dividir punt en 3 segments_3.png>
+Package pdftex.def Info: Vectors - 44 - Dividir punt en 3 segments_3.png  used 
+on input line 159.
+(pdftex.def)             Requested size: 284.52756pt x 159.90787pt.
+<Vectors - 44 - Dividir punt en 3 segments_4.png, id=84, 526.23787pt x 295.7456
+8pt>
+File: Vectors - 44 - Dividir punt en 3 segments_4.png Graphic file (type png)
+<use Vectors - 44 - Dividir punt en 3 segments_4.png>
+Package pdftex.def Info: Vectors - 44 - Dividir punt en 3 segments_4.png  used 
+on input line 171.
+(pdftex.def)             Requested size: 284.52756pt x 159.90787pt.
+File: Logo_Departament.png Graphic file (type png)
+<use Logo_Departament.png>
+Package pdftex.def Info: Logo_Departament.png  used on input line 178.
+(pdftex.def)             Requested size: 136.1653pt x 51.21504pt.
+File: Logo_Institut.png Graphic file (type png)
+<use Logo_Institut.png>
+Package pdftex.def Info: Logo_Institut.png  used on input line 178.
+(pdftex.def)             Requested size: 80.53452pt x 51.21504pt.
+ [6 <./Vectors - 44 - Dividir punt en 3 segments_3.png> <./Vectors - 44 - Divid
+ir punt en 3 segments_4.png>]
+<Vectors - 44 - Dividir punt en 3 segments_5.png, id=94, 526.23787pt x 295.7456
+8pt>
+File: Vectors - 44 - Dividir punt en 3 segments_5.png Graphic file (type png)
+<use Vectors - 44 - Dividir punt en 3 segments_5.png>
+Package pdftex.def Info: Vectors - 44 - Dividir punt en 3 segments_5.png  used 
+on input line 183.
+(pdftex.def)             Requested size: 284.52756pt x 159.90787pt.
+File: Logo_Departament.png Graphic file (type png)
+<use Logo_Departament.png>
+Package pdftex.def Info: Logo_Departament.png  used on input line 186.
+(pdftex.def)             Requested size: 136.1653pt x 51.21504pt.
+File: Logo_Institut.png Graphic file (type png)
+<use Logo_Institut.png>
+Package pdftex.def Info: Logo_Institut.png  used on input line 186.
+(pdftex.def)             Requested size: 80.53452pt x 51.21504pt.
+ [7 <./Vectors - 44 - Dividir punt en 3 segments_5.png>]
+<Vectors - 46 - Baricentre d'un triangle_1.png, id=104, 815.0752pt x 457.52887p
+t>
+File: Vectors - 46 - Baricentre d'un triangle_1.png Graphic file (type png)
+<use Vectors - 46 - Baricentre d'un triangle_1.png>
+Package pdftex.def Info: Vectors - 46 - Baricentre d'un triangle_1.png  used on
+ input line 206.
+(pdftex.def)             Requested size: 284.52756pt x 159.71164pt.
+<Vectors - 46 - Baricentre d'un triangle_2.png, id=105, 815.0752pt x 457.52887p
+t>
+File: Vectors - 46 - Baricentre d'un triangle_2.png Graphic file (type png)
+<use Vectors - 46 - Baricentre d'un triangle_2.png>
+Package pdftex.def Info: Vectors - 46 - Baricentre d'un triangle_2.png  used on
+ input line 223.
+(pdftex.def)             Requested size: 284.52756pt x 159.71164pt.
+File: Logo_Departament.png Graphic file (type png)
+<use Logo_Departament.png>
+Package pdftex.def Info: Logo_Departament.png  used on input line 224.
+(pdftex.def)             Requested size: 136.1653pt x 51.21504pt.
+File: Logo_Institut.png Graphic file (type png)
+<use Logo_Institut.png>
+Package pdftex.def Info: Logo_Institut.png  used on input line 224.
+(pdftex.def)             Requested size: 80.53452pt x 51.21504pt.
+ [8 <./Vectors - 46 - Baricentre d'un triangle_1.png>]
+<Vectors - 46 - Baricentre d'un triangle_3.png, id=117, 788.4pt x 457.5348pt>
+File: Vectors - 46 - Baricentre d'un triangle_3.png Graphic file (type png)
+<use Vectors - 46 - Baricentre d'un triangle_3.png>
+Package pdftex.def Info: Vectors - 46 - Baricentre d'un triangle_3.png  used on
+ input line 231.
+(pdftex.def)             Requested size: 284.52756pt x 165.1243pt.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
+                                                  {\textdef@ \textstyle \f@s...
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...xtstyle \f@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \sf@...
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...tstyle \sf@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \ssf...
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...style \ssf@size {\firstchoice@false #1}}
+                                                  \check@mathfonts }
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...firstchoice@false #1}}\check@mathfonts }
+                                                  
+l.238 ...textbf{M = \left( \frac{5}{3}, 4 \right)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.239 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.240 \begin{center}
+                    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.240 \begin{center}
+                    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.240 \begin{center}
+                    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.240 \begin{center}
+                    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   $
+l.240 \begin{center}
+                    
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   $
+l.240 \begin{center}
+                    
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   $
+l.240 \begin{center}
+                    
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.240 \begin{center}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \vskip 
+l.240 \begin{center}
+                    
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.240 \begin{center}
+                    
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<Vectors - 46 - Baricentre d'un triangle_4.png, id=118, 788.4pt x 457.5348pt>
+File: Vectors - 46 - Baricentre d'un triangle_4.png Graphic file (type png)
+<use Vectors - 46 - Baricentre d'un triangle_4.png>
+Package pdftex.def Info: Vectors - 46 - Baricentre d'un triangle_4.png  used on
+ input line 241.
+(pdftex.def)             Requested size: 284.52756pt x 165.1243pt.
+File: Logo_Departament.png Graphic file (type png)
+<use Logo_Departament.png>
+Package pdftex.def Info: Logo_Departament.png  used on input line 242.
+(pdftex.def)             Requested size: 136.1653pt x 51.21504pt.
+File: Logo_Institut.png Graphic file (type png)
+<use Logo_Institut.png>
+Package pdftex.def Info: Logo_Institut.png  used on input line 242.
+(pdftex.def)             Requested size: 80.53452pt x 51.21504pt.
+[9 <./Vectors - 46 - Baricentre d'un triangle_2.png> <./Vectors - 46 - Baricent
+re d'un triangle_3.png>]
+
+! LaTeX Error: \begin{document} ended by \end{center}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.242 \end{center}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+\end  ...end#1\endcsname \@checkend {#1}\endgroup 
+                                                  \UseHook {env/#1/after}\if...
+l.242 \end{center}
+                  
+Things are pretty mixed up, but I think the worst is over.
+
+File: Logo_Departament.png Graphic file (type png)
+<use Logo_Departament.png>
+Package pdftex.def Info: Logo_Departament.png  used on input line 244.
+(pdftex.def)             Requested size: 136.1653pt x 51.21504pt.
+File: Logo_Institut.png Graphic file (type png)
+<use Logo_Institut.png>
+Package pdftex.def Info: Logo_Institut.png  used on input line 244.
+(pdftex.def)             Requested size: 80.53452pt x 51.21504pt.
+[10 <./Vectors - 46 - Baricentre d'un triangle_4.png>]
+
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(1BAT_Vectors_AplicacionsExercicisResolts.aux)
+ ***********
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-05-26>
+ ***********
+Package rerunfilecheck Info: File `1BAT_Vectors_AplicacionsExercicisResolts.out
+' has not changed.
+(rerunfilecheck)             Checksum: 59F4880E4DA570F1C9CD26F61E6218D8;861.
+ ) 
+Here is how much of TeX's memory you used:
+ 11889 strings out of 467509
+ 195963 string characters out of 5408780
+ 636862 words of memory out of 5000000
+ 40948 multiletter control sequences out of 15000+600000
+ 634340 words of font info for 63 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 74i,16n,79p,360b,547s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\jotav\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1200.pk> <C:\Users\jotav\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcbx1728.pk><C:/Users/jotav/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb><C:/Users/jotav/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmbx5.pfb><C:/Users/jotav/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/jotav/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jotav/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/jotav/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/U
+sers/jotav/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb><C:/Users/jotav/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi5.pfb><C:/Users/jotav/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb><C:/Users/jotav/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb><C:/Users/jotav/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/jotav/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/jotav/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jotav/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jotav/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on 1BAT_Vectors_AplicacionsExercicisResolts.pdf (10 pages, 21528
+21 bytes).
+PDF statistics:
+ 221 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+
