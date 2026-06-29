@@ -1,0 +1,7 @@
+\babel@toc {catalan}{}\relax 
+\contentsline {section}{\numberline {1}Breu repàs teòric}{1}{}%
+\contentsline {section}{\numberline {2}Exercicis resolts}{1}{}%
+\contentsline {subsection}{\numberline {2.1}Exercici 5 (part teoria)}{1}{}%
+\contentsline {subsection}{\numberline {2.2}Exercici 14 (activitats finals)}{3}{}%
+\contentsline {subsection}{\numberline {2.3}Exercici 16 (activitats finals)}{3}{}%
+\contentsline {subsection}{\numberline {2.4}Exercici 20 (activitats finals)}{4}{}%
