@@ -1,0 +1,16 @@
+\babel@toc {catalan}{}\relax 
+\contentsline {section}{\numberline {1}Estudi de la continuïtat en un punt}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Teoria: Continuïtat en un punt i tipus de discontinuïtats}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Exercici 9 (activitats finals)}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Exercici 10 (activitats finals)}{3}{}%
+\contentsline {subsection}{\numberline {1.4}Exercici 8 (activitats finals)}{3}{}%
+\contentsline {subsection}{\numberline {1.5}Exercici 2 (Autoavaluació)}{4}{}%
+\contentsline {subsection}{\numberline {1.6}Exercici 23 (activitats finals)}{5}{}%
+\contentsline {section}{\numberline {2}Estudi de la continuïtat global d'una funció}{6}{}%
+\contentsline {subsection}{\numberline {2.1}Teoria: Estudi de la continuïtat global}{6}{}%
+\contentsline {subsection}{\numberline {2.2}Exercici 13 (activitats finals)}{6}{}%
+\contentsline {subsection}{\numberline {2.3}Exercici 3 (Autoavaluació)}{7}{}%
+\contentsline {subsection}{\numberline {2.4}Exercici 17 (part teoria)}{7}{}%
+\contentsline {subsection}{\numberline {2.5}Exercici 18 (part teoria)}{8}{}%
+\contentsline {subsection}{\numberline {2.6}Exercici 15 (activitats finals)}{8}{}%
+\contentsline {subsection}{\numberline {2.7}Exercici 20 (activitats finals)}{9}{}%
